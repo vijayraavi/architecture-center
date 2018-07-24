@@ -21,3 +21,5 @@
     href: batching-hive.md
   - name: Monitoring
     href: monitoring.md
+  - name: Security
+    href: security.md
