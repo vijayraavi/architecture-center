@@ -19,14 +19,14 @@ The following tables summarize the threat model for the Drone Delivery applicati
 
 ### Processing (Compute)
 
-| Zone | Component / interaction | Threat | Risk | Mitigation |
+| Path | Component / interaction | Threat | Risk | Mitigation |
 |------|-----------------------|--------|------|------------|
 | Things | IoT devices to IoT Hub | S | Unauthorized device connects to IoT Hub | Device identity and authentication |
 | Hot path, warm path, cold path | Message processing | E | SQL injection attacks and other code execution attacks. | Validate input. |
 
 ### Communication
 
-| Zone | Component / interaction | Threat | Risk | Mitigation |
+| Path | Component / interaction | Threat | Risk | Mitigation |
 |------|-----------------------|--------|------|------------|
 | Cold path | IoT Hub to Storage | S | Attacker spoofs the cloud gateway and routes data to another endpoint | IoT Hub uses security tokens, which are verified against shared access policies. Grant devices and services the minimum permissions needed. |
 | &nbsp; | &nbsp; | T | Attacker tampers with data being written to storage. | Require [secure transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer) in Azure Storage. |
@@ -41,6 +41,10 @@ The following tables summarize the threat model for the Drone Delivery applicati
 
 ### Storage
 
+| Path | Component / interaction | Threat | Risk | Mitigation |
+|------|-----------------------|--------|------|------------|
+| Hot, warm, cold | Storage | S | Attacker obtains access keys | Store access keys in [Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/). Never check secrets into source code. |
+| &nbsp; | &nbsp; | I | Attacker reads data in storage. | All data written to Azure Storage is [encrypted](https://docs.microsoft.com/en-us/azure/storage/common/storage-service-encryption) with 256-bit AES encryption. |
 
 
 
