@@ -14,7 +14,7 @@ The following image shows the data flow diagram for the Drone Delivery applicati
 
 ## Threat model
 
-The following tables summarize the threat model for the Drone Delivery application. 
+The following tables summarize the threat model for the Drone Delivery application. This doesn't capture every possible threat and mitigation, but shows the type of approach you should take.
 
 ### Processing (Compute)
 
@@ -48,8 +48,7 @@ The following tables summarize the threat model for the Drone Delivery applicati
 | Hot, warm | Cosmos DB | S | Attacker obtains access keys | Store access keys in Key Vault. Implement scheduled rotation of keys. Never check secrets into source code. |
 | &nbsp; | &nbsp; | T | Attacker writes to the database. | Use [read-only keys](https://docs.microsoft.com/en-us/azure/cosmos-db/secure-access-to-data#master-keys) or [resource tokens](https://docs.microsoft.com/en-us/rest/api/cosmos-db/access-control-on-cosmosdb-resources) for dashboards or web apps that read from the database. |
 | &nbsp; | &nbsp; | I | Attacker reads data in storage. | All data written to Cosmos  DB is [encrypted](https://docs.microsoft.com/en-us/azure/cosmos-db/database-encryption-at-rest) automatically. |
-| Cold path | Storage to HDInsight | T | Attacker tampers with raw telemetry data. | Use [shared access signatures](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-storage-sharedaccesssignature-permissions) to give HDInsight read-only access to the storage account. |
-
+| Cold path | Storage to HDInsight | T | Attacker tampers with raw telemetry data. | Use [shared access signatures](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-storage-sharedaccesssignature-permissions) to give HDInsight read-only access to the raw telemetry storage account. |
 
 
 
