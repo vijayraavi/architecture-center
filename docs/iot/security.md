@@ -1,4 +1,4 @@
-# Security
+# Threat modeling
 
 This chapter looks at security in the example Drone Delivery IoT application. It describes the threat model that our team performed and the mitigations that we identified. For an overview of using threat modeling in an IoT architecture, see [Internet of Things security architecture](https://docs.microsoft.com/en-us/azure/iot-fundamentals/iot-security-architecture).
 
@@ -54,10 +54,31 @@ The following tables summarize the threat model for the Drone Delivery applicati
 
 One way to reduce the potential attack surface is to isolate components within a virtual network. A virtual network gives you control over the public endpoints, using a combination of NSG rules, [network virtual appliances](../reference-architectures/dmz/secure-vnet-hybrid.md), and [virtual network isolation](https://docs.microsoft.com/en-us/azure/security/azure-isolation#networking-isolation). You can also use VPN gatways or ExpressRoute connections to create a [hybrid network](../reference-architectures/hybrid-networking/index.md) that connects your on-premises network to Azure.
 
-This approach has always been possible when running purely VM-based workloads. However, it was previously not possible to isolate connectivity to Azure services, which have used 
+This approach has always been possible when running purely VM-based workloads. [Virtual Network Service Endpoints](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview) extends this approach to managed Azure services. Using a VNet service endpoint, you can allow traffic to the service endpoint only from selected virtual networks and subnets. Moreover, traffic from your VNet to the Azure service always remains on the Microsoft Azure backbone network. 
 
+At the time we developed the Drone Delivery reference application, VNet service endpoints were not available for all of the Azure services used. For the most up-to-date notifications, check the [Azure Virtual Network updates page](https://azure.microsoft.com/updates/?product=virtual-network).
 
-With Virtual Network Service Endpoints, you can allow traffic only from selected virtual networks and subnets, creating a secure network boundary. 
+### Warm path
 
+For the warm path, it's possible to deploy the Azure Function application into an [App Service Environment](/azure/app-service/environment/intro). This provides a dedicated environment for running a Functions app using an [App Service plan](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#app-service-plan). 
 
+Isolate network traffic to Cosmos DB by creating a VNet service endpoint and associate it to the subnet for the App Service Environment. 
 
+![](./_images/ase-service-endpoint.png)
+
+The web app that displays the data stored in Cosmos DB is secured using Azure Active Directory (Azure AD) authentication.
+
+### Cold path
+
+A similar approach is possible for the cold path, by [deploying](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-extend-hadoop-virtual-network) the HDInsights cluster into a virtual network. Isolate network traffic between the cluster and Azure Storage by creating a VNet service endpoint for Storage. 
+
+![](./_images/hdinsight-service-endpoint.png)
+
+Depending on the security requirements, you can also lock down access to the serving layer, which stores the output from the batch processing jobs. In this diagram, Cosmso DB is used as the analytical data store. Users view the data through Power BI from an on-premises network that is connected to Azure through an ExpressRoute circuit. Or you can connect to the [Power BI SaaS application](https://docs.microsoft.com/en-us/power-bi/service-admin-power-bi-expressroute) through ExpressRoute.
+
+### Hot path
+
+Currently, Stream Analytics does not support deploying into a virtual network. However, you can provide some degree of isolation by restricting Cosmos DB to allow connections only from Azure cloud services. For more information, see [Azure Cosmos DB firewall support](https://docs.microsoft.com/en-us/azure/cosmos-db/firewall-support).
+
+The point of this section is not that you must always deploy every security countermeasure described here. Instead, you should evaluate your security requirements based on your particular scenario. For more information about network security in Azure, see 
+[Microsoft cloud services and network security](https://docs.microsoft.com/en-us/azure/best-practices-network-security).
