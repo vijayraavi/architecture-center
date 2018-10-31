@@ -25,6 +25,10 @@
         href: guide/architecture-styles/big-data.md
       - name: Big compute
         href: guide/architecture-styles/big-compute.md
+    - name: Design principles for cloud applications
+      href: guide/design-principles/index.md
+    - name: Pillars of software quality
+      href: guide/pillars.md
     - name: Choosing a compute service
       items:
       - name: Overview
@@ -39,32 +43,6 @@
         href: guide/technology-choices/data-store-overview.md
       - name: Data store comparison
         href: guide/technology-choices/data-store-comparison.md
-    - name: Design principles
-      items:
-      - name: Overview
-        href: guide/design-principles/index.md
-      - name: Design for self-healing
-        href: guide/design-principles/self-healing.md
-      - name: Make all things redundant
-        href: guide/design-principles/redundancy.md
-      - name: Minimize coordination
-        href: guide/design-principles/minimize-coordination.md
-      - name: Design to scale out
-        href: guide/design-principles/scale-out.md
-      - name: Partition around limits
-        href: guide/design-principles/partition.md
-      - name: Design for operations
-        href: guide/design-principles/design-for-operations.md
-      - name: Use managed services
-        href: guide/design-principles/managed-services.md
-      - name: Use the best data store for the job
-        href: guide/design-principles/use-the-best-data-store.md
-      - name: Design for evolution
-        href: guide/design-principles/design-for-evolution.md
-      - name: Build for the needs of business
-        href: guide/design-principles/build-for-business.md
-    - name: Pillars of software quality
-      href: guide/pillars.md
 
   - name: Data architecture guide
     items:

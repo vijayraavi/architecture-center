@@ -5,15 +5,13 @@ author: MikeWasson
 ms.date: 10/30/2018
 ---
 
-# Ten design principles for Azure applications
+# Ten design principles for cloud applications
 
 Follow these design principles to make your application more scalable, resilient, and manageable. 
 
 ## Design for self healing
 
-**Design your application to be self healing when failures occur**. In a distributed system, failures happen. Hardware can fail. The network can have transient failures. Rarely, an entire region may experience a disruption. 
-
-A resilient application is one that:
+In a distributed system, failures happen. Hardware can fail. The network can have transient failures. Rarely, an entire region may experience a disruption. A resilient application is one that:
 
 - Can detect failures
 - Responds to failures gracefully
@@ -51,7 +49,7 @@ For a structured approach to making your applications self healing, see [Design 
 
 ## Make all things redundant
 
-**Build redundancy into your application, to avoid having single points of failure**. A resilient application routes around failure. Identify the critical paths in your application. Is there redundancy at each point in the path? If a subsystem fails, will the application fail over to something else?
+ resilient application routes around failure. Identify the critical paths in your application. Are there any single points of failure? If a subsystem fails, will the application fail over to something else?
 
 ### Recommendations 
 
@@ -67,11 +65,9 @@ For a structured approach to making your applications self healing, see [Design 
 
 ## Minimize coordination
 
-**Minimize coordination between application services to achieve scalability.** In some cases, nodes must coordinate, for example to preserve ACID guarantees. In this diagram, `Node2` is waiting for `Node1` to release a database lock:
+According to the previous design principle, application services should run on multiple instances, both for resiliency and scalability. But if two instances need to coordinate, it limits the benefits of horizontal scale and creates bottlenecks. For example, in the following diagram, `Node2` is waiting for `Node1` to release a database lock. In this design, adding more nodes causes more contention. In the worst case, nodes may spend most of their time waiting.
 
 ![](./images/database-lock.svg)
-
-Coordination limits the benefits of horizontal scale and creates bottlenecks. As you scale out the application and add more instances, you'll see increased contention. In the worst case, the front-end instances will spend most of their time waiting.
 
 ### Recommendations
 
@@ -101,7 +97,7 @@ However these patterns can be challenging to implement correctly. See [CQRS arch
  
 ## Design to scale out
 
-**Design your application so that it can scale horizontally**. A big advantage of the cloud is elastic scaling &mdash; the ability to use as much capacity as you need, scaling out as load increases, and scaling in when the extra capacity is not needed. Design your application so that it can scale horizontally, adding or removing new instances as demand requires.
+A big advantage of the cloud is elastic scaling &mdash; the ability to use as much capacity as you need, scaling out as load increases, and scaling in when the extra capacity is not needed. Design your application so that it can scale horizontally, adding or removing new instances as demand requires.
 
 ### Recommendations
 
@@ -126,7 +122,7 @@ However these patterns can be challenging to implement correctly. See [CQRS arch
 
 ## Partition around limits
 
-**Use partitioning to work around database, network, and compute limits**. In the cloud, all services have limits in their ability to scale up. Azure service limits are documented in [Azure subscription and service limits, quotas, and constraints][azure-limits]. Limits include number of cores, database size, query throughput, and network throughput. If your system grows sufficiently large, you may hit one or more of these limits. 
+In the cloud, all services have limits in their ability to scale up. Azure service limits are documented in [Azure subscription and service limits, quotas, and constraints][azure-limits]. Limits include number of cores, database size, query throughput, and network throughput. If your system grows sufficiently large, you may hit one or more of these limits. 
 
 Use partitioning to work around these limits. For example:
 
@@ -146,7 +142,7 @@ Use partitioning to work around these limits. For example:
 
 ## Design for operations
 
-**Design so the operations team has the tools they need.** The cloud has dramatically changed the role of the operations team. Critical functions of the operations team include deployment, monitoring, escalation, incident response, and security auditing. 
+The cloud has dramatically changed the role of the operations team. Critical functions of the operations team include deployment, monitoring, escalation, incident response, and security auditing. 
 
 Robust logging and tracing are particularly important in cloud applications. Involve the operations team in design and planning, to ensure the application gives them the data and insight thay need to be successful. See [DevOps Checklist](../../checklist/dev-ops.md).
 
@@ -168,13 +164,13 @@ Robust logging and tracing are particularly important in cloud applications. Inv
 
 ## Use managed services
 
-**When possible, use platform as a service (PaaS) rather than infrastructure as a service (IaaS)**. IaaS is like having a box of parts. You can build anything, but you have to assemble it yourself. Managed services are easier to configure and administer. You don't need to provision VMs, manage patches, and all of the other overhead associated with running software on a VM.
+When possible, use platform as a service (PaaS) rather than infrastructure as a service (IaaS). IaaS is like having a box of parts. You can build anything, but you have to assemble it yourself. Managed services are easier to configure and administer. You don't need to provision VMs, manage patches, and all of the other overhead associated with running software on a VM.
 
 Even if your application is based on IaaS, look for places where it may be natural to incorporate managed services. These include cache, queues, and data storage.
 
 ## Use the best data store for the job
 
-**Pick the storage technology that is the best fit for your data and how it will be used.**  Relational databases are very good at what they do &mdash; providing ACID guarantees for transactions over relational data. But they come with some costs:
+Relational databases are very good at what they do &mdash; providing ACID guarantees for transactions over relational data. But they come with some costs:
 
 - Queries may require expensive joins.
 - Data must be normalized and conform to a predefined schema (schema on write).
@@ -198,7 +194,7 @@ Remember that data includes more than just the persisted application data. It al
  
 ## Design for evolution
 
-**An evolutionary design is key for continuous innovation.** All successful applications change over time, whether to fix bugs, add new features, or make existing systems scale beter. If all the parts of an application are tightly coupled, it becomes very hard to introduce changes into the system. 
+All successful applications change over time, whether to fix bugs, add new features, or make existing systems scale beter. If all the parts of an application are tightly coupled, it becomes very hard to introduce changes into the system. 
 
 This problem is not limited to monolithic applications. An application can be decomposed into services, but still have tight coupling that leaves the system rigid and brittle. 
 
@@ -225,7 +221,7 @@ When services are designed to evolve, teams can innovate and continuously delive
 
 ## Build for the needs of business
 
-**Every design decision must be justified by a business requirement.** This design principle may seem obvious, but it's crucial to keep in mind. Do you anticipate millions of users, or a few thousand? Is an hour of application downtime acceptable? Do you expect large bursts in traffic, or a very predictable workload? Ultimately, every design decision must be justified by a business requirement. 
+Every design decision must be justified by a business requirement. This design principle may seem obvious, but it's crucial to keep in mind. Do you anticipate millions of users, or a few thousand? Is an hour of application downtime acceptable? Do you expect large bursts in traffic, or a very predictable workload? Ultimately, every design decision must be justified by a business requirement. 
 
 ### Recommendations
 
@@ -241,7 +237,7 @@ When services are designed to evolve, teams can innovate and continuously delive
 
 **Plan for growth**. A solution might meet your current needs, in terms of number of users, volume of transactions, data storage, and so forth. However, a robust application can handle growth without major architectural changes. Your business model and business requirements will likely change over time. If a design is too rigid, it becomes hard to evolve the application for new use cases and scenarios. 
 
-**Manage costs**. In a traditional on-premises application, you pay upfront for hardware (CAPEX). In the cloud, you pay for the resources that you consume. Make sure that you understand the pricing model for the services that you consume. See [Azure pricing][pricing] for more information. Also consider your operations costs. In the cloud, you don't have to manage the hardware or other infrastructure, but you still need to manage your applications, including DevOps, incident response, and disaster recovery.
+**Manage costs**. With on-premises applications, you pay upfront for hardware (CAPEX). In the cloud, you pay for the resources that you consume. Make sure that you understand the pricing model for the services that you use. See [Azure pricing][pricing] for more information. Also consider your operations costs. In the cloud, you don't have to manage the hardware or other infrastructure, but you still need to manage your applications, including DevOps, incident response, and disaster recovery.
 
 [autoscaling]: ../../best-practices/auto-scaling.md
 [azure-limits]: /azure/azure-subscription-service-limits
