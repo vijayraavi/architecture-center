@@ -2,7 +2,7 @@
 title: Design principles for Azure applications
 description: Design principles for Azure applications
 author: MikeWasson
-ms.date: 08/30/2018
+ms.date: 10/30/2018
 ---
 
 # Ten design principles for Azure applications
@@ -11,15 +11,11 @@ Follow these design principles to make your application more scalable, resilient
 
 ## Design for self healing
 
-In a distributed system, failures happen. Hardware can fail. The network can have transient failures. Rarely, an entire service or region may experience a disruption.
-
 **Design your application to be self healing when failures occur**. This requires a three-pronged approach:
 
 - Detect failures.
 - Respond to failures gracefully.
 - Log and monitor failures, to give operational insight.
-
-How you respond to a failure may depend on your availability requirements. If you require very high availability, you might automatically fail over to a secondary region during a regional outage. However, that will incur a higher cost than a single-region deployment. 
 
 Don't just consider big events like regional outages, which are generally rare. Focus just as much on handling local, short-lived failures, such as network connectivity failures or failed database connections.
 
@@ -29,27 +25,27 @@ Don't just consider big events like regional outages, which are generally rare. 
 
 **Protect failing remote services**. If a failure is non-transient, then automatic retries can lead to cascading failures, as requests back up. Use the [Circuit Breaker Pattern][circuit-breaker] to fail fast when an operation is likely to fail.  
 
-**Isolate critical resources**. Failures in one subsystem can sometimes cascade, if resources such as threads or sockets are not freed in a timely manner, leading to resource exhaustion. Use the [Bulkhead Pattern][bulkhead] to partition a system into isolated groups, so that a failure in one partition doesn't bring down the entire system.  
+**Isolate critical resources**. Failures in one subsystem can sometimes cascade, if resources such as threads or sockets become exhausted. Use the [Bulkhead Pattern][bulkhead] to partition a system into isolated groups, so that a failure in one partition doesn't bring down the entire system.  
 
 **Perform load leveling**. Applications may experience sudden spikes in traffic that can overwhelm services on the backend. To avoid this, use the [Queue-Based Load Leveling Pattern][load-level] to queue work items to run asynchronously. The queue acts as a buffer that smooths out peaks in the load. 
 
-**Fail over**. If an instance can't be reached, fail over to another instance. For things that are stateless, like a web server, put several instances behind a load balancer or traffic manager. For things that store state, like a database, use replicas and fail over. Depending on the data store and how it replicates, this may require the application to deal with eventual consistency. 
+**Fail over**. If an instance can't be reached, fail over to another instance. For things that are stateless, like a web server, put several instances behind a load balancer. For things that store state, like a database, use replicas and fail over. 
 
-**Compensate failed transactions**. In general, avoid distributed transactions, as they require coordination across services and resources. Instead, compose an operation from smaller individual transactions. If the operation fails midway through, use [Compensating Transactions][compensating-transactions] to undo any step that already completed. 
+**Compensate failed transactions**. Avoid distributed transactions, as they require coordination across services and resources. Instead, compose an operation from smaller individual transactions. If an operation fails, use [Compensating Transactions][compensating-transactions] to undo any steps that already completed. 
 
-**Checkpoint long-running transactions**. Checkpoints can provide resiliency if a long-running operation fails. When the operation restarts (for example, it is picked up by another VM), it can be resumed from the last checkpoint.
+**Checkpoint long-running transactions**. Checkpoints can provide resiliency if a long-running operation fails. When the operation restarts, it can be resumed from the last checkpoint.
 
-**Degrade gracefully**. Sometimes you can't work around a problem, but you can provide reduced functionality that is still useful. Consider an application that shows a catalog of books. If the application can't retrieve the thumbnail image for the cover, it might show a placeholder image. Entire subsystems might be noncritical for the application. For example, in an e-commerce site, showing product recommendations is probably less critical than processing orders.
+**Degrade gracefully**. Sometimes you can't work around a problem, but you can provide reduced functionality that is still useful. Entire subsystems might be noncritical for the application. For example, in an e-commerce site, product recommendations are probably less critical than order processing.
 
-**Throttle clients**. Sometimes a small number of users create excessive load, which can reduce your application's availability for other users. In this situation, throttle the client for a certain period of time. See [Throttling Pattern][throttle].
+**Throttle clients**. Sometimes a small number of users create excessive load, which can reduce your application's availability for other users. In this situation, [throttle][throttle] the client for a certain period of time. 
 
-**Block bad actors**. Just because you throttle a client, it doesn't mean client was acting maliciously. It just means the client exceeded their service quota. But if a client consistently exceeds their quota or otherwise behaves badly, you might block them. Define an out-of-band process for user to request getting unblocked.
+**Block bad actors**. If a client consistently exceeds their quota or otherwise behaves badly, you might block them. Define an out-of-band process for user to request getting unblocked.
 
-**Use leader election**. When you need to coordinate a task, use [Leader Election][leader-election] to select a coordinator. That way, the coordinator is not a single point of failure. If the coordinator fails, a new one is selected. Rather than implement a leader election algorithm from scratch, consider an off-the-shelf solution such as Zookeeper.  
+**Use leader election**. When you need to coordinate a task, use [Leader Election][leader-election] to select a coordinator, so the coordinator is not a single point of failure. Rather than implement a leader election algorithm from scratch, consider an off-the-shelf solution such as Zookeeper.  
 
 **Test with fault injection**. All too often, the success path is well tested but not the failure path. A system could run in production for a long time before a failure path is exercised. Use fault injection to test the resiliency of the system to failures, either by triggering actual failures or by simulating them. 
 
-**Embrace chaos engineering**. Chaos engineering extends the notion of fault injection, by randomly injecting failures or abnormal conditions into production instances. 
+**Embrace chaos engineering**. Chaos engineering extends the idea of fault injection, by randomly injecting failures or abnormal conditions into production instances. 
 
 For a structured approach to making your applications self healing, see [Design resilient applications for Azure][resiliency-overview].  
 
@@ -59,49 +55,29 @@ For a structured approach to making your applications self healing, see [Design 
 
 ### Recommendations 
 
-**Consider business requirements**. The amount of redundancy built into a system can affect both cost and complexity. Your architecture should be informed by your business requirements, such as recovery time objective (RTO). For example, a multi-region deployment is more expensive than a single-region deployment, and is more complicated to manage. You will need operational procedures to handle failover and failback. The additional cost and complexity might be justified for some business scenarios and not others.
+**Consider business requirements**. The amount of redundancy built into a system can affect both cost and complexity. Your architecture should be informed by your business requirements, such as recovery time objective (RTO). 
 
-**Place VMs behind a load balancer**. Don't use a single VM for mission-critical workloads. Instead, place multiple VMs behind a load balancer. If any VM becomes unavailable, the load balancer distributes traffic to the remaining healthy VMs. To learn how to deploy this configuration, see [Multiple VMs for scalability and availability][multi-vm-blueprint].
+**Place VMs behind a load balancer**. Don't use a single VM for mission-critical workloads. Instead deploy two or more VMs behind a load balancer. 
 
-![](./images/load-balancing.svg)
+**Replicate databases**. Azure SQL Database and Cosmos DB automatically replicate the data within a region, and you can enable geo-replication across regions. If you are using an IaaS database solution, choose one that supports replication and failover. 
 
-**Replicate databases**. Azure SQL Database and Cosmos DB automatically replicate the data within a region, and you can enable geo-replication across regions. If you are using an IaaS database solution, choose one that supports replication and failover, such as [SQL Server Always On Availability Groups][sql-always-on]. 
+**Partition for availability**. Database partitioning can improve availability. If one shard goes down, the other shards can still be reached. A failure in one shard will only disrupt a subset of the total transactions. 
 
-**Enable geo-replication**. Geo-replication for [Azure SQL Database][sql-geo-replication] and [Cosmos DB][cosmosdb-geo-replication] creates secondary readable replicas of your data in one or more secondary regions. In the event of an outage, the database can fail over to the secondary region for writes.
-
-**Partition for availability**. Database partitioning is often used to improve scalability, but it can also improve availability. If one shard goes down, the other shards can still be reached. A failure in one shard will only disrupt a subset of the total transactions. 
-
-**Deploy to more than one region**. For the highest availability, deploy the application to more than one region. That way, in the rare case when a problem affects an entire region, the application can fail over to another region. The following diagram shows a multi-region application that uses Azure Traffic Manager to handle failover.
-
-![](images/failover.svg)
-
-**Synchronize front and backend failover**. Use Azure Traffic Manager to fail over the front end. If the front end becomes unreachable in one region, Traffic Manager will route new requests to the secondary region. Depending on your database solution, you may need to coordinate failing over the database. 
-
-**Use automatic failover but manual failback**. Use Traffic Manager for automatic failover, but not for automatic failback. Automatic failback carries a risk that you might switch to the primary region before the region is completely healthy. Instead, verify that all application subsystems are healthy before manually failing back. Also, depending on the database, you might need to check data consistency before failing back.
-
-**Include redundancy for Traffic Manager**. Traffic Manager is a possible failure point. Review the Traffic Manager SLA, and determine whether using Traffic Manager alone meets your business requirements for high availability. If not, consider adding another traffic management solution as a failback. If the Azure Traffic Manager service fails, change your CNAME records in DNS to point to the other traffic management service.
-
+**Deploy to more than one region**. For the highest availability, deploy the application to more than one region. In the rare case that a problem affects an entire region, the application can fail over to another region. 
 
 ## Minimize coordination
 
-**Minimize coordination between application services to achieve scalability.** Most cloud applications consist of multiple application services &mdash; web front ends, databases, business processes, reporting and analysis, and so on. To achieve scalability and reliability, each of those services should run on multiple instances. 
+**Minimize coordination between application services to achieve scalability.** Most cloud applications consist of multiple application services &mdash; web front ends, databases, business processes, reporting and analysis, and so on. 
 
 What happens when two instances try to perform concurrent operations that affect some shared state? In some cases, there must be coordination across nodes, for example to preserve ACID guarantees. In this diagram, `Node2` is waiting for `Node1` to release a database lock:
 
 ![](./images/database-lock.svg)
 
-Coordination limits the benefits of horizontal scale and creates bottlenecks. In this example, as you scale out the application and add more instances, you'll see increased lock contention. In the worst case, the front-end instances will spend most of their time waiting on locks.
-
-"Exactly once" semantics are another frequent source of coordination. For example, an order must be processed exactly once. Two workers are listening for new orders. `Worker1` picks up an order for processing. The application must ensure that `Worker2` doesn't duplicate the work, but also if `Worker1` 
-crashes, the order isn't dropped.
-
-![](./images/coordination.svg)
-
-You can use a pattern such as [Scheduler Agent Supervisor][sas-pattern] to coordinate between the workers, but in this case a better approach might be to partition the work. Each worker is assigned a certain range of orders (say, by billing region). If a worker crashes, a new instance picks up where the previous instance left off, but multiple instances aren't contending.
+Coordination limits the benefits of horizontal scale and creates bottlenecks. As you scale out the application and add more instances, you'll see increased contention. In the worst case, the front-end instances will spend most of their time waiting.
 
 ### Recommendations
 
-**Embrace eventual consistency**. When data is distributed, it takes coordination to enforce strong consistency guarantees. For example, suppose an operation updates two databases. Instead of putting it into a single transaction scope, it's better if the system can accommodate eventual consistency, perhaps by using the [Compensating Transaction][compensating-transaction] pattern to logically roll back after a failure.
+**Embrace eventual consistency**. When data is distributed, strong consistency can only be achieve by coordinating across nodes. Often it's better if the system can accommodate eventual consistency. Use the [Compensating Transaction][compensating-transaction] pattern to logically roll back after a failure.
 
 **Use domain events to synchronize state**. A [domain event][domain-event] is an event that records when something happens that has significance within the domain. Interested services can listen for the event, rather than using a global transaction to coordinate across multiple services. If this approach is used, the system must tolerate eventual consistency (see previous item). 
 
@@ -111,13 +87,13 @@ You can use a pattern such as [Scheduler Agent Supervisor][sas-pattern] to coord
 
 - In the [Event Sourcing pattern][event-sourcing], state changes are recorded as a series of events to an append-only data store. Appending an event to the stream is an atomic operation, requiring minimal locking. 
 
-These two patterns complement each other. If the write-only store in CQRS uses event sourcing, the read-only store can listen for the same events to create a readable snapshot of the current state, optimized for queries. Before adopting CQRS or event sourcing, however, be aware of the challenges of this approach. For more information, see [CQRS architecture style][cqrs-style].
+However these patterns can be challenging to implement correctly. See [CQRS architecture style][cqrs-style].
 
 **Partition data**.  Avoid putting all of your data into one data schema that is shared across many application services. A microservices architecture enforces this principle by making each service responsible for its own data store. Within a single database, partitioning the data into shards can improve concurrency, because a service writing to one shard does not affect a service writing to a different shard.
 
-**Design idempotent operations**. When possible, design operations to be idempotent. That way, they can be handled using at-least-once semantics. For example, you can put work items on a queue. If a worker crashes in the middle of an operation, another worker simply picks up the work item.
+**Design idempotent operations**. When possible, design operations to be idempotent. That way, they can be handled using at-least-once semantics. For example, put work items on a queue. If a worker crashes in the middle of an operation, another worker simply picks up the item.
 
-**Use asynchronous parallel processing**. If an operation requires multiple steps that are performed asynchronously (such as remote service calls), you might be able to call them in parallel, and then aggregate the results. This approach assumes that each step does not depend on the results of the previous step.	
+**Use asynchronous parallel processing**. If an operation requires multiple steps that are performed asynchronously (such as remote service calls), you might be able to call them in parallel and aggregate the results.	
 
 **Use optimistic concurrency when possible**. Pessimistic concurrency control uses database locks to prevent conflicts. This can cause poor performance and reduce availability. With optimistic concurrency control, each transaction modifies a copy or snapshot of the data. When the transaction is committed, the database engine validates the transaction and rejects any transactions that would affect database consistency. 
 
@@ -125,28 +101,27 @@ Azure SQL Database and SQL Server support optimistic concurrency through [snapsh
 
 **Consider MapReduce or other parallel, distributed algorithms**. Depending on the data and type of work to be performed, you may be able to split the work into independent tasks that can be performed by multiple nodes working in parallel. See [Big compute architecture style][big-compute].
 
-**Use leader election for coordination**. In cases where you need to coordinate operations, make sure the coordinator does not become a single point of failure in the application. Using the [Leader Election pattern][leader-election], one instance is the leader at any time, and acts as the coordinator. If the leader fails, a new instance is elected to be the leader. 
+**Use leader election for coordination**. If you do need to coordinate operations, make sure the coordinator does not become a single point of failure. Use the [Leader Election pattern][leader-election]. If the leader fails, a new instance is elected to be the leader.
  
-
 ## Design to scale out
 
-**Design your application so that it can scale horizontally**. A primary advantage of the cloud is elastic scaling &mdash; the ability to use as much capacity as you need, scaling out as load increases, and scaling in when the extra capacity is not needed. Design your application so that it can scale horizontally, adding or removing new instances as demand requires.
+**Design your application so that it can scale horizontally**. A big advantage of the cloud is elastic scaling &mdash; the ability to use as much capacity as you need, scaling out as load increases, and scaling in when the extra capacity is not needed. Design your application so that it can scale horizontally, adding or removing new instances as demand requires.
 
 ### Recommendations
 
-**Avoid instance stickiness**. Stickiness, or *session affinity*, is when requests from the same client are always routed to the same server. Stickiness limits the application's ability to scale out. For example, traffic from a high-volume user will not be distributed across instances. Causes of stickiness include storing session state in memory, and using machine-specific keys for encryption. Make sure that any instance can handle any request. 
+**Avoid instance stickiness**. Stickiness, or *session affinity*, is when requests from the same client are always routed to the same server. Stickiness limits the application's ability to scale out. Make sure that any instance can handle any request.
 
-**Identify bottlenecks**. Scaling out isn't a magic fix for every performance issue. For example, if your backend database is the bottleneck, it won't help to add more web servers. Identify and resolve the bottlenecks in the system first, before throwing more instances at the problem. Stateful parts of the system are the most likely cause of bottlenecks. 
+**Identify bottlenecks**. Scaling out isn't a magic fix for every performance issue. If your backend database is the bottleneck, it won't help to add more web servers. Identify and resolve the bottlenecks in the system first, before throwing more instances at the problem. Stateful parts of the system are the most likely cause of bottlenecks. 
 
 **Decompose workloads by scalability requirements.**  Applications often consist of multiple workloads, with different requirements for scaling. For example, an application might have a public-facing site and a separate administration site. The public site may experience sudden surges in traffic, while the administration site has a smaller, more predictable load. 
 
-**Offload resource-intensive tasks.** Tasks that require a lot of CPU or I/O resources should be moved to [background jobs][background-jobs] when possible, to minimize the load on the front end that is handling user requests.
+**Offload resource-intensive tasks.** Move tasks that require a lot of CPU or I/O resources to [background jobs][background-jobs] when possible, to minimize the load on the front end that handles user requests.
 
-**Use built-in autoscaling features**. Many Azure compute services have built-in support for autoscaling. If the application has a predictable, regular workload, scale out on a schedule. For example, scale out during business hours. Otherwise, if the workload is not predictable, use performance metrics such as CPU or request queue length to trigger autoscaling. For autoscaling best practices, see [Autoscaling][autoscaling].
+**Use built-in autoscaling features**. Many Azure services have built-in support for autoscaling. If the application has a predictable, regular workload, scale out on a schedule. Otherwise, performance metrics such as CPU or request queue length to trigger autoscaling. See [Autoscaling best practices][autoscaling].
 
 **Consider aggressive autoscaling for critical workloads**. For critical workloads, you want to keep ahead of demand. It's better to add new instances quickly under heavy load to handle the additional traffic, and then gradually scale back.
 
-**Design for scale in**.  Remember that with elastic scale, the application will have periods of scale in, when instances get removed. The application must gracefully handle instances being removed. Here are some ways to handle scalein:
+**Design for scale in**.  With elastic scale, the application will have periods of scale in, when instances get removed. The application must gracefully handle instances being removed:
 
 - Listen for shutdown events (when available) and shut down cleanly. 
 - Clients/consumers of a service should support transient fault handling and retry. 
