@@ -168,16 +168,7 @@ Robust logging and tracing are particularly important in cloud applications. Inv
 
 ## Use managed services
 
-**When possible, use platform as a service (PaaS) rather than infrastructure as a service (IaaS)**. IaaS is like having a box of parts. You can build anything, but you have to assemble it yourself. Managed services are easier to configure and administer. You don't need to provision VMs, set up VNets, manage patches and updates, and all of the other overhead associated with running software on a VM.
-
-| Instead of running... | Consider using... |
-|-----------------------|-------------|
-| Active Directory | Azure Active Directory Domain Services |
-| Kafka | Event Hubs |
-| IIS | App Service |
-| MongoDB | Cosmos DB |
-| Redis | Azure Redis Cache |
-| SQL Server | Azure SQL Database |
+**When possible, use platform as a service (PaaS) rather than infrastructure as a service (IaaS)**. IaaS is like having a box of parts. You can build anything, but you have to assemble it yourself. Managed services are easier to configure and administer. You don't need to provision VMs, manage patches, and all of the other overhead associated with running software on a VM.
 
 Even if your application is based on IaaS, look for places where it may be natural to incorporate managed services. These include cache, queues, and data storage.
 
@@ -199,11 +190,11 @@ Remember that data includes more than just the persisted application data. It al
 
 **Prefer availability over (strong) consistency**. The CAP theorem implies that a distributed system must make trade-offs between availability and consistency. Often, you can achieve higher availability by adopting an eventual consistency model. 
 
-**Consider the skill set of the development team**. There are advantages to using polyglot persistence, but don't go overboard. Adopting a new data storage technology requires a new set of skills. The development team must understand how to get the most out of the technology. They must understand appropriate usage patterns, how to optimize queries, tune for performance, and so on. Factor this in when considering storage technologies. 
+**Consider the skill set of the development team**. There are advantages to using polyglot persistence, but don't go overboard. Adopting a new data storage technology requires a new set of skills. The development team must understand how to get the most out of the technology. They must understand appropriate usage patterns, how to optimize queries, tune for performance, and so on.  
 
 **Use compensating transactions**. A side effect of polyglot persistence is that a single transaction might write data to multiple stores. If something fails, use compensating transactions to undo any steps that already completed.
 
-**Look at bounded contexts**. *Bounded context* is a term from domain driven design. The bounded contexts in your system are a natural place to consider polyglot persistence. For example, "products" may appear in both the Product Catalog context and the Product Inventory context, but it's very likely that these two contexts have different requirements for storing and querying products.
+**Look at bounded contexts**. *Bounded context* is a term from domain driven design. The bounded contexts in your system are a natural place to consider polyglot persistence. For example, "products" may appear in both the Catalog context and the Inventory context, but it's very likely that these contexts have different requirements for storing and querying products.
  
 ## Design for evolution
 
@@ -221,7 +212,7 @@ When services are designed to evolve, teams can innovate and continuously delive
 
 **Use asynchronous messaging**. Asynchronous messaging decouples the message producer from the consumer. The producer does not depend on the consumer responding to the message or taking any particular action. With a pub/sub architecture, the producer may not even know who is consuming the message. New services can easily consume the messages without any modifications to the producer.
 
-**Expose open interfaces**. Avoid creating custom translation layers that sit between services. Instead, a service should expose an API with a well-defined contract. The API should be versioned, so that it can evolve while maintaining backward compatibility. That way, you can update a service without coordinating updates to all of the upstream services that depend on it. 
+**Expose open interfaces**. Avoid creating custom translation layers that sit between services. Instead, a service should expose an API with a well-defined contract. The API should be versioned, so that it can evolve while maintaining backward compatibility. That way, you can update a service without coordinating updates to all of the upstream services that depend on it.
 
 **Design and test against service contracts**. When services expose well-defined APIs, you can develop and test against those APIs. You can develop and test a service by mocking its dependent services. Of course, you would still perform integration tests and load tests with the real services before deploying.
 
@@ -244,50 +235,34 @@ When services are designed to evolve, teams can innovate and continuously delive
 
 **Model the application around the business domain**. Start by analyzing the business requirements. Use these requirements to model the application. Consider using a domain-driven design (DDD) approach to create [domain models][domain-model] that reflect the business processes and use cases. 
 
-**Capture both functional and nonfunctional requirements**. Functional requirements let you judge whether the application does the right thing. Nonfunctional requirements let you judge whether the application does those things *well*. In particular, make sure that you understand your requirements for scalability, availability, and latency. These requirements will influence design decisions and choice of technology.
+**Capture both functional and nonfunctional requirements**. Functional requirements let you judge whether the application does the right thing. Nonfunctional requirements let you judge whether the application does those things *well*. Make sure that you understand your requirements for scalability, availability, and latency. These requirements will influence design decisions and choice of technology.
 
 **Decompose by workload**. The term "workload" in this context means a discrete capability or computing task, which can be logically separated from other tasks. Different workloads may have different requirements for availability, scalability, data consistency, and disaster recovery. 
 
-**Plan for growth**. A solution might meet your current needs, in terms of number of users, volume of transactions, data storage, and so forth. However, a robust application can handle growth without major architectural changes. Also consider that your business model and business requirements will likely change over time. If an application's service model and data models are too rigid, it becomes hard to evolve the application for new use cases and scenarios. 
+**Plan for growth**. A solution might meet your current needs, in terms of number of users, volume of transactions, data storage, and so forth. However, a robust application can handle growth without major architectural changes. Your business model and business requirements will likely change over time. If a design is too rigid, it becomes hard to evolve the application for new use cases and scenarios. 
 
 **Manage costs**. In a traditional on-premises application, you pay upfront for hardware (CAPEX). In the cloud, you pay for the resources that you consume. Make sure that you understand the pricing model for the services that you consume. See [Azure pricing][pricing] for more information. Also consider your operations costs. In the cloud, you don't have to manage the hardware or other infrastructure, but you still need to manage your applications, including DevOps, incident response, and disaster recovery.
 
-[domain-model]: https://martinfowler.com/eaaCatalog/domainModel.html
-[pricing]: https://azure.microsoft.com/pricing/
-
-[monitoring]: ../../best-practices/monitoring.md
+[autoscaling]: ../../best-practices/auto-scaling.md
+[azure-limits]: /azure/azure-subscription-service-limits
+[background-jobs]: ../../best-practices/background-jobs.md
 [big-compute]: ../architecture-styles/big-compute.md
-[compensating-transaction]: ../../patterns/compensating-transaction.md
-[cqrs-style]: ../architecture-styles/cqrs.md
+[bulkhead]: ../../patterns/bulkhead.md
+[circuit-breaker]: ../../patterns/circuit-breaker.md
 [cqrs-pattern]: ../../patterns/cqrs.md
-[cosmosdb-faq]: /azure/cosmos-db/faq
+[cqrs-style]: ../architecture-styles/cqrs.md
+[compensating-transaction]: ../../patterns/compensating-transaction.md
+[data-partitioning-guidance]: ../../best-practices/data-partitioning.md
+[data-store-overview]: ../technology-choices/data-store-overview.md
 [domain-event]: https://martinfowler.com/eaaDev/DomainEvent.html
+[domain-model]: https://martinfowler.com/eaaCatalog/domainModel.html
 [event-sourcing]: ../../patterns/event-sourcing.md
 [leader-election]: ../../patterns/leader-election.md
-[sas-pattern]: ../../patterns/scheduler-agent-supervisor.md
-[sql-snapshot-isolation]: /sql/t-sql/statements/set-transaction-isolation-level-transact-sql
-[storage-concurrency]: https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/
-[azure-limits]: /azure/azure-subscription-service-limits
-[data-partitioning-guidance]: ../../best-practices/data-partitioning.md
-[sharding]: ../../patterns/sharding.md
-[multi-vm-blueprint]: ../../reference-architectures/virtual-machines-windows/multi-vm.md
-
-[cassandra]: https://cassandra.apache.org/
-[cosmosdb-geo-replication]: /azure/cosmos-db/distribute-data-globally
-[sql-always-on]: https://msdn.microsoft.com/library/hh510230.aspx
-[sql-geo-replication]: /azure/sql-database/sql-database-geo-replication-overview
-
-[autoscaling]: ../../best-practices/auto-scaling.md
-[background-jobs]: ../../best-practices/background-jobs.md
-[pipes-filters-pattern]: ../../patterns/pipes-and-filters.md
-
-[circuit-breaker]: ../../patterns/circuit-breaker.md
-[compensating-transactions]: ../../patterns/compensating-transaction.md
-[leader-election]: ../../patterns/leader-election.md
 [load-level]: ../../patterns/queue-based-load-leveling.md
+[monitoring]: ../../best-practices/monitoring.md
+[pipes-filters-pattern]: ../../patterns/pipes-and-filters.md
+[pricing]: https://azure.microsoft.com/pricing/
 [resiliency-overview]: ../../resiliency/index.md
 [retry]: ../../patterns/retry.md
+[sharding]: ../../patterns/sharding.md
 [throttle]: ../../patterns/throttling.md
-[transient-fault-handling]: ../../best-practices/transient-faults.md
-[data-store-overview]: ../technology-choices/data-store-overview.md
-[bulkhead]: ../../patterns/bulkhead.md
