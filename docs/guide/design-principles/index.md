@@ -11,19 +11,19 @@ Follow these design principles to make your application more scalable, resilient
 
 ## Design for self healing
 
-**Design your application to be self healing when failures occur**. This requires a three-pronged approach:
+**Design your application to be self healing when failures occur**. In a distributed system, failures happen. Hardware can fail. The network can have transient failures. Rarely, an entire region may experience a disruption. 
 
-- Detect failures.
-- Respond to failures gracefully.
-- Log and monitor failures, to give operational insight.
+A resilient application is one that:
 
-Don't just consider big events like regional outages, which are generally rare. Focus just as much on handling local, short-lived failures, such as network connectivity failures or failed database connections.
+- Can detect failures
+- Responds to failures gracefully
+- Logs and monitor failures, to give operational insight.
 
 ### Recommendations
 
 **Retry failed operations**. Build [retry logic][retry] into your application to handle transient failures. Transient failures include momentary loss of network connectivity, a dropped database connection, or a timeout when a service is busy.
 
-**Protect failing remote services**. If a failure is non-transient, then automatic retries can lead to cascading failures, as requests back up. Use the [Circuit Breaker Pattern][circuit-breaker] to fail fast when an operation is likely to fail.  
+**Protect failing remote services**. If a failure is non-transient, automatic retries can lead to cascading failures, as requests back up. Use the [Circuit Breaker Pattern][circuit-breaker] to fail fast when an operation is likely to fail.  
 
 **Isolate critical resources**. Failures in one subsystem can sometimes cascade, if resources such as threads or sockets become exhausted. Use the [Bulkhead Pattern][bulkhead] to partition a system into isolated groups, so that a failure in one partition doesn't bring down the entire system.  
 
@@ -67,9 +67,7 @@ For a structured approach to making your applications self healing, see [Design 
 
 ## Minimize coordination
 
-**Minimize coordination between application services to achieve scalability.** Most cloud applications consist of multiple application services &mdash; web front ends, databases, business processes, reporting and analysis, and so on. 
-
-What happens when two instances try to perform concurrent operations that affect some shared state? In some cases, there must be coordination across nodes, for example to preserve ACID guarantees. In this diagram, `Node2` is waiting for `Node1` to release a database lock:
+**Minimize coordination between application services to achieve scalability.** In some cases, nodes must coordinate, for example to preserve ACID guarantees. In this diagram, `Node2` is waiting for `Node1` to release a database lock:
 
 ![](./images/database-lock.svg)
 
@@ -77,17 +75,9 @@ Coordination limits the benefits of horizontal scale and creates bottlenecks. As
 
 ### Recommendations
 
-**Embrace eventual consistency**. When data is distributed, strong consistency can only be achieve by coordinating across nodes. Often it's better if the system can accommodate eventual consistency. Use the [Compensating Transaction][compensating-transaction] pattern to logically roll back after a failure.
+**Embrace eventual consistency**. To avoid contention, an application shouldn't try to provide strong transactional consistency. While a business operation is being performed, the overall state of the system might be inconsistent, unti the operation has completed and the system becomes consistent again. Use the [Compensating Transaction][compensating-transaction] pattern to logically roll back after a failure.
 
 **Use domain events to synchronize state**. A [domain event][domain-event] is an event that records when something happens that has significance within the domain. Interested services can listen for the event, rather than using a global transaction to coordinate across multiple services. If this approach is used, the system must tolerate eventual consistency (see previous item). 
-
-**Consider patterns such as CQRS and event sourcing**. These two patterns can help to reduce contention between read workloads and write workloads. 
-
-- The [CQRS pattern][cqrs-pattern] separates read operations from write operations. In some implementations, the read data is physically separated from the write data. 
-
-- In the [Event Sourcing pattern][event-sourcing], state changes are recorded as a series of events to an append-only data store. Appending an event to the stream is an atomic operation, requiring minimal locking. 
-
-However these patterns can be challenging to implement correctly. See [CQRS architecture style][cqrs-style].
 
 **Partition data**.  Avoid putting all of your data into one data schema that is shared across many application services. A microservices architecture enforces this principle by making each service responsible for its own data store. Within a single database, partitioning the data into shards can improve concurrency, because a service writing to one shard does not affect a service writing to a different shard.
 
@@ -97,9 +87,15 @@ However these patterns can be challenging to implement correctly. See [CQRS arch
 
 **Use optimistic concurrency when possible**. Pessimistic concurrency control uses database locks to prevent conflicts. This can cause poor performance and reduce availability. With optimistic concurrency control, each transaction modifies a copy or snapshot of the data. When the transaction is committed, the database engine validates the transaction and rejects any transactions that would affect database consistency. 
 
-Azure SQL Database and SQL Server support optimistic concurrency through [snapshot isolation][sql-snapshot-isolation]. Some Azure storage services support optimistic concurrency through the use of Etags, including [Azure Cosmos DB][cosmosdb-faq] and [Azure Storage][storage-concurrency].
-
 **Consider MapReduce or other parallel, distributed algorithms**. Depending on the data and type of work to be performed, you may be able to split the work into independent tasks that can be performed by multiple nodes working in parallel. See [Big compute architecture style][big-compute].
+
+**Consider patterns such as CQRS and event sourcing**. These two patterns can help to reduce contention between read workloads and write workloads. 
+
+- The [CQRS pattern][cqrs-pattern] separates read operations from write operations. In some implementations, the read data is physically separated from the write data. 
+
+- In the [Event Sourcing pattern][event-sourcing], state changes are recorded as a series of events to an append-only data store. Appending an event to the stream is an atomic operation, requiring minimal locking. 
+
+However these patterns can be challenging to implement correctly. See [CQRS architecture style][cqrs-style].
 
 **Use leader election for coordination**. If you do need to coordinate operations, make sure the coordinator does not become a single point of failure. Use the [Leader Election pattern][leader-election]. If the leader fails, a new instance is elected to be the leader.
  
@@ -130,25 +126,13 @@ Azure SQL Database and SQL Server support optimistic concurrency through [snapsh
 
 ## Partition around limits
 
-**Use partitioning to work around database, network, and compute limits**. In the cloud, all services have limits in their ability to scale up. Azure service limits are documented in [Azure subscription and service limits, quotas, and constraints][azure-limits]. Limits include number of cores, database size, query throughput, and network throughput. If your system grows sufficiently large, you may hit one or more of these limits. Use partitioning to work around these limits.
+**Use partitioning to work around database, network, and compute limits**. In the cloud, all services have limits in their ability to scale up. Azure service limits are documented in [Azure subscription and service limits, quotas, and constraints][azure-limits]. Limits include number of cores, database size, query throughput, and network throughput. If your system grows sufficiently large, you may hit one or more of these limits. 
 
-There are many ways to partition a system, such as:
+Use partitioning to work around these limits. For example:
 
-- Partition a database to avoid limits on database size, data I/O, or number of concurrent sessions.
-
+- Partition a database to avoid limits on database size, data I/O, or number of concurrent sessions. See [Data partitioning][data-partitioning-guidance].
 - Partition a queue or message bus to avoid limits on the number of requests or the number of concurrent connections.
-
-- Partition an App Service web app to avoid limits on the number of instances per App Service plan. 
-
-A database can be partitioned *horizontally*, *vertically*, or *functionally*.
-
-- In horizontal partitioning, also called sharding, each partition holds data for a subset of the total data set. The partitions share the same data schema. For example, customers whose names start with A&ndash;M go into one partition, N&ndash;Z into another partition.
-
-- In vertical partitioning, each partition holds a subset of the fields for the items in the data store. For example, put frequently accessed fields in one partition, and less frequently accessed fields in another.
-
-- In functional partitioning, data is partitioned according to how it is used by each bounded context in the system. For example, store invoice data in one partition and product inventory data in another. The schemas are independent.
-
-For more detailed guidance, see [Data partitioning][data-partitioning-guidance].
+- Partition an App Service web app to avoid limits on the number of instances per App Service plan.
 
 ### Recommendations
 
@@ -162,19 +146,13 @@ For more detailed guidance, see [Data partitioning][data-partitioning-guidance].
 
 ## Design for operations
 
-**Design an application so that the operations team has the tools they need.** The cloud has dramatically changed the role of the operations team. They are no longer responsible for managing the hardware and infrastructure that hosts the application.  That said, operations is still a critical part of running a successful cloud application. Some of the important functions of the operations team include:
+**Design so the operations team has the tools they need.** The cloud has dramatically changed the role of the operations team. Critical functions of the operations team include deployment, monitoring, escalation, incident response, and security auditing. 
 
-- Deployment
-- Monitoring
-- Escalation
-- Incident response
-- Security auditing
-
-Robust logging and tracing are particularly important in cloud applications. Involve the operations team in design and planning, to ensure the application gives them the data and insight thay need to be successful.  <!-- to do: Link to DevOps checklist -->
+Robust logging and tracing are particularly important in cloud applications. Involve the operations team in design and planning, to ensure the application gives them the data and insight thay need to be successful. See [DevOps Checklist](../../checklist/dev-ops.md).
 
 ### Recommendations
 
-**Make all things observable**. Once a solution is deployed and running, logs and traces are your primary insight into the system. *Tracing* records a path through the system, and is useful to pinpoint bottlenecks, performance issues, and failure points. *Logging* captures individual events such as application state changes, errors, and exceptions. Log in production, or else you lose insight at the very times when you need it the most.
+**Make all things observable**. Logs and traces are your primary insight into the system. *Tracing* records a path through the system, and is useful to pinpoint bottlenecks, performance issues, and failure points. *Logging* captures individual events such as application state changes, errors, and exceptions. Log in production, or else you lose insight at the very times when you need it the most.
 
 **Instrument for monitoring**. Monitoring gives insight into how well (or poorly) an application is performing, in terms of availability, performance, and system health. For example, monitoring tells you whether you are meeting your SLA. Monitoring happens during the normal operation of the system. It should be as close to real-time as possible, so that the operations staff can react to issues quickly. Ideally, monitoring can help avert problems before they lead to a critical failure. For more information, see [Monitoring and diagnostics][monitoring].
 
@@ -192,72 +170,60 @@ Robust logging and tracing are particularly important in cloud applications. Inv
 
 **When possible, use platform as a service (PaaS) rather than infrastructure as a service (IaaS)**. IaaS is like having a box of parts. You can build anything, but you have to assemble it yourself. Managed services are easier to configure and administer. You don't need to provision VMs, set up VNets, manage patches and updates, and all of the other overhead associated with running software on a VM.
 
-For example, suppose your application needs a message queue. You could set up your own messaging service on a VM, using something like RabbitMQ. But Azure Service Bus already provides reliable messaging as service, and it's simpler to set up. Just create a Service Bus namespace (which can be done as part of a deployment script) and then call Service Bus using the client SDK. 
-
-Of course, your application may have specific requirements that make an IaaS approach more suitable. However, even if your application is based on IaaS, look for places where it may be natural to incorporate managed services. These include cache, queues, and data storage.
-
 | Instead of running... | Consider using... |
 |-----------------------|-------------|
 | Active Directory | Azure Active Directory Domain Services |
-| Elasticsearch | Azure Search |
-| Hadoop | HDInsight |
+| Kafka | Event Hubs |
 | IIS | App Service |
 | MongoDB | Cosmos DB |
 | Redis | Azure Redis Cache |
 | SQL Server | Azure SQL Database |
 
+Even if your application is based on IaaS, look for places where it may be natural to incorporate managed services. These include cache, queues, and data storage.
 
 ## Use the best data store for the job
 
-**Pick the storage technology that is the best fit for your data and how it will be used.** Gone are the days when you would just stick all of your data into a big relational SQL database. Relational databases are very good at what they do &mdash; providing ACID guarantees for transactions over relational data. But they come with some costs:
+**Pick the storage technology that is the best fit for your data and how it will be used.**  Relational databases are very good at what they do &mdash; providing ACID guarantees for transactions over relational data. But they come with some costs:
 
 - Queries may require expensive joins.
 - Data must be normalized and conform to a predefined schema (schema on write).
 - Lock contention may impact performance.
 
-In any large solution, it's likely that a single data store technology won't fill all your needs. Alternatives to relational databases include key/value stores, document databases, search engine databases, time series databases, column family databases, and graph databases. Each has pros and cons, and different types of data fit more naturally into one or another. 
-
-For example, you might store a product catalog in a document database, such as Cosmos DB, which allows for a flexible schema. In that case, each product description is a self-contained document. For queries over the entire catalog, you might index the catalog and store the index in Azure Search. Product inventory might go into a SQL database, because that data requires ACID guarantees.
+Consider other data stores when appropriate. Alternatives include key/value stores, document databases, time series databases, and graph databases. Each has pros and cons, and different types of data fit more naturally into one or another. See [Choose the right data store][data-store-overview].
 
 Remember that data includes more than just the persisted application data. It also includes application logs, events, messages, and caches.
 
 ### Recommendations
 
-**Don't use a relational database for everything**. Consider other data stores when appropriate. See [Choose the right data store][data-store-overview].
+**Embrace polyglot persistence**. In any large solution, it's likely that a single data store technology won't fill all your needs. The use of multiple data stores in a single solution is called *polyglot persistence*.
 
-**Embrace polyglot persistence**. In any large solution, it's likely that a single data store technology won't fill all your needs. 
+**Prefer availability over (strong) consistency**. The CAP theorem implies that a distributed system must make trade-offs between availability and consistency. Often, you can achieve higher availability by adopting an eventual consistency model. 
 
-**Consider the type of data**. For example, put transactional data into SQL, put JSON documents into a document database, put telemetry data into a time series data base, put application logs in Elasticsearch, and put blobs in Azure Blob Storage.
+**Consider the skill set of the development team**. There are advantages to using polyglot persistence, but don't go overboard. Adopting a new data storage technology requires a new set of skills. The development team must understand how to get the most out of the technology. They must understand appropriate usage patterns, how to optimize queries, tune for performance, and so on. Factor this in when considering storage technologies. 
 
-**Prefer availability over (strong) consistency**. The CAP theorem implies that a distributed system must make trade-offs between availability and consistency. (Network partitions, the other leg of the CAP theorem, can never be completely avoided.) Often, you can achieve higher availability by adopting an *eventual consistency* model. 
+**Use compensating transactions**. A side effect of polyglot persistence is that a single transaction might write data to multiple stores. If something fails, use compensating transactions to undo any steps that already completed.
 
-**Consider the skill set of the development team**. There are advantages to using polyglot persistence, but it's possible to go overboard. Adopting a new data storage technology requires a new set of skills. The development team must understand how to get the most out of the technology. They must understand appropriate usage patterns, how to optimize queries, tune for performance, and so on. Factor this in when considering storage technologies. 
-
-**Use compensating transactions**. A side effect of polyglot persistence is that single transaction might write data to multiple stores. If something fails, use compensating transactions to undo any steps that already completed.
-
-**Look at bounded contexts**. *Bounded context* is a term from domain driven design. A bounded context is an explicit boundary around a domain model, and defines which parts of the domain the model applies to. Ideally, a bounded context maps to a subdomain of the business domain. The bounded contexts in your system are a natural place to consider polyglot persistence. For example, "products" may appear in both the Product Catalog subdomain and the Product Inventory subdomain, but it's very likely that these two subdomains have different requirements for storing, updating, and querying products.
+**Look at bounded contexts**. *Bounded context* is a term from domain driven design. The bounded contexts in your system are a natural place to consider polyglot persistence. For example, "products" may appear in both the Product Catalog context and the Product Inventory context, but it's very likely that these two contexts have different requirements for storing and querying products.
  
 ## Design for evolution
 
-**An evolutionary design is key for continuous innovation.** All successful applications change over time, whether to fix bugs, add new features, bring in new technologies, or make existing systems more scalable and resilient. If all the parts of an application are tightly coupled, it becomes very hard to introduce changes into the system. A change in one part of the application may break another part, or cause changes to ripple through the entire codebase.
+**An evolutionary design is key for continuous innovation.** All successful applications change over time, whether to fix bugs, add new features, or make existing systems scale beter. If all the parts of an application are tightly coupled, it becomes very hard to introduce changes into the system. 
 
-This problem is not limited to monolithic applications. An application can be decomposed into services, but still exhibit the sort of tight coupling that leaves the system rigid and brittle. But when services are designed to evolve, teams can innovate and continuously deliver new features. 
+This problem is not limited to monolithic applications. An application can be decomposed into services, but still have tight coupling that leaves the system rigid and brittle. 
 
-Microservices are becoming a popular way to achieve an evolutionary design, because they address many of the considerations listed here.
+When services are designed to evolve, teams can innovate and continuously deliver new features. Microservices are becoming a popular way to achieve an evolutionary design, because they address many of the considerations listed here.
 
 ### Recommendations
 
-**Enforce high cohesion and loose coupling**. A service is *cohesive* if it provides functionality that logically belongs together. Services are *loosely coupled* if you can change one service without changing the other. High cohesion generally means that changes in one function will require changes in other related functions. If you find that updating a service requires coordinated updates to other services, it may be a sign that your services are not cohesive. One of the goals of domain-driven design (DDD) is to identify those boundaries.
+**Enforce high cohesion and loose coupling**. A service is *cohesive* if it has functionality that logically belongs together. Services are *loosely coupled* if you can change one service without changing the other. If you find that updating a service requires coordinated updates to other services, it may be a sign that your services are not cohesive. One of the goals of domain-driven design (DDD) is to identify these boundaries.
 
 **Encapsulate domain knowledge**. When a client consumes a service, the responsibility for enforcing the business rules of the domain should not fall on the client. Instead, the service should encapsulate all of the domain knowledge that falls under its responsibility. Otherwise, every client has to enforce the business rules, and you end up with domain knowledge spread across different parts of the application. 
 
-**Use asynchronous messaging**. Asynchronous messaging is a way to decouple the message producer from the consumer. The producer does not depend on the consumer responding to the message or taking any particular action. With a pub/sub architecture, the producer may not even know who is consuming the message. New services can easily consume the messages without any modifications to the producer.
+**Use asynchronous messaging**. Asynchronous messaging decouples the message producer from the consumer. The producer does not depend on the consumer responding to the message or taking any particular action. With a pub/sub architecture, the producer may not even know who is consuming the message. New services can easily consume the messages without any modifications to the producer.
 
-**Don't build domain knowledge into a gateway**. Gateways can be useful in a microservices architecture, for things like request routing, protocol translation, load balancing, or authentication. However, the gateway should be restricted to this sort of infrastructure functionality. It should not implement any domain knowledge, to avoid becoming a heavy dependency.
+**Expose open interfaces**. Avoid creating custom translation layers that sit between services. Instead, a service should expose an API with a well-defined contract. The API should be versioned, so that it can evolve while maintaining backward compatibility. That way, you can update a service without coordinating updates to all of the upstream services that depend on it. 
 
-**Expose open interfaces**. Avoid creating custom translation layers that sit between services. Instead, a service should expose an API with a well-defined API contract. The API should be versioned, so that you can evolve the API while maintaining backward compatibility. That way, you can update a service without coordinating updates to all of the upstream services that depend on it. Public facing services should expose a RESTful API over HTTP. Backend services might use an RPC-style messaging protocol for performance reasons. 
-
-**Design and test against service contracts**. When services expose well-defined APIs, you can develop and test against those APIs. That way, you can develop and test an individual service without spinning up all of its dependent services. (Of course, you would still perform integration and load testing against the real services.)
+**Design and test against service contracts**. When services expose well-defined APIs, you can develop and test against those APIs. You can develop and test a service by mocking its dependent services. Of course, you would still perform integration tests and load tests with the real services before deploying.
 
 **Abstract infrastructure away from domain logic**. Don't let domain logic get mixed up with infrastructure-related functionality, such as messaging or persistence. Otherwise, changes in the domain logic will require updates to the infrastructure layers and vice versa. 
 
@@ -268,7 +234,7 @@ Microservices are becoming a popular way to achieve an evolutionary design, beca
 
 ## Build for the needs of business
 
-**Every design decision must be justified by a business requirement.** This design principle may seem obvious, but it's crucial to keep in mind when designing a solution. Do you anticipate millions of users, or a few thousand? Is a one hour application outage acceptable? Do you expect large bursts in traffic, or a very predictable workload? Ultimately, every design decision must be justified by a business requirement. 
+**Every design decision must be justified by a business requirement.** This design principle may seem obvious, but it's crucial to keep in mind. Do you anticipate millions of users, or a few thousand? Is an hour of application downtime acceptable? Do you expect large bursts in traffic, or a very predictable workload? Ultimately, every design decision must be justified by a business requirement. 
 
 ### Recommendations
 
@@ -282,9 +248,9 @@ Microservices are becoming a popular way to achieve an evolutionary design, beca
 
 **Decompose by workload**. The term "workload" in this context means a discrete capability or computing task, which can be logically separated from other tasks. Different workloads may have different requirements for availability, scalability, data consistency, and disaster recovery. 
 
-**Plan for growth**. A solution might meet your current needs, in terms of number of users, volume of transactions, data storage, and so forth. However, a robust application can handle growth without major architectural changes. See [Design to scale out](scale-out.md) and [Partition around limits](partition.md). Also consider that your business model and business requirements will likely change over time. If an application's service model and data models are too rigid, it becomes hard to evolve the application for new use cases and scenarios. See [Design for evolution](design-for-evolution.md).
+**Plan for growth**. A solution might meet your current needs, in terms of number of users, volume of transactions, data storage, and so forth. However, a robust application can handle growth without major architectural changes. Also consider that your business model and business requirements will likely change over time. If an application's service model and data models are too rigid, it becomes hard to evolve the application for new use cases and scenarios. 
 
-**Manage costs**. In a traditional on-premises application, you pay upfront for hardware (CAPEX). In a cloud application, you pay for the resources that you consume. Make sure that you understand the pricing model for the services that you consume. The total cost will include network bandwidth usage, storage, IP addresses, service consumption, and other factors. See [Azure pricing][pricing] for more information. Also consider your operations costs. In the cloud, you don't have to manage the hardware or other infrastructure, but you still need to manage your applications, including DevOps, incident response, disaster recovery, and so forth. 
+**Manage costs**. In a traditional on-premises application, you pay upfront for hardware (CAPEX). In the cloud, you pay for the resources that you consume. Make sure that you understand the pricing model for the services that you consume. See [Azure pricing][pricing] for more information. Also consider your operations costs. In the cloud, you don't have to manage the hardware or other infrastructure, but you still need to manage your applications, including DevOps, incident response, and disaster recovery.
 
 [domain-model]: https://martinfowler.com/eaaCatalog/domainModel.html
 [pricing]: https://azure.microsoft.com/pricing/
