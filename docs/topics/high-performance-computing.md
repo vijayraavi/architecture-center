@@ -6,6 +6,8 @@
 
 ### What problems can HPC Solve?
 
+### How is HPC different on the cloud?
+
 ## Networking
 
 ## Compute
@@ -16,8 +18,16 @@
 
 ## Cloud Bursting
 
+## Cost Management
+
+## Authentication
+
 ## Supported Applications & Partners
 
 ## Remote Visualization
 
 ## Performance Benchmarks
+
+## Customer References & Stories
+
+## Partners & Consultants
