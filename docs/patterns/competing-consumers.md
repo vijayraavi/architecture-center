@@ -11,7 +11,7 @@ pnp.pattern.categories: [messaging]
 
 # Competing Consumers pattern
 
-[!INCLUDE [header](../_includes/header.md)]
+
 
 Enable multiple concurrent consumers to process messages received on the same messaging channel. This enables a system to process multiple messages concurrently to optimize throughput, to improve scalability and availability, and to balance the workload.
 

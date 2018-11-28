@@ -5,7 +5,7 @@ keywords: Azure
 ---
 # Cloud Design Patterns
 
-[!INCLUDE [header](../../_includes/header.md)]
+
 
 These design patterns are useful for building reliable, scalable, secure applications in the cloud.
 

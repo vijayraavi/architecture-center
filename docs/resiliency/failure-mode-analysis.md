@@ -8,7 +8,7 @@ ms.custom: resiliency
 pnp.series.title: Design for Resiliency
 ---
 # Failure mode analysis
-[!INCLUDE [header](../_includes/header.md)]
+
 
 Failure mode analysis (FMA) is a process for building resiliency into a system, by identifying possible failure points in the system. The FMA should be part of the architecture and design phases, so that you can build failure recovery into the system from the beginning.
 

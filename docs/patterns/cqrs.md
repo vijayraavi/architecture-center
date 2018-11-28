@@ -11,7 +11,7 @@ pnp.pattern.categories: [data-management, design-implementation, performance-sca
 
 # Command and Query Responsibility Segregation (CQRS) pattern
 
-[!INCLUDE [header](../_includes/header.md)]
+
 
 Segregate operations that read data from operations that update data by using separate interfaces. This can maximize performance, scalability, and security. Supports the evolution of the system over time through higher flexibility, and prevents update commands from causing merge conflicts at the domain level.
 

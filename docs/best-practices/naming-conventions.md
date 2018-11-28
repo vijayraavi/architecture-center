@@ -8,7 +8,7 @@ pnp.series.title: Best Practices
 ---
 # Naming conventions
 
-[!INCLUDE [header](../_includes/header.md)]
+
 
 This article is a summary of the naming rules and restrictions for Azure resources
 and a baseline set of recommendations for naming conventions.  You can use these recommendations as a starting point for your own conventions specific to your needs.

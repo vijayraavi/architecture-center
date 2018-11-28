@@ -12,7 +12,7 @@ pnp.pattern.categories: [data-management, security]
 
 # Valet Key pattern
 
-[!INCLUDE [header](../_includes/header.md)]
+
 
 Use a token that provides clients with restricted direct access to a specific resource, in order to offload data transfer from the application. This is particularly useful in applications that use cloud-hosted storage systems or queues, and can minimize cost and maximize scalability and performance.
 

@@ -8,7 +8,7 @@ pnp.series.title: Best Practices
 ---
 
 # Autoscaling
-[!INCLUDE [header](../_includes/header.md)]
+
 
 Autoscaling is the process of dynamically allocating resources to match performance requirements. As the volume of work grows, an application may need additional resources to maintain the desired performance levels and satisfy service-level agreements (SLAs). As demand slackens and the additional resources are no longer needed, they can be de-allocated to minimize costs.
 

@@ -11,7 +11,7 @@ pnp.pattern.categories: [resiliency]
 
 # Compensating Transaction pattern
 
-[!INCLUDE [header](../_includes/header.md)]
+
 
 Undo the work performed by a series of steps, which together define an eventually consistent operation, if one or more of the steps fail. Operations that follow the eventual consistency model are commonly found in cloud-hosted applications that implement complex business processes and workflows.
 

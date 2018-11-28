@@ -4,7 +4,7 @@ description: Article on understanding and designing resilient, highly available,
 author: adamglick
 ms.date: 08/18/2016
 ---
-[!INCLUDE [header](../_includes/header.md)]
+
 
 # Azure resiliency technical guidance: Recovery from local failures in Azure
 

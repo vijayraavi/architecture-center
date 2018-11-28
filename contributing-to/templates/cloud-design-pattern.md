@@ -9,7 +9,7 @@ pnp.pattern.categories: Replace this text based on the guidance in Completing th
 
 # Article Title
 
-[!INCLUDE [header](../_includes/header.md)]
+
 
 _Your article can have only one **H1 heading (#)**, which is the article title. The H1 heading is always followed by a succinct descriptive paragraph that informs the reader what the article is about and how it can help them. Do not start the article with a note or tip. Descriptive text always appears in italics. Descriptive text should be deleted or replaced with your text prior to publication._
 

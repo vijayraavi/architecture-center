@@ -11,7 +11,7 @@ pnp.pattern.categories: [data-management, design-implementation, performance-sca
 
 # Static Content Hosting pattern
 
-[!INCLUDE [header](../_includes/header.md)]
+
 
 Deploy static content to a cloud-based storage service that can deliver them directly to the client. This can reduce the need for potentially expensive compute instances.
 
