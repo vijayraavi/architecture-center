@@ -3,6 +3,9 @@ title: High Performance Computing (HPC) on Azure
 description: A guide to building running HPC workloads on Azure
 ms.date: 12/03/2018
 ---
+<---
+Might be too similar to: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/high-performance-computing?WT.mc_id=computeinmanufacturing-docs-ercenk
+-->
 
 # High Performance Computing (HPC) on Azure
 
@@ -50,10 +53,15 @@ Details on popular VM sizes used for HPC and the different capabilities of them
 
 ## Management
 
-- [Microsoft MPI](https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi)
-- Microsoft HPC Pack
-- Azure Batch
+- [Microsoft HPC Pack](https://docs.microsoft.com/en-us/powershell/high-performance-computing/overview?view=hpc16-ps)
+- [Azure Batch](https://docs.microsoft.com/en-us/azure/batch/)
 - Cycle Cloud
+- [Alces Flight](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/alces-flight-limited.alces-flight-compute-solo?tab=overview%3Fwt.mc_id%3Dcomputeinmanufacturing-docs-ercenk)
+
+- https://azure.microsoft.com/en-us/blog/tibco-datasynapse-comes-to-the-azure-marketplace/?WT.mc_id=computeinmanufacturing-docs-ercenk
+- http://www.brightcomputing.com/technology-partners/microsoft
+- https://azure.microsoft.com/en-us/blog/ibm-and-microsoft-azure-support-spectrum-symphony-and-spectrum-lsf/?WT.mc_id=computeinmanufacturing-docs-ercenk
+- https://www.pbspro.org/
 
 ## Cloud Bursting
 
@@ -74,6 +82,9 @@ Details on popular VM sizes used for HPC and the different capabilities of them
 ## Supported Applications & Partners
 
 Logo's of applications & vendors that we have relationships and experience with that link to relevant case studies or materials
+- [StarCCM+](https://azure.microsoft.com/en-us/blog/availability-of-star-ccm-on-microsoft-azure/?WT.mc_id=computeinmanufacturing-docs-ercenk)
+
+- [Microsoft MPI](https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi)
 
 ## Remote Visualization
 
@@ -81,6 +92,7 @@ Logo's of applications & vendors that we have relationships and experience with 
 
 ## Performance Benchmarks
 
+- [Compute Benchmarks](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/compute-benchmark-scores)
 - Benchmarks for performance for various applications
 
 ## Customer References & Stories
