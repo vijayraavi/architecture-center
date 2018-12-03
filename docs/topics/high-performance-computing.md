@@ -1,10 +1,18 @@
-# High Performance Computing
+---
+title: High Performance Computing (HPC) on Azure
+description: A guide to building running HPC workloads on Azure
+layout: LandingPage
+ms.topic: landing-page
+ms.date: 09/28/2018
+---
+
+# High Performance Computing (HPC) on Azure
 
 ## Introduction to HPC
 
-Brief intodruction to HPC to set the context
+Brief introduction to HPC to set the context.
 
-https://www.youtube.com/watch?v=rKURT32faJk
+[!VIDEO https://www.youtube.com/embed/rKURT32faJk]
 
 ### What problems can HPC Solve?
 
