@@ -1,9 +1,7 @@
 ---
 title: High Performance Computing (HPC) on Azure
 description: A guide to building running HPC workloads on Azure
-layout: LandingPage
-ms.topic: landing-page
-ms.date: 09/28/2018
+ms.date: 12/03/2018
 ---
 
 # High Performance Computing (HPC) on Azure
@@ -12,9 +10,9 @@ ms.date: 09/28/2018
 
 Brief introduction to HPC to set the context.
 
-[!VIDEO https://www.youtube.com/embed/rKURT32faJk]
+> [!VIDEO https://www.youtube.com/embed/rKURT32faJk]
 
-### What problems can HPC Solve?
+### Problems solved with High Performance Computing
 
 Many industries:
 
@@ -25,7 +23,7 @@ Many industries:
 - Engineering
 - Weather modeling
 
-### How is HPC different on the cloud?
+### How is HPC different on the cloud
 
 - Dynamic Scaling
 - Pay for only what you use
@@ -52,6 +50,7 @@ Details on popular VM sizes used for HPC and the different capabilities of them
 
 ## Management
 
+- [Microsoft MPI](https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi)
 - Microsoft HPC Pack
 - Azure Batch
 - Cycle Cloud
