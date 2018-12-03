@@ -1,13 +1,12 @@
 ---
 title: High Performance Computing (HPC) on Azure
 description: A guide to building running HPC workloads on Azure
+author: adamboeglin
 ms.date: 12/03/2018
 ---
-<---
-Might be too similar to: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/high-performance-computing?WT.mc_id=computeinmanufacturing-docs-ercenk
--->
-
 # High Performance Computing (HPC) on Azure
+
+This whole page might be too similar to: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/high-performance-computing?WT.mc_id=computeinmanufacturing-docs-ercenk
 
 ## Introduction to HPC
 
