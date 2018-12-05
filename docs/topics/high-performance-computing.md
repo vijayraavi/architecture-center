@@ -27,8 +27,74 @@ Many industries:
 
 ### How is HPC different on the cloud
 
+- [Big Compute Architecture Style](/azure/architecture/guide/architecture-styles/big-compute)
 - Dynamic Scaling
 - Pay for only what you use
+
+### Architecture Guidance
+
+There are a number of different ways to design and implement your HPC architecture on Azure.  The following scenarios outline a few of the common ways HPC solutions are built.
+
+<ul  class="panelContent cardsC">
+<li style="display: flex; flex-direction: column;">
+    <a href="/docs/example-scenario/apps/hpc-saas.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/docs/example-scenario/apps/media/architecture-hpc-saas.png" height="140px" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>A computer-aided engineering service on Azure</h3>
+                        <p>Provide a software-as-a-service (SaaS) platform for computer-aided engineering (CAE) on Azure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+<ul  class="panelContent cardsC">
+<li style="display: flex; flex-direction: column;">
+    <a href="/docs/example-scenario/infrastructure/hpc-cfd.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/docs/example-scenario/infrastructure/media/architecture-hpc-cfd.png" height="140px" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Running computational fluid dynamics (CFD) simulations on Azure</h3>
+                        <p>Execute computational fluid dynamics (CFD) simulations on Azure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+<li style="display: flex; flex-direction: column;">
+    <a href="/docs/example-scenario/infrastructure/video-rendering.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/docs/example-scenario/infrastructure/media/architecture-video-rendering.png" height="140px" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>3D video rendering on Azure</h3>
+                        <p>Run native HPC workloads in Azure using the Azure Batch service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+</ul>
 
 ## Networking
 
@@ -87,7 +153,27 @@ Logo's of applications & vendors that we have relationships and experience with 
 
 ## Remote Visualization
 
-- Options for doing remote vis on Azure
+<ul  class="panelContent cardsC">
+<li style="display: flex; flex-direction: column;">
+    <a href="/docs/example-scenario/infrastructure/linux-vdi-citrix.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/docs/example-scenario/infrastructure/media/azure-citrix-sample-diagram.png" height="140px" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Linux virtual desktops with Citrix</h3>
+                        <p>Build a VDI environment for Linux Desktops using Citrix on Azure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+</ul>
 
 ## Performance Benchmarks
 
