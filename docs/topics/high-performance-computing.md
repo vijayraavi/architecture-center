@@ -43,7 +43,7 @@ There are a number of different ways to design and implement your HPC architectu
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/azure/architecture/example-scenario/apps/media/architecture-hpc-saas.png" height="140px" />
+                            <img src="../example-scenario/apps/media/architecture-hpc-saas.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -55,7 +55,6 @@ There are a number of different ways to design and implement your HPC architectu
         </div>
     </a>
 </li>
-<ul  class="panelContent cardsC">
 <li style="display: flex; flex-direction: column;">
     <a href="/azure/architecture/example-scenario/infrastructure/hpc-cfd" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
@@ -63,7 +62,7 @@ There are a number of different ways to design and implement your HPC architectu
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/azure/architecture/example-scenario/infrastructure/media/architecture-hpc-cfd.png" height="140px" />
+                            <img src="../example-scenario/infrastructure/media/architecture-hpc-cfd.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -82,7 +81,7 @@ There are a number of different ways to design and implement your HPC architectu
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/azure/architecture/example-scenario/infrastructure/media/architecture-video-rendering.png" height="140px" />
+                            <img src="../example-scenario/infrastructure/media/architecture-video-rendering.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -161,7 +160,7 @@ Logo's of applications & vendors that we have relationships and experience with 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src=/azure/architecture/example-scenarioinfrastructure/media/azure-citrix-sample-diagram.png" height="140px" />
+                            <img src="../example-scenario/infrastructure/media/azure-citrix-sample-diagram.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
