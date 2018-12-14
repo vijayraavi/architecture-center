@@ -11,7 +11,7 @@ ms.custom: seodec18
 
 This reference architecture shows an end-to-end [stream processing](/azure/architecture/data-guide/big-data/real-time-processing) pipeline. The pipeline ingests data from two sources, correlates records in the two streams, and calculates a rolling average across a time window. The results are stored for further analysis.
 
-A reference implementation for this architecture is available on [GitHub][github].
+[![GitHub](../../_images/github.png)][github] A reference implementation for this architecture is available on [GitHub][github].
 
 ![Reference architecture for creating a stream processing pipeline with Azure Stream Analytics](./images/stream-processing-asa/stream-processing-asa.png)
 
@@ -211,9 +211,5 @@ Notice that Event Hubs is throttling requests, shown in the upper right panel. A
 Auto-inflate was enabled at about the 06:35 mark. You can see the p drop in throttled requests, as Event Hubs automatically scaled up to 3 throughput units.
 
 Interestingly, this had the side effect of increasing the SU utilization in the Stream Analytics job. By throttling, Event Hubs was artificially reducing the ingestion rate for the Stream Analytics job. It's actually common that resolving one performance bottleneck reveals another. In this case, allocating additional SU for the Stream Analytics job resolved the issue.
-
-## Deploy the solution
-
-To the deploy and run the reference implementation, follow the steps in the [GitHub readme][github].
 
 [github]: https://github.com/mspnp/reference-architectures/tree/master/data/streaming_asa
