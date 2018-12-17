@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Fusion: How can a Digital Estate be inventoried?"
 description: Explanation of the concept a creating an inventory for a digital estate
 author: BrianBlanchard
@@ -8,11 +9,24 @@ ms.date: 10/10/2018
 # Fusion: How can a Digital Estate be inventoried?
 
 Developing an inventory is the first step in [Digital Estate Planning](overview.md). In this process, a list of IT assets that support specific business functions would be collected for later analysis and rationalization. This article assumes that a [bottom up approach to analysis](approach.md) is most appropriate for planning needs.
+=======
+title: Gather inventory data for a digital estate
+titleSuffix: Enterprise Cloud Adoption
+description: How to create an inventory for a digital estate
+author: BrianBlanchard
+ms.date: 12/10/2018
+---
+
+# Enterprise Cloud Adoption: Gather inventory data for a digital estate
+
+Developing an inventory is the first step in [Digital Estate Planning](overview.md). In this process, a list of IT assets that support specific business functions would be collected for later analysis and rationalization. This article assumes that a bottom-up approach to analysis is most appropriate for planning needs. For more information, see [Approaches to digital estate planning](./approach.md).
+>>>>>>> master
 
 ## How can a digital estate be inventoried?
 
 The inventory supporting a digital estate changes depending on the desired Digital Transformation and corresponding Transformation Journey.
 
+<<<<<<< HEAD
 * Operational Transformation: During an operational transformation, it is often advised that the inventory be collected from scanning tools which can create a centralized list of all VMs and servers. Some such tools can also create network mapping and dependencies, which will help define workload alignment. Read more about [infrastructure assessment tools](../migration/plan/infrastructure-assessment-tools.md) to begin creating an inventory.
 * Incremental Transformation: Inventory for an incremental transformation begins with the customer. Mapping the customer experience from start to finish is a good place to begin. Aligning that map to applications, apis, data, and other assets will create a detailed inventory for analysis. More guidance coming with the launch of  the Incremental Transformation Journey (Spring 2019)
 * Disruptive Transformation: Disruptive transformation focuses on the product or service. From there an inventory would include a mapping of the opportunities to disrupt the market & the capabilities needed. More guidance coming with the launch of Disruptive Transformation Journey (Summer 2019)
@@ -28,3 +42,21 @@ Once an inventory is compiled and validated, it can rationalized.
 
 > [!div class="nextstepaction"]
 > [Inventory Rationalization](rationalize.md)
+=======
+- Operational Transformation: During an operational transformation, it is often advised that the inventory be collected from scanning tools which can create a centralized list of all VMs and servers. Some tools can also create network mappings and dependencies, which will help define workload alignment.
+
+- Incremental Transformation: Inventory for an incremental transformation begins with the customer. Mapping the customer experience from start to finish is a good place to begin. Aligning that map to applications, APIs, data, and other assets will create a detailed inventory for analysis.
+
+- Disruptive Transformation: Disruptive transformation focuses on the product or service. From there an inventory would include a mapping of the opportunities to disrupt the market and the capabilities needed.
+
+## Accuracy and completeness of an inventory
+
+An inventory is seldom fully complete in its first iteration. It is highly advised that various members of the Cloud Strategy team align stakeholders and power users to validate the inventory. When possible, additional tools like network and dependency analysis can be used to identify assets that are being sent traffic, but are not in the inventory.
+
+## Next steps
+
+Once an inventory is compiled and validated, it can rationalized. Inventory Rationalization is the next step to digital estate planning.
+
+> [!div class="nextstepaction"]
+> [Rationalize the digital estate](rationalize.md)
+>>>>>>> master

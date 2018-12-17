@@ -3,6 +3,7 @@ title: Running SAP production workloads using an Oracle database on Azure
 description: Run an SAP production deployment in Azure using an Oracle database.
 author: DharmeshBhagat
 ms.date: 9/12/2018
+ms.custom: fasttrack
 ---
 
 # Running SAP production workloads using an Oracle Database on Azure
@@ -15,7 +16,7 @@ This example scenario demonstrates an SAP deployment on Windows or Linux virtual
 
 ## Relevant use cases
 
-Consider this example for the following scenarios:
+Other relevant use cases include:
 
 * Mission-critical workloads running on SAP.
 * Non-critical SAP workloads.

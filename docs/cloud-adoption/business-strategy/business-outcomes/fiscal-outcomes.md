@@ -1,13 +1,21 @@
 ---
+<<<<<<< HEAD
 title: "Fusion: Examples of Fiscal Outcomes"
+=======
+title: "Enterprise Cloud Adoption: Examples of Fiscal Outcomes"
+>>>>>>> master
 description: Examples of Fiscal Outcomes
 author: BrianBlanchard
 ms.date: 10/10/2018
 ---
 
+<<<<<<< HEAD
 # Fusion: Examples of Fiscal Outcomes
 
 As discussed in [Business Outcomes](overview.md), there are several potential business outcomes that can serve as the foundation for any Transformation Journey conversation with the business. In this article we will focus on the most time tested of all business measures: Finance. Understanding the fiscal conversation will help to better articulate the business outcomes that are the target of a business’ Transformation Journey.
+=======
+# Enterprise Cloud Adoption: Examples of Fiscal Outcomes
+>>>>>>> master
 
 At this highest level, Fiscal conversations consist of three rudimentary concepts:
 

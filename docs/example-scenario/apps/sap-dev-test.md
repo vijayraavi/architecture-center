@@ -3,6 +3,7 @@ title: Dev/test environments for SAP workloads on Azure
 description: Build a dev/test environment for SAP workloads.
 author: AndrewDibbins
 ms.date: 7/11/18
+ms.custom: fasttrack
 ---
 
 # Dev/test environments for SAP workloads on Azure
@@ -17,7 +18,7 @@ For production use cases review the SAP reference architectures available below:
 
 ## Relevant use cases
 
-Consider this scenario for the following use cases:
+Other relevant use cases include:
 
 * Non-critical SAP non-productive workloads (sandbox, development, test, quality assurance)
 * Non-critical SAP business workloads

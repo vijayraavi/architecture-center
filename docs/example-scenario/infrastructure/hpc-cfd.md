@@ -3,6 +3,7 @@ title: Running computational fluid dynamics (CFD) simulations on Azure
 description: Execute computational fluid dynamics (CFD) simulations on Azure.
 author: mikewarr
 ms.date: 09/20/2018
+ms.custom: fasttrack
 ---
 
 # Running computational fluid dynamics (CFD) simulations on Azure
@@ -15,7 +16,7 @@ To simplify the creation, management, and optimization of HPC clusters, Azure Cy
 
 ## Relevant use cases
 
-Consider this scenario for these industries where CFD applications could be used:
+Other relevant industries for CFD applications include:
 
 * Aeronautics
 * Automotive

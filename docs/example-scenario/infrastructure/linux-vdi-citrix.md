@@ -2,7 +2,8 @@
 title: Linux virtual desktops with Citrix
 description: Build a VDI environment for Linux Desktops using Citrix on Azure.
 author: miguelangelopereira 
-ms.date: 09/12/2018 
+ms.date: 09/12/2018
+ms.custom: fasttrack
 ---
 
 # Linux Virtual Desktops with Citrix
@@ -91,7 +92,7 @@ For deployment information see the official [Citrix documentation](https://docs.
 
 ## Pricing
 
-- The Citrix XenDestop licenses are not included in Azure service charges.
+- The Citrix XenDesktop licenses are not included in Azure service charges.
 - The Citrix NetScaler license is included in a pay-as-you-go model.
 - Using reserved instances will greatly reduce the compute cost for the solution.
 - The ExpressRoute cost is not included.

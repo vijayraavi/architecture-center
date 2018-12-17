@@ -2,7 +2,7 @@
 title: Authorization in multitenant applications
 description: How to perform authorization in a multitenant application
 author: MikeWasson
-ms:date: 07/21/2017
+ms.date: 07/21/2017
 
 pnp.series.title: Manage Identity in Multitenant Applications
 pnp.series.prev: app-roles
@@ -162,7 +162,7 @@ The application also defines a set of possible operations on surveys:
 * Update
 * Delete
 * Publish
-* Unpublsh
+* Unpublish
 
 The following code creates a list of permissions for a particular user and survey. Notice that this code looks at both the user's app roles, and the owner/contributor fields in the survey.
 

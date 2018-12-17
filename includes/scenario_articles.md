@@ -66,25 +66,6 @@
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
-    <a href="./apps/app-monitoring.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./apps/media/architecture-app-monitoring.png" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Web application monitoring on Azure</h3>
-                        <p>Monitor a web application hosted in Azure App Service.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
     <a href="./apps/decentralized-trust.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
@@ -110,11 +91,11 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./apps/media/architecture-devops-dotnet-webapp.png" height="140px" />
+                            <img src="./apps/media/architecture-devops-dotnet-webapp.svg" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>CI/CD pipeline with Azure DevOps</h3>
+                        <h3>Design a CI/CD pipeline using Azure DevOps</h3>
                         <p>Build and release a .NET app to Azure Web Apps using Azure DevOps.</p>
                     </div>
                 </div>
@@ -209,7 +190,7 @@
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Dev/test enviroments for SAP workloads on Azure</h3>
+                        <h3>Dev/test environments for SAP workloads on Azure</h3>
                         <p>Build a dev/test environment for SAP workloads.</p>
                     </div>
                 </div>
@@ -319,6 +300,25 @@
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
+    <a href="./data/hybrid-etl-with-adf.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="./data/media/architecture-diagram-hybrid-etl-with-adf.png" height="140px" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Hybrid ETL with existing on-premises SSIS and Azure Data Factory</h3>
+                        <p>Hybrid ETL with existing on-premises SQL Server Integration Services (SSIS) deployments and Azure Data Factory</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+<li style="display: flex; flex-direction: column;">
     <a href="./data/realtime-analytics-vehicle-iot.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
@@ -382,6 +382,25 @@
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
+    <a href="./infrastructure/multi-tier-app-disaster-recovery.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="./infrastructure/media/arhitecture-disaster-recovery-multi-tier-app.png" height="140px" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Multi-tier web application built for high availability and disaster recovery on Azure</h3>
+                        <p>Create a multitier web application built for high availability and disaster recovery on Azure using Azure virtual machines, availability sets, availability zones, Azure Site Recovery, and Azure Traffic Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+<li style="display: flex; flex-direction: column;">
     <a href="./infrastructure/regulated-multitier-app.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
@@ -392,7 +411,7 @@
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Secure Windows web application for regulated industries</h3>
+                        <h3>Building secure web apps with Windows virtual machines on Azure</h3>
                         <p>Build a secure, multi-tier web application with Windows Server on Azure using scale sets, Application Gateway, and load balancers.</p>
                     </div>
                 </div>
