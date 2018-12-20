@@ -8,15 +8,17 @@ ms.date: 10/11/2018
 
 The [Migration section](overview.md) of the [Fusion framework](../../overview.md), outlines the processes typically required to migrate a DataCenter to the cloud. This section extends the migration conversation by focusing on the [Execution of actual migration work](overview.md).
 
-## What happens after you have developed a [migration plan & strategy](../plan/overview.md) and [built out an Azure environment for migration](../build/overview.md)?
+## What happens after you have developed a [migration backlog](../plan/migration-backlog.md) and [built out an Azure environment for migration](../../infrastructure/overview.md)?
 
-Now it’s time to start the [migration process](overview.md). In this process, the team will perform the actual migration of apps to the cloud. Unlike the collaborative and problem solving tasks in [Plan](../plan/overview.md) and [Build](../build/overview.md), migration tends to be repetitive & largely turnkey.
+Now it’s time to start the [migration process](overview.md). In this process, the team will perform the actual migration of apps to the cloud. Unlike the collaborative and problem solving tasks when defining the [Digital Estate](../../digital-estate/overview.md) or building the [Core Cloud Infrastructure](../../infrastructure/overview.md), migration tends to be repetitive. Beyond the repetitive aspects, there will likely be testing and tuning efforts that require deep knowledge of the cloud provider. The repetitive nature of this process can sometimes be best addressed by a partner. Additionally, partners may be able to better align deep technical expertise, when problems arise in the repetitive processes.
+
+Partners tend to be very closely aligned with a single cloud vendor, or small number of cloud vendors. To better illustrate partnership options, the remainder of this article assumes Microsoft Azure is the chosen Cloud Provider.
 
 During Plan, Build, or Migrate, a company generally has three execution options:
 
 * Guided self-service: Existing technical team will execute the migration, with help from Microsoft
 * Microsoft FastTrack for Azure: Use the Microsoft FastTrack program for Azure to accelerate migration
-* Solutions partner: Get connected with Microsoft Cloud Solution Partners (CSPs) to accelerate migration
+* Solutions partner: Get connected with Azure Solution Partners or Cloud Solution Providers (CSPs) to accelerate migration
 
 ## Guided Self-Service
 
@@ -24,8 +26,8 @@ If an organization is planning an Azure migration on its own, Microsoft is alway
 
 * Assessment and migration tools: Azure allows you to leverage a wide range of tools to be used in different phases for your cloud transformation, including assessing your existing infrastructure. For more details on the tool, you can refer to the Assess section in the Migration chapter below.
 * [Fusion framework](../../overview.md): This guide presents a structured approach for [migrating to Azure](../overview.md). It is based on proven practices that Microsoft has prepared from different customer engagements. It is organized as a series of steps, from architecture and design to implementation. For each step, supporting guidance will help you with the design of your application architecture.
-* [Cloud design patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/): Azure provides a number of useful cloud design patterns for building reliable, scalable, secure applications in the cloud. Each pattern describes the problem that the pattern addresses, considerations for applying the pattern, and an example based on Azure. Most of the patterns include code samples or snippets that show how to implement the pattern on Azure. However, most of the patterns are relevant to any distributed system, whether hosted on Azure or on other cloud platforms.
-* [Cloud fundamentals](../../../building-blocks/): Fundamentals help teach the basic approaches to implementation of core concepts. This guide helps technicians think about solutions that go beyond a single Azure service.
+* [Cloud design patterns](https://docs.microsoft.com/azure/architecture/patterns/): Azure provides a number of useful cloud design patterns for building reliable, scalable, secure applications in the cloud. Each pattern describes the problem that the pattern addresses, considerations for applying the pattern, and an example based on Azure. Most of the patterns include code samples or snippets that show how to implement the pattern on Azure. However, most of the patterns are relevant to any distributed system, whether hosted on Azure or on other cloud platforms.
+* [Cloud fundamentals](https://docs.microsoft.com/en-us/azure/architecture/guide/): Fundamentals help teach the basic approaches to implementation of core concepts. This guide helps technicians think about solutions that go beyond a single Azure service.
 * [Example Scenarios](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/): The guide provides references from real customer implementations, outlining the tools, approaches, and processes that past customers have followed to accomplish specific business goals.
 * [Reference architectures](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/): Reference architectures are arranged by scenario, with related architectures grouped together. Each architecture includes recommended practices, along with considerations for scalability, availability, manageability, and security. Most also include a deployable solution.
 
