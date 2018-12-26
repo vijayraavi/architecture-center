@@ -15,7 +15,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai/_images/batch-ai-deep-learning.png" height="140px" />
+                            <img src="./ai/images/batch-ai-deep-learning.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -34,7 +34,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai/_images/batch-scoring-python.png" height="140px" />
+                            <img src="./ai/images/batch-scoring-python.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -53,31 +53,12 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai//media/architecture-commerce-chatbot.png" height="140px" />
+                            <img src="./ai/media/architecture-commerce-chatbot.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Conversational chatbot for hotel reservations</h3>
                         <p>Build a conversational chatbot for commerce applications with Azure Bot Service.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./ai/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./ai/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
                     </div>
                 </div>
             </div>
@@ -91,7 +72,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai//media/architecture-intelligent-apps-image-processing.png" height="140px" />
+                            <img src="./ai/media/architecture-intelligent-apps-image-processing.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -110,7 +91,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai/_images/recommenders-architecture.png" height="140px" />
+                            <img src="./ai/images/recommenders-architecture.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -129,7 +110,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai/_images/python-model-architecture.png" height="140px" />
+                            <img src="./ai/images/python-model-architecture.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -148,7 +129,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai/_images/realtime-scoring-r.png" height="140px" />
+                            <img src="./ai/images/realtime-scoring-r.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -173,7 +154,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./app-service-web-app//images/architecture-diagram-app-monitoring.svg" height="140px" />
+                            <img src="./app-service-web-app/images/architecture-diagram-app-monitoring.svg" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -192,31 +173,12 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./app-service-web-app//images/basic-web-app.png" height="140px" />
+                            <img src="./app-service-web-app/images/basic-web-app.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Basic web application</h3>
                         <p>Recommended architecture for a basic web application running in Azure.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./app-service-web-app/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./app-service-web-app/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
                     </div>
                 </div>
             </div>
@@ -230,7 +192,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./app-service-web-app//images/multi-region-web-app-diagram.png" height="140px" />
+                            <img src="./app-service-web-app/images/multi-region-web-app-diagram.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -249,7 +211,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./app-service-web-app//images/scalable-web-app.png" height="140px" />
+                            <img src="./app-service-web-app/images/scalable-web-app.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -274,7 +236,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./apps//media/architecture-apim-api-scenario.png" height="140px" />
+                            <img src="./apps/media/architecture-apim-api-scenario.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -293,7 +255,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./apps//media/architecture-decentralized-trust.png" height="140px" />
+                            <img src="./apps/media/architecture-decentralized-trust.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -312,7 +274,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./apps//media/architecture-devops-dotnet-webapp.svg" height="140px" />
+                            <img src="./apps/media/architecture-devops-dotnet-webapp.svg" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -331,7 +293,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./apps//media/architecture-devops-with-aks.png" height="140px" />
+                            <img src="./apps/media/architecture-devops-with-aks.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -350,7 +312,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./apps//media/architecture-ecommerce-scenario.png" height="140px" />
+                            <img src="./apps/media/architecture-ecommerce-scenario.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -369,7 +331,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./apps//media/architecture-ecommerce-search.png" height="140px" />
+                            <img src="./apps/media/architecture-ecommerce-search.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -388,7 +350,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./apps//media/architecture-hpc-saas.png" height="140px" />
+                            <img src="./apps/media/architecture-hpc-saas.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -407,7 +369,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./apps/(media/architecture-sap-dev-test.png" height="140px" />
+                            <img src="./apps/media/architecture-sap-dev-test.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -426,7 +388,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./apps/ media/architecture-sap-production.png" height="140px" />
+                            <img src="./apps/media/architecture-sap-production.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -451,7 +413,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data//media/architecture-big-data-with-iot.png" height="140px" />
+                            <img src="./data/media/architecture-big-data-with-iot.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -470,7 +432,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data//media/architecture-data-warehouse.png" height="140px" />
+                            <img src="./data/media/architecture-data-warehouse.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -489,7 +451,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data//media/architecture-ecommerce-order-processing.png" height="140px" />
+                            <img src="./data/media/architecture-ecommerce-order-processing.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -508,7 +470,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data//images/enterprise-bi-sqldw-adf.png" height="140px" />
+                            <img src="./data/images/enterprise-bi-sqldw-adf.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -527,7 +489,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data//images/enterprise-bi-sqldw.png" height="140px" />
+                            <img src="./data/images/enterprise-bi-sqldw.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -546,7 +508,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data//media/architecture-fraud-detection.png" height="140px" />
+                            <img src="./data/media/architecture-fraud-detection.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -565,7 +527,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data//media/architecture-diagram-hybrid-etl-with-adf.png" height="140px" />
+                            <img src="./data/media/architecture-diagram-hybrid-etl-with-adf.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -584,7 +546,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data/(media/architecture-realtime-analytics-vehicle-data1.png" height="140px" />
+                            <img src="./data/media/architecture-realtime-analytics-vehicle-data1.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -603,7 +565,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data//images/stream-processing-databricks.png" height="140px" />
+                            <img src="./data/images/stream-processing-databricks.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -622,7 +584,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data//images/stream-processing-asa/stream-processing-asa.png" height="140px" />
+                            <img src="./data/images/stream-processing-asa/stream-processing-asa.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -641,32 +603,13 @@
 
 <ul  class="panelContent cardsC">
 <li style="display: flex; flex-direction: column;">
-    <a href="./dmz/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./dmz/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
     <a href="./dmz/nva-ha.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./dmz//images/nva-ha/pip-udr-without-snat.png" height="140px" />
+                            <img src="./dmz/images/nva-ha/pip-udr-without-snat.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -685,7 +628,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./dmz//images/dmz-public.png" height="140px" />
+                            <img src="./dmz/images/dmz-public.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -704,7 +647,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./dmz//images/dmz-private.png" height="140px" />
+                            <img src="./dmz/images/dmz-private.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -729,31 +672,12 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./enterprise-integration/_images/simple-enterprise-integration.png" height="140px" />
+                            <img src="./enterprise-integration/images/simple-enterprise-integration.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Basic enterprise integration using Azure</h3>
                         <p>Recommended architecture for implementing a simple enterprise integration pattern using Azure Logic Apps and Azure API Management.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./enterprise-integration/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./enterprise-integration/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
                     </div>
                 </div>
             </div>
@@ -767,7 +691,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./enterprise-integration/_images/enterprise-integration-queues-events.png" height="140px" />
+                            <img src="./enterprise-integration/images/enterprise-integration-queues-events.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -786,32 +710,13 @@
 
 <ul  class="panelContent cardsC">
 <li style="display: flex; flex-direction: column;">
-    <a href="./hybrid-networking/considerations.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./hybrid-networking/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
     <a href="./hybrid-networking/expressroute-vpn-failover.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking//images/expressroute-vpn-failover.png" height="140px" />
+                            <img src="./hybrid-networking/images/expressroute-vpn-failover.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -830,7 +735,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking//images/expressroute.png" height="140px" />
+                            <img src="./hybrid-networking/images/expressroute.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -849,31 +754,12 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking//images/hub-spoke.png" height="140px" />
+                            <img src="./hybrid-networking/images/hub-spoke.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Implement a hub-spoke network topology in Azure</h3>
                         <p>Implement a hub-spoke network topology in Azure.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./hybrid-networking/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./hybrid-networking/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Connect an on-premises network to Azure</h3>
-                        <p>Compare reference architectures for connecting an on-premises network to Azure.</p>
                     </div>
                 </div>
             </div>
@@ -887,7 +773,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking//images/shared-services.png" height="140px" />
+                            <img src="./hybrid-networking/images/shared-services.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -906,7 +792,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking/_images/guidance-hybrid-network-vpn/RRAS-perf-counters.png" height="140px" />
+                            <img src="./hybrid-networking/images/guidance-hybrid-network-vpn/RRAS-perf-counters.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -925,7 +811,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking//images/vpn.png" height="140px" />
+                            <img src="./hybrid-networking/images/vpn.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -950,7 +836,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./identity//images/adds-extend-domain.png" height="140px" />
+                            <img src="./identity/images/adds-extend-domain.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -969,7 +855,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./identity//images/adds-forest.png" height="140px" />
+                            <img src="./identity/images/adds-forest.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -988,7 +874,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./identity//images/adfs.png" height="140px" />
+                            <img src="./identity/images/adfs.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1007,50 +893,12 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./identity//images/azure-ad.png" height="140px" />
+                            <img src="./identity/images/azure-ad.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Integrate on-premises AD domains with Azure AD</h3>
                         <p>Implement a secure hybrid network architecture using Azure Active Directory (Azure AD).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./identity/considerations.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./identity/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./identity/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./identity/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Integrate on-premises Active Directory with Azure</h3>
-                        <p>Compare reference architectures for integrating on-premises Active Directory with Azure.</p>
                     </div>
                 </div>
             </div>
@@ -1070,7 +918,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./infrastructure//media/architecture-hpc-cfd.png" height="140px" />
+                            <img src="./infrastructure/media/architecture-hpc-cfd.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1089,7 +937,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./infrastructure//media/azure-citrix-sample-diagram.png" height="140px" />
+                            <img src="./infrastructure/media/azure-citrix-sample-diagram.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1108,7 +956,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./infrastructure//media/arhitecture-disaster-recovery-multi-tier-app.png" height="140px" />
+                            <img src="./infrastructure/media/arhitecture-disaster-recovery-multi-tier-app.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1127,7 +975,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./infrastructure//media/architecture-regulated-multitier-app.png" height="140px" />
+                            <img src="./infrastructure/media/architecture-regulated-multitier-app.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1146,7 +994,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./infrastructure//media/architecture-service-fabric-complete.png" height="140px" />
+                            <img src="./infrastructure/media/architecture-service-fabric-complete.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1165,7 +1013,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./infrastructure//media/architecture-video-rendering.png" height="140px" />
+                            <img src="./infrastructure/media/architecture-video-rendering.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1184,7 +1032,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./infrastructure/(media/secure-scalable-wordpress.png" height="140px" />
+                            <img src="./infrastructure/media/secure-scalable-wordpress.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1202,25 +1050,6 @@
 ## jenkins
 
 <ul  class="panelContent cardsC">
-<li style="display: flex; flex-direction: column;">
-    <a href="./jenkins/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./jenkins//images/jenkins-server.png" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Run a Jenkins server on Azure</h3>
-                        <p>Recommended architecture that shows how to deploy and operate a scalable, enterprise-grade Jenkins server on Azure secured with single sign-on (SSO).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
 </ul>
 
 
@@ -1234,7 +1063,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./microservices/_images/aks.png" height="140px" />
+                            <img src="./microservices/images/aks.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1253,32 +1082,13 @@
 
 <ul  class="panelContent cardsC">
 <li style="display: flex; flex-direction: column;">
-    <a href="./n-tier/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./n-tier/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
     <a href="./n-tier/linux-vm.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./n-tier//images/single-vm-diagram.png" height="140px" />
+                            <img src="./n-tier/images/single-vm-diagram.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1297,7 +1107,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./n-tier//images/multi-region-sql-server.png" height="140px" />
+                            <img src="./n-tier/images/multi-region-sql-server.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1316,7 +1126,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./n-tier//images/n-tier-cassandra.png" height="140px" />
+                            <img src="./n-tier/images/n-tier-cassandra.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1335,7 +1145,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./n-tier//images/n-tier-sql-server.png" height="140px" />
+                            <img src="./n-tier/images/n-tier-sql-server.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1354,7 +1164,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./n-tier//images/single-vm-diagram.png" height="140px" />
+                            <img src="./n-tier/images/single-vm-diagram.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1379,31 +1189,12 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./sap//images/sap-hana-large-instances.png" height="140px" />
+                            <img src="./sap/images/sap-hana-large-instances.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Run SAP HANA on Azure Large Instances</h3>
                         <p>Proven practices for running SAP HANA in a high availability environment on Azure Large Instances.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./sap/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./sap/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
                     </div>
                 </div>
             </div>
@@ -1417,7 +1208,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./sap//images/sap-netweaver.png" height="140px" />
+                            <img src="./sap/images/sap-netweaver.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1436,7 +1227,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./sap//images/sap-s4hana.png" height="140px" />
+                            <img src="./sap/images/sap-s4hana.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1461,31 +1252,12 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./serverless/_images/serverless-event-processing.png" height="140px" />
+                            <img src="./serverless/images/serverless-event-processing.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Serverless event processing using Azure Functions</h3>
                         <p>Reference architecture that shows serverless event ingestion and processing</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./serverless/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./serverless/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
                     </div>
                 </div>
             </div>
@@ -1499,7 +1271,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./serverless/_images/serverless-web-app.png" height="140px" />
+                            <img src="./serverless/images/serverless-web-app.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1517,226 +1289,17 @@
 ## sharepoint
 
 <ul  class="panelContent cardsC">
-<li style="display: flex; flex-direction: column;">
-    <a href="./sharepoint/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./sharepoint//images/sharepoint-ha.png" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Run a highly available SharePoint Server 2016 farm in Azure</h3>
-                        <p>Recommended architecture for deploying a high availability SharePoint Server 2016 farm in Azure.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
 </ul>
 
 
 ## virtual-machines-linux
 
 <ul  class="panelContent cardsC">
-<li style="display: flex; flex-direction: column;">
-    <a href="./virtual-machines-linux/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./virtual-machines-linux/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./virtual-machines-linux/multi-region-application.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./virtual-machines-linux/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./virtual-machines-linux/multi-vm.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./virtual-machines-linux/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./virtual-machines-linux/n-tier.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./virtual-machines-linux/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./virtual-machines-linux/single-vm.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./virtual-machines-linux/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
 </ul>
 
 
 ## virtual-machines-windows
 
 <ul  class="panelContent cardsC">
-<li style="display: flex; flex-direction: column;">
-    <a href="./virtual-machines-windows/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./virtual-machines-windows/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./virtual-machines-windows/multi-region-application.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./virtual-machines-windows/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./virtual-machines-windows/multi-vm.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./virtual-machines-windows/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./virtual-machines-windows/n-tier.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./virtual-machines-windows/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./virtual-machines-windows/single-vm.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="./virtual-machines-windows/" height="140px" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
 </ul>
 
