@@ -8,15 +8,14 @@ for folder in $(ls -d */ | cut -f1 -d'/'); do
 
 	if [[ "$folder" == "ai" ]]; then
 		echo -e "\n## AI Scenarios\n"
-	fi
-	if [[ "$folder" == "apps" ]]; then
+	elif [[ "$folder" == "apps" ]]; then
 		echo -e "\n## Application Scenarios\n"
-	fi
-	if [[ "$folder" == "data" ]]; then
+	elif [[ "$folder" == "data" ]]; then
 		echo -e "\n## Data Scenarios\n"
-	fi
-	if [[ "$folder" == "infrastructure" ]]; then
+	elif [[ "$folder" == "infrastructure" ]]; then
 		echo -e "\n## Infrastructure Scenarios\n"
+	else
+		echo -e "\n## ${folder}\n"
 	fi
 
 	echo -e "<ul  class=\"panelContent cardsC\">"
