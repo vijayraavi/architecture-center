@@ -15,7 +15,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai/images/batch-ai-deep-learning.png" height="140px" />
+                            <img src="./ai/_images/batch-ai-deep-learning.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -34,7 +34,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai/images/batch-scoring-python.png" height="140px" />
+                            <img src="./ai/_images/batch-scoring-python.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -91,7 +91,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai/images/recommenders-architecture.png" height="140px" />
+                            <img src="./ai/_images/recommenders-architecture.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -110,7 +110,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai/images/python-model-architecture.png" height="140px" />
+                            <img src="./ai/_images/python-model-architecture.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -129,7 +129,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./ai/images/realtime-scoring-r.png" height="140px" />
+                            <img src="./ai/_images/realtime-scoring-r.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -154,7 +154,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./app-service-web-app/images/architecture-diagram-app-monitoring.svg" height="140px" />
+                            <img src="./app-service-web-app/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -173,7 +173,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./app-service-web-app/images/basic-web-app.png" height="140px" />
+                            <img src="./app-service-web-app/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -192,7 +192,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./app-service-web-app/images/multi-region-web-app-diagram.png" height="140px" />
+                            <img src="./app-service-web-app/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -211,7 +211,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./app-service-web-app/images/scalable-web-app.png" height="140px" />
+                            <img src="./app-service-web-app/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -470,7 +470,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data/images/enterprise-bi-sqldw-adf.png" height="140px" />
+                            <img src="./data/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -489,7 +489,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data/images/enterprise-bi-sqldw.png" height="140px" />
+                            <img src="./data/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -565,7 +565,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data/images/stream-processing-databricks.png" height="140px" />
+                            <img src="./data/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -584,7 +584,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./data/images/stream-processing-asa/stream-processing-asa.png" height="140px" />
+                            <img src="./data/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -609,7 +609,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./dmz/images/nva-ha/pip-udr-without-snat.png" height="140px" />
+                            <img src="./dmz/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -628,7 +628,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./dmz/images/dmz-public.png" height="140px" />
+                            <img src="./dmz/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -647,7 +647,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./dmz/images/dmz-private.png" height="140px" />
+                            <img src="./dmz/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -672,7 +672,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./enterprise-integration/images/simple-enterprise-integration.png" height="140px" />
+                            <img src="./enterprise-integration/_images/simple-enterprise-integration.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -691,7 +691,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./enterprise-integration/images/enterprise-integration-queues-events.png" height="140px" />
+                            <img src="./enterprise-integration/_images/enterprise-integration-queues-events.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -716,7 +716,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking/images/expressroute-vpn-failover.png" height="140px" />
+                            <img src="./hybrid-networking/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -735,7 +735,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking/images/expressroute.png" height="140px" />
+                            <img src="./hybrid-networking/_images/guidance-hybrid-network-expressroute/figure2.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -754,7 +754,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking/images/hub-spoke.png" height="140px" />
+                            <img src="./hybrid-networking/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -773,7 +773,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking/images/shared-services.png" height="140px" />
+                            <img src="./hybrid-networking/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -792,7 +792,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking/images/guidance-hybrid-network-vpn/RRAS-perf-counters.png" height="140px" />
+                            <img src="./hybrid-networking/_images/guidance-hybrid-network-vpn/RRAS-perf-counters.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -811,7 +811,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./hybrid-networking/images/vpn.png" height="140px" />
+                            <img src="./hybrid-networking/_images/guidance-hybrid-network-vpn/audit-logs.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -836,7 +836,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./identity/images/adds-extend-domain.png" height="140px" />
+                            <img src="./identity/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -855,7 +855,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./identity/images/adds-forest.png" height="140px" />
+                            <img src="./identity/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -874,7 +874,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./identity/images/adfs.png" height="140px" />
+                            <img src="./identity/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -893,7 +893,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./identity/images/azure-ad.png" height="140px" />
+                            <img src="./identity/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1063,7 +1063,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./microservices/images/aks.png" height="140px" />
+                            <img src="./microservices/_images/aks.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1088,7 +1088,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./n-tier/images/single-vm-diagram.png" height="140px" />
+                            <img src="./n-tier/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1107,7 +1107,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./n-tier/images/multi-region-sql-server.png" height="140px" />
+                            <img src="./n-tier/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1126,7 +1126,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./n-tier/images/n-tier-cassandra.png" height="140px" />
+                            <img src="./n-tier/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1145,7 +1145,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./n-tier/images/n-tier-sql-server.png" height="140px" />
+                            <img src="./n-tier/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1164,7 +1164,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./n-tier/images/single-vm-diagram.png" height="140px" />
+                            <img src="./n-tier/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1189,7 +1189,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./sap/images/sap-hana-large-instances.png" height="140px" />
+                            <img src="./sap/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1208,7 +1208,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./sap/images/sap-netweaver.png" height="140px" />
+                            <img src="./sap/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1227,7 +1227,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./sap/images/sap-s4hana.png" height="140px" />
+                            <img src="./sap/" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1252,7 +1252,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./serverless/images/serverless-event-processing.png" height="140px" />
+                            <img src="./serverless/_images/serverless-event-processing.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -1271,7 +1271,7 @@
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="./serverless/images/serverless-web-app.png" height="140px" />
+                            <img src="./serverless/_images/serverless-web-app.png" height="140px" />
                         </div>
                     </div>
                     <div class="cardText">

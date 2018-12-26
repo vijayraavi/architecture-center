@@ -32,7 +32,7 @@ for folder in $(ls -d */ | cut -f1 -d'/'); do
 		fi
 
 		description=$(cat $article | grep "description:" | cut -d ":" -f 2- | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
-		image="./${folder}/$(cat $article | grep -e media -e images | grep -e ".png" -e".svg" -e ".jpg" | head -1 | sed -n 's/.*\(\(media\|images\).*\(svg\|png\|jpg\)\).*/\1/p')"
+		image="./${folder}/$(cat $article | grep -e media -e _images | grep -e ".png" -e".svg" -e ".jpg" | head -1 | sed -n 's/.*\(\(media\|_images\).*\(svg\|png\|jpg\)\).*/\1/p')"
 
 		cat <<EOF
 <li style="display: flex; flex-direction: column;">
