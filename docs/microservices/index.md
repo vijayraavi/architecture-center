@@ -12,34 +12,27 @@ ms.topic: landing-page
 Microservices are a popular architectural style for building cloud applications that are resilient, highly scalable, independently deployable, and able to evolve quickly. But a successful microservices architecture requires a different approach to designing and building applications.
 
 <!-- markdownlint-disable MD033 -->
-<ul id="cardtypes-J" class="cardsJ">
-    <li>
-        <div class="container intro">
-            <p>Panel intro: n sed lacus sit amet ipsum aliquam faucibus. Phasellus varius sed erat eu
-                fringilla. Pellentesque ante leo, blandit quis nunc ornare, egestas aliquet augue.
-                Vivamus bibendum metus a lorem mattis lacinia et ut lacus.</p>
-        </div>
-    </li>
-    <li>
-        <a href="">
-            <div class="cardSize">
-                <div class="cardPadding">
-                    <div class="card">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img src="https://docs.microsoft.com/media/hubs/dotnet/net-docs-web-1.svg" alt="" data-linktype="external">
-                            </div>
+<ul  class="panelContent cardsJ">
+<!-- Batch scoring of Python models -->
+<li style="display: flex; flex-direction: column;">
+    <a href="./ai/batch-scoring-python.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../_images/icons/python-powered-h.svg" />
                         </div>
-                        <div class="cardText">
-                            <h3>Lorem ipsum dolor sit amet</h3>
-                            <p>Mauris ultricies mi sapien, vel pulvinar arcu lacinia a. Proin quis ligula
-                                enim. Nullam ac tellus a enim rutrum aliquet.</p>
-                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Batch scoring of Python models</h3>
+                        <p>Batch score many Python models in parallel on a schedule using Azure Batch AI.</p>
                     </div>
                 </div>
             </div>
-        </a>
-    </li>
+        </div>
+    </a>
+</li>
 </ul>
 
 
