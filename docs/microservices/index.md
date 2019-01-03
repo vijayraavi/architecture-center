@@ -3,28 +3,45 @@ title: Designing, building, and operating microservices on Azure with Kubernetes
 description: Designing, building, and operating microservices on Azure
 author: MikeWasson
 ms.date: 10/23/2018
+layout: LandingPage
+ms.topic: landing-page
 ---
 
-# Designing, building, and operating microservices on Azure
+# Building microservices on Azure
 
-![](./images/drone.svg)
+Microservices are a popular architectural style for building cloud applications that are resilient, highly scalable, independently deployable, and able to evolve quickly. But a successful microservices architecture requires a different approach to designing and building applications.
 
-Microservices have become a popular architectural style for building cloud applications that are resilient, highly scalable, independently deployable, and able to evolve quickly. To be more than just a buzzword, however, microservices require a different approach to designing and building applications. 
+<!-- markdownlint-disable MD033 -->
+<ul id="cardtypes-J" class="cardsJ">
+    <li>
+        <div class="container intro">
+            <p>Panel intro: n sed lacus sit amet ipsum aliquam faucibus. Phasellus varius sed erat eu
+                fringilla. Pellentesque ante leo, blandit quis nunc ornare, egestas aliquet augue.
+                Vivamus bibendum metus a lorem mattis lacinia et ut lacus.</p>
+        </div>
+    </li>
+    <li>
+        <a href="">
+            <div class="cardSize">
+                <div class="cardPadding">
+                    <div class="card">
+                        <div class="cardImageOuter">
+                            <div class="cardImage">
+                                <img src="https://docs.microsoft.com/media/hubs/dotnet/net-docs-web-1.svg" alt="" data-linktype="external">
+                            </div>
+                        </div>
+                        <div class="cardText">
+                            <h3>Lorem ipsum dolor sit amet</h3>
+                            <p>Mauris ultricies mi sapien, vel pulvinar arcu lacinia a. Proin quis ligula
+                                enim. Nullam ac tellus a enim rutrum aliquet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
 
-In this set of articles, we explore how to build and run a microservices architecture on Azure. Topics include:
-
-- Using Domain Driven Design (DDD) to design a microservices architecture. 
-- Choosing the right Azure technologies for compute, storage, messaging, and other elements of the design.
-- Understanding microservices design patterns.
-- Designing for resiliency, scalability, and performance.
-- Building a CI/CD pipeline.
-
-
-Throughout, we focus on an end-to-end scenario: A drone delivery service that lets customers schedule packages to be picked up and delivered via drone. You can find the code for our reference implementation on GitHub
-
-[![GitHub](../_images/github.png) Reference implementation][drone-ri]
-
-But first, let's start with fundamentals. What are microservices, and what are the advantages of adopting a microservices architecture?
 
 ## Why build microservices?
 
