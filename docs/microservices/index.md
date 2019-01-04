@@ -25,7 +25,7 @@ Microservices are a popular architectural style for building cloud applications 
                     </div>
                     <div class="cardText">
                         <h3>What is a microservices architecture?</h3>
-                        <p>How do microservices differ from other architectures, and when should you build microservices?</p>
+                        <p>How do microservices differ from other architectures, and when should you use this approach?</p>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@ Microservices are a popular architectural style for building cloud applications 
 
 These scenarios show ....
 
-<ul  class="panelContent cardsE">
+<ul  class="panelContent cardsD">
 <li style="display: flex; flex-direction: column;">
     <a href="../example-scenario/infrastructure/service-fabric-microservices.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
@@ -79,9 +79,9 @@ These scenarios show ....
 </li>
 </ul>
 
-## Microservices reference architectures
+## Reference architectures
 
-<ul  class="panelContent cardsE">
+<ul  class="panelContent cardsF">
 <li style="display: flex; flex-direction: column;">
     <a href="../reference-architectures/microservices/aks.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
@@ -95,6 +95,25 @@ These scenarios show ....
                     <div class="cardText">
                         <h3>Microservices architecture on Azure Kubernetes Service (AKS)</h3>
                         <p>This architecture shows a basic AKS configuration that can be the starting point for most deployments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+<li style="display: flex; flex-direction: column;">
+    <a href="../reference-architectures/microservices/aks.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../_images/microservices.svg" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Microservices architecture on Service Fabric</h3>
+                        <p>This architecture shows a recommended way to deploy microservices on Service Fabric.</p>
                     </div>
                 </div>
             </div>
