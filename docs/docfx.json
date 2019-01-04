@@ -61,6 +61,14 @@
     "fileMetadata": {
       "tocRel": {
         "reference-architectures/**.md": "../toc.json"
+      },
+      "product_feedback_displaytext": {
+        "example-scenario/**/*.md": "Scenario Feedback",
+        "cloud-adoption/**/*.md": "Cloud Adoption Feedback"
+      },
+      "feedback_product_url": {
+        "example-scenario/**/*.md": "https://azure-architecture.uservoice.com/forums/918625-architecture-guidance",
+        "cloud-adoption/**/*.md": "https://azure-architecture.uservoice.com/forums/918757-cloud-adoption"
       }
     },
     "template": [
