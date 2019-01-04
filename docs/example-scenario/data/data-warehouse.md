@@ -6,9 +6,9 @@ author: alexbuckgit
 ms.date: 09/15/2018
 ---
 
-::: zone target="docs"
-
 # Data warehousing and analytics for sales and marketing
+
+::: zone target="docs"
 
 This example scenario demonstrates a data pipeline that integrates large amounts of data from multiple sources into a unified analytics platform in Azure. This specific scenario is based on a sales and marketing solution, but the design patterns are relevant for many industries requiring advanced analytics of large datasets such as e-commerce, retail, and healthcare.
 
