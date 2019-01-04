@@ -4,6 +4,8 @@ titleSuffix: Azure Example Scenarios
 description: Consolidate data from multiple sources and optimize data analytics.
 author: alexbuckgit
 ms.date: 09/15/2018
+feedback_product_url: https://azure-architecture.uservoice.com/forums/918625-architecture-guidance
+product_feedback_displaytext: Example Scenario Feedback
 ---
 
 # Data warehousing and analytics for sales and marketing
@@ -33,11 +35,7 @@ This approach can also be used to:
 
 ## Architecture
 
-::: zone target="architecture"
-
 ![Architecture for a data warehousing and analysis scenario in Azure][architecture]
-
-::: zone-end
 
 The data flows through the solution as follows:
 
