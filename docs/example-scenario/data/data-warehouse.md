@@ -33,7 +33,11 @@ This approach can also be used to:
 
 ## Architecture
 
+::: zone target="architecture"
+
 ![Architecture for a data warehousing and analysis scenario in Azure][architecture]
+
+::: zone-end
 
 The data flows through the solution as follows:
 
