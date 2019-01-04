@@ -1,0 +1,101 @@
+<html>
+<head>
+
+    <title>IFrame test</title>
+
+    <style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: #215B7D;
+		}
+
+		.wrapper {
+			display: flex;
+			flex-flow: row wrap;
+			height: 100%;
+			align-items: stretch;
+		}
+
+		.wrapper>* {
+			flex: 1 100%;
+		}
+
+		.topbar {
+			height: 40px;
+			position: relative;
+			background: black;
+			color: white;
+        }
+        
+        .topbar span {
+            color: rgb(85, 179, 255) ;
+            cursor: pointer ;
+            display: inline-block ;
+            font-family: az_ea_font, "Segoe UI", wf_segoe-ui_normal, "Segoe WP", Tahoma, Arial, sans-serif ;
+            font-size: 20px ;
+            font-weight: 400 ;
+            line-height: 40px ;
+            padding-bottom: 0px ;
+            padding-left: 7px ;
+            padding-right: 7px ;
+            padding-top: 0px ;
+            text-decoration-color: rgb(85, 179, 255) ;
+            text-decoration-line: none ;
+            text-decoration-style: solid ;
+        }
+
+		.content {
+			padding: 1em;
+			color: white;
+		}
+
+		.iframe,
+		.content {
+			flex: 2 0px;
+			margin: 0 auto;
+			height: calc(100% - 40px);
+		}
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <header class="topbar">
+            <span>Microsoft Azure</span>
+        </header>
+        <div class="content">
+            Lorem ipsum....
+        </div>
+        <iframe class="iframe" id="inner" src="./chromeless-forms?fromOrigin=https://review.docs.microsoft.com&context=chromeless-test/chromeless&editorHostOrigin=https://review.docs.microsoft.com"></iframe>
+    </div>
+
+    <script type="text/javascript">
+    window.addEventListener('message', function (event) {
+        if (event.data && event.data.id) {
+            console.log("received message in parent frame event", event);
+            document.getElementById('inner').contentWindow.postMessage({
+                id: event.data.id,
+                type: 'Forms',
+                payload: {
+                    formId: event.data.payload.formId, // The ID of the form in question, as there may be multiple forms on a page.
+                    success: true,
+                    responseText: 'Your form was submitted successfully.'
+                }
+            }, '*');
+        } else {
+            console.log("received message in parent frame, but it is not a docs event", event);
+        }
+    });
+    </script>
+
+</body>
+</html>
