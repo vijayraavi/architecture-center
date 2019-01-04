@@ -6,9 +6,9 @@ author: alexbuckgit
 ms.date: 09/15/2018
 ---
 
-# Data warehousing and analytics for sales and marketing
+::: zone target="docs"
 
-**Test Content**
+# Data warehousing and analytics for sales and marketing
 
 This example scenario demonstrates a data pipeline that integrates large amounts of data from multiple sources into a unified analytics platform in Azure. This specific scenario is based on a sales and marketing solution, but the design patterns are relevant for many industries requiring advanced analytics of large datasets such as e-commerce, retail, and healthcare.
 
@@ -28,6 +28,8 @@ This approach can also be used to:
 - Establish a data warehouse to be a single source of truth for your data.
 - Integrate relational data sources with other unstructured datasets.
 - Use semantic modeling and powerful visualization tools for simpler data analysis.
+
+::: zone-end
 
 ## Architecture
 
@@ -58,6 +60,8 @@ Data is loaded from these different data sources using several Azure components:
 - [Analysis Services](/azure/analysis-services) provides a semantic model for your data. It can also increase system performance when analyzing your data.
 - [Power BI](/power-bi) is a suite of business analytics tools to analyze data and share insights. Power BI can query a semantic model stored in Analysis Services, or it can query SQL Data Warehouse directly.
 - [Azure Active Directory (Azure AD)](/azure/active-directory) authenticates users who connect to the Analysis Services server through Power BI. Data Factory can also use Azure AD to authenticate to SQL Data Warehouse via a service principal or [Managed identity for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview).
+
+::: zone target="docs"
 
 ### Alternatives
 
@@ -98,6 +102,8 @@ Review a [pricing sample for a data warehousing scenario][calculator] via the Az
 - Review the [Azure reference architecture for automated enterprise BI](/azure/architecture/reference-architectures/data/enterprise-bi-adf), which includes instructions for deploying an instance of this architecture in Azure.
 - Read the [Maritz Motivation Solutions customer story][source-document]. That story describes a similar approach to managing customer data.
 - Find comprehensive architectural guidance on data pipelines, data warehousing, online analytical processing (OLAP), and big data in the [Azure Data Architecture Guide](/azure/architecture/data-guide).
+
+::: zone-end
 
 <!-- links -->
 [source-document]: https://customers.microsoft.com/story/maritz
