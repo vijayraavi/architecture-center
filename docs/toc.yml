@@ -471,27 +471,24 @@
   items:
   - name: Build microservices on Azure
     items:
-    - name: Introduction
+    - name: Overview
       href: microservices/index.md
-    - name: Domain analysis
-      href: microservices/domain-analysis.md
-    - name: Identifying microservice boundaries
-      href: microservices/microservice-boundaries.md
-    - name: Data considerations
-      href: microservices/data-considerations.md
-    - name: Interservice communication
-      href: microservices/interservice-communication.md
-    - name: API design
-      href: microservices/api-design.md
-    - name: Ingestion and workflow
-      href: microservices/ingestion-workflow.md
-    - name: API gateways
-      href: microservices/gateway.md
-    - name: Logging and monitoring
-      href: microservices/logging-monitoring.md
-    - name: CI/CD
-      href: microservices/ci-cd.md
-
+    - name: Introduction to microservices
+      href: microservices/introduction.md
+    - name: Designing microservices
+      items:
+      - name: Domain analysis
+        href: microservices/domain-analysis.md
+      - name: Identifying microservice boundaries
+        href: microservices/microservice-boundaries.md
+      - name: Interservice communication
+        href: microservices/interservice-communication.md
+      - name: API design
+        href: microservices/api-design.md
+      - name: Data considerations
+        href: microservices/data-considerations.md
+    - name: Microservices on Azure Kubernetes Service (AKS)
+    - name: Microservices on Service Fabric
   - name: Manage multitenant identity
     items:
     - name: Introduction
