@@ -13,7 +13,6 @@ Microservices are a popular architectural style for building cloud applications 
 
 <!-- markdownlint-disable MD033 -->
 <ul  class="panelContent cardsJ">
-
 <li style="display: flex; flex-direction: column;">
     <a href="./introduction.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
@@ -26,7 +25,7 @@ Microservices are a popular architectural style for building cloud applications 
                     </div>
                     <div class="cardText">
                         <h3>What is a microservices architecture?</h3>
-                        <p>How does a microservices architecture differ from other architecture styles, and when should you build one?</p>
+                        <p>How do microservices differ from other architectures, and when should you build microservices?</p>
                     </div>
                 </div>
             </div>
@@ -35,3 +34,71 @@ Microservices are a popular architectural style for building cloud applications 
 </li>
 </ul>
 
+## Example scenarios
+
+These scenarios show ....
+
+<ul  class="panelContent cardsE">
+<li style="display: flex; flex-direction: column;">
+    <a href="../example-scenario/infrastructure/service-fabric-microservices.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../_images/microservices.svg" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Using Service Fabric to decompose monolithic applications</h3>
+                        <p>Describes an iterative approach to decomposing an IIS/ASP.NET web site into a microservices architecture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+<li style="display: flex; flex-direction: column;">
+    <a href="../example-scenario/infrastructure/service-fabric-microservices.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../_images/microservices.svg" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Scalable order processing on Azure</h3>
+                        <p>This example scenario shows order processing using a functional programming model implemented via microservices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+</ul>
+
+## Microservices reference architectures
+
+<ul  class="panelContent cardsE">
+<li style="display: flex; flex-direction: column;">
+    <a href="../reference-architectures/microservices/aks.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../_images/microservices.svg" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Microservices architecture on Azure Kubernetes Service (AKS)</h3>
+                        <p>This architecture shows a basic AKS configuration that can be the starting point for most deployments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+</ul>
