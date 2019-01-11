@@ -4,6 +4,7 @@ titleSuffix: Azure Example Scenarios
 description: Build a conversational chatbot for commerce applications with Azure Bot Service.
 author: iainfoulds
 ms.date: 07/05/2018
+socialModel.ImageUrl: ./media/architecture-commerce-chatbot.png
 ---
 
 # Conversational chatbot for hotel reservations on Azure
