@@ -1,0 +1,8 @@
+- name: High Performance Computing
+  href: index.md
+- name: Intro to HPC
+  items: index.md#introduction-to-hpc
+  - name: Application architecture guide
+    items:
+      - name: Big Compute Architecture Guide
+        href: /azure/architecture/guide/architecture-styles/big-compute?toc=/azure/architecture/topics/high-performance-computing/toc.json
