@@ -11,9 +11,23 @@
         href: ../../guide/architecture-styles/big-compute.md?toc=/azure/architecture/topics/high-performance-computing/toc.json
   - name: Architecture Examples
     items:
+      - name: 3D Video Rendering
+        href: ../../example-scenario/infrastructure/video-rendering.md?toc=/azure/architecture/topics/high-performance-computing/toc.json
       - name: Computational Fluid Dynamics (CFD) on Azure
         href: ../../example-scenario/infrastructure/hpc-cfd.md?toc=/azure/architecture/topics/high-performance-computing/toc.json
+      - name: Computer-aided Engineering on Azure
+        href: ../..//example-scenario/apps/hpc-saas.md?toc=/azure/architecture/topics/high-performance-computing/toc.json
 - name: Management Services
   items:
     - name: Azure Batch
-      href: https://docs.microsoft.com/azure/batch/?toc=/azure/architecture/topics/high-performance-computing/toc.json
+      href: https://docs.microsoft.com/azure/batch/batch-technical-overview?toc=/azure/architecture/topics/high-performance-computing/toc.json
+- name: Infrastructure Components (IaaS)
+  items:
+    - name: Compute
+      items:
+        - name: HPC Servers
+          href: https://docs.microsoft.com/azure/virtual-machines/windows/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json
+        - name: GPU Servers
+          href: https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu?toc=/azure/architecture/topics/high-performance-computing/toc.json
+        - name: Cray Supercomputers
+          href: https://azure.microsoft.com/solutions/high-performance-computing/cray/
