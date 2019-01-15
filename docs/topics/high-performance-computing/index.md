@@ -3,6 +3,8 @@ title: High Performance Computing (HPC) on Azure
 description: A guide to building running HPC workloads on Azure
 author: adamboeglin
 ms.date: 12/03/2018
+layout: LandingPage
+ms.topic: landing-page
 ---
 # High Performance Computing (HPC) on Azure
 
@@ -33,7 +35,7 @@ Many industries:
 
 There are a number of different ways to design and implement your HPC architecture on Azure.  The following scenarios outline a few of the common ways HPC solutions are built.
 
-<ul>
+<ul class="panelContent cardsC">
 <li style="display: flex; flex-direction: column;">
     <a href="/azure/architecture/example-scenario/apps/hpc-saas" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
@@ -150,7 +152,7 @@ Logo's of applications & vendors that we have relationships and experience with 
 
 ## Remote Visualization
 
-<ul>
+<ul class="panelContent cardsC">
 <li style="display: flex; flex-direction: column;">
     <a href="/azure/architecture/example-scenario/infrastructure/linux-vdi-citrix.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
