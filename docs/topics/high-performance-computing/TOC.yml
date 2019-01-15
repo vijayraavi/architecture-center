@@ -34,5 +34,5 @@
           href: https://docs.microsoft.com/azure/virtual-machines/windows/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json
         - name: GPU Servers
           href: https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu?toc=/azure/architecture/topics/high-performance-computing/toc.json
-        - name: Cray Supercomputers
+        - name: Cray Supercomputers ☍
           href: https://azure.microsoft.com/solutions/high-performance-computing/cray/
