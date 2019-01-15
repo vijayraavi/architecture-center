@@ -1,9 +1,7 @@
-- name: High Performance Computing
+- name: High Performance Computing on Azure
   href: index.md
-- name: Introduction to HPC
-  items:
-  - name: HPC Overview
-    href: index.md#introduction-to-hpc
+- name: HPC Overview
+  href: index.md#introduction-to-hpc
 - name: Building HPC Systems
   items:
   - name: Design Patterns
