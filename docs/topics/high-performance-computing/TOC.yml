@@ -1,9 +1,11 @@
 - name: High Performance Computing on Azure
   href: index.md
-- name: HPC Overview
+- name: Introduction to HPC
   href: index.md#introduction-to-hpc
 - name: Building HPC Systems
   items:
+  - name: Overview
+    href: index.md##how-is-hpc-different-on-the-cloud
   - name: Design Patterns
     items:
       - name: Big Compute Architecture Guide
@@ -18,10 +20,14 @@
         href: ../../example-scenario/apps/hpc-saas.md?toc=/azure/architecture/topics/high-performance-computing/toc.json
 - name: Management Services
   items:
+    - name: Overview
+      href: index.md#management
     - name: Azure Batch
       href: https://docs.microsoft.com/azure/batch/batch-technical-overview?toc=/azure/architecture/topics/high-performance-computing/toc.json
 - name: Infrastructure Components (IaaS)
   items:
+    - name: Infrastructure Compontents
+      href: index.md##infrastructure
     - name: Compute
       items:
         - name: HPC Servers

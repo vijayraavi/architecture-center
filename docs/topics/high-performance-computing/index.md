@@ -95,12 +95,14 @@ There are a number of different ways to design and implement your HPC architectu
 </li>
 </ul>
 
-## Networking
+## Infrastructure
+
+### Networking
 
 - Infiniband Network
 - High speed VM networking
 
-## Compute
+### Compute
 
 Details on popular VM sizes used for HPC and the different capabilities of them
 
@@ -108,7 +110,7 @@ Details on popular VM sizes used for HPC and the different capabilities of them
 
 - Cray Supercomputers
 
-## Storage
+### Storage
 
 - Avere for hybrid
 - BeeGFS
