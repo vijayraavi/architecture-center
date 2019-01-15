@@ -5,7 +5,7 @@
 - name: Building HPC Systems
   items:
   - name: Overview
-    href: index.md##how-is-hpc-different-on-the-cloud
+    href: index.md#how-is-hpc-different-on-the-cloud
   - name: Design Patterns
     items:
       - name: Big Compute Architecture Guide
@@ -27,7 +27,7 @@
 - name: Infrastructure Components (IaaS)
   items:
     - name: Infrastructure Compontents
-      href: index.md##infrastructure
+      href: index.md#infrastructure
     - name: Compute
       items:
         - name: HPC Servers
