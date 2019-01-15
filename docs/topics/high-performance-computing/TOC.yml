@@ -1,8 +1,14 @@
 - name: High Performance Computing
   href: index.md
-- name: Intro to HPC
-  items: index.md#introduction-to-hpc
+- name: Introduction to HPC
+  items:
+  - name: HPC Overview
+    href: index.md#introduction-to-hpc
   - name: Application architecture guide
     items:
       - name: Big Compute Architecture Guide
-        href: /azure/architecture/guide/architecture-styles/big-compute?toc=/azure/architecture/topics/high-performance-computing/toc.json
+        href: ../../guide/architecture-styles/big-compute?toc=/azure/architecture/topics/high-performance-computing/toc.json
+- name: Management Services
+  items:
+    - name: Azure Batch
+      href: https://docs.microsoft.com/azure/batch/?toc=/azure/architecture/topics/high-performance-computing/toc.json
