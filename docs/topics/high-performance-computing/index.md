@@ -37,7 +37,7 @@ There are a number of different ways to design and implement your HPC architectu
 
 <ul class="panelContent cardsC">
 <li style="display: flex; flex-direction: column;">
-    <a href="/azure/architecture/example-scenario/apps/hpc-saas.md?toc=/azure/architecture/topics/high-performance-computing/toc.json" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="/azure/architecture/example-scenario/apps/hpc-saas?toc=/azure/architecture/topics/high-performance-computing/toc.json" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
@@ -56,7 +56,7 @@ There are a number of different ways to design and implement your HPC architectu
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
-    <a href="/azure/architecture/example-scenario/infrastructure/hpc-cfd.md?toc=/azure/architecture/topics/high-performance-computing/toc.json" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="/azure/architecture/example-scenario/infrastructure/hpc-cfd?toc=/azure/architecture/topics/high-performance-computing/toc.json" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
@@ -75,7 +75,7 @@ There are a number of different ways to design and implement your HPC architectu
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
-    <a href="/azure/architecture/example-scenario/infrastructure/video-rendering.md?toc=/azure/architecture/topics/high-performance-computing/toc.json" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="/azure/architecture/example-scenario/infrastructure/video-rendering?toc=/azure/architecture/topics/high-performance-computing/toc.json" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
@@ -156,7 +156,7 @@ Logo's of applications & vendors that we have relationships and experience with 
 
 <ul class="panelContent cardsC">
 <li style="display: flex; flex-direction: column;">
-    <a href="/azure/architecture/example-scenario/infrastructure/linux-vdi-citrix.md?toc=/azure/architecture/topics/high-performance-computing/toc.json" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="/azure/architecture/example-scenario/infrastructure/linux-vdi-citrix?toc=/azure/architecture/topics/high-performance-computing/toc.json" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
