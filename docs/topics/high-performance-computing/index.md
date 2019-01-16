@@ -127,7 +127,7 @@ Large-scale Batch and HPC workloads have demands for data storage and access tha
 - BeeGFS
 - Local NVMe SSDs
 - [Blob, table, and queue storage](https://docs.microsoft.com/azure/storage/storage-introduction?toc=/azure/architecture/topics/high-performance-computing/toc.json)
-- [File storage](https://docs.microsoft.com/azure/storage/storage-files-introduction.md
+- [Azure File sstorage](https://docs.microsoft.com/azure/storage/storage-files-introduction?toc=/azure/architecture/topics/high-performance-computing/toc.json) offers fully managed file shares accessible via the Server Message Block (SMB) protocol
 
 ### Networking
 
@@ -142,25 +142,33 @@ Large-scale Batch and HPC workloads have demands for data storage and access tha
 
 ## Management
 
-### Do-it-yourself solutions
+### Do-it-yourself
 
-- Set up your own cluster environment in Azure virtual machines or [virtual machine scale sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview?toc=/azure/architecture/topics/high-performance-computing/toc.json). 
-- Lift and shift an on-premises cluster, or deploy a new cluster in Azure for additional capacity. 
-- Use Azure Resource Manager templates to deploy leading [workload managers](#workload-managers), infrastructure, and [applications](#hpc-applications). 
-- Choose [HPC and GPU VM sizes](#hpc-and-gpu-sizes) that include specialized hardware and network connections for MPI or GPU workloads. 
-- Add [high performance storage](#hpc-storage) for I/O-intensive workloads.
+Building an HPC system from scratch on Azure offers a significant amount of flexability, but is often very maintenance intensive.  
 
-### Hybrid solutions
+1. Set up your own cluster environment in Azure virtual machines or [virtual machine scale sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview?toc=/azure/architecture/topics/high-performance-computing/toc.json).
+2. Use Azure Resource Manager templates to deploy leading [workload managers](#workload-managers), infrastructure, and [applications](#hpc-applications).
+3. Choose [HPC and GPU VM sizes](#hpc-and-gpu-sizes) that include specialized hardware and network connections for MPI or GPU workloads. 
+4. Add [high performance storage](#hpc-storage) for I/O-intensive workloads.
+
+### Hybrid & Cloud Bursting
+
+- Architectures for hybrid network
+- Information on Azure VPN
+- Guide on ExpressRoute
 - Extend your on-premises solution to offload ("burst") peak workloads to Azure infrastructure
 - Use cloud compute on-demand with your existing [workload manager](#workload-manager).
 - Take advantage of [HPC and GPU VM sizes](#hpc-and-gpu-sizes) for MPI or GPU workloads.
 
 ### Big Compute solutions as a service
-- Develop custom Big Compute solutions and workflows using [Azure Batch](#azure-batch) and related [Azure services](#related-azure-services).
+
+Develop custom Big Compute solutions and workflows using [Azure Batch](#azure-batch) and related [Azure services](#related-azure-services).
+
 - Run Azure-enabled engineering and simulation solutions from vendors including [Altair](http://www.altair.com/), [Rescale](https://www.rescale.com/azure/), and [Cycle Computing](https://cyclecomputing.com/) (now [joined with Microsoft](https://blogs.microsoft.com/blog/2017/08/15/microsoft-acquires-cycle-computing-accelerate-big-computing-cloud/)).
 - Use a [Cray supercomputer](https://www.cray.com/solutions/supercomputing-as-a-service/cray-in-azure) as a service hosted in Azure.
 
 ### Marketplace solutions
+
 - Use the scale of [HPC applications](#hpc-applications) and [solutions](#marketplace-solutions) offered in the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). 
 - [RogueWave CentOS-based HPC](https://azuremarketplace.microsoft.com/marketplace/apps/RogueWave.CentOSbased73HPC?tab=Overview)
 - [SUSE Linux Enterprise Server for HPC](https://azure.microsoft.com/marketplace/partners/suse/suselinuxenterpriseserver12optimizedforhighperformancecompute/)
@@ -171,6 +179,7 @@ Large-scale Batch and HPC workloads have demands for data storage and access tha
 - [Intel Cloud Edition for Lustre](https://azuremarketplace.microsoft.com/marketplace/apps/intel.intel-cloud-edition-gs)
 
 ### Azure Batch
+
 [Batch](https://docs.microsoft.com/azure/batch/batch-technical-overview?toc=/azure/architecture/topics/high-performance-computing/toc.json) is a platform service for running large-scale parallel and high-performance computing (HPC) applications efficiently in the cloud. Azure Batch schedules compute-intensive work to run on a managed pool of virtual machines, and can automatically scale compute resources to meet the needs of your jobs. 
 
 SaaS providers or developers can use the Batch SDKs and tools to integrate HPC applications or container workloads with Azure, stage data to Azure, and build job execution pipelines. 
@@ -188,22 +197,19 @@ The following are examples of cluster and workload managers that can run in Azur
   - [Windows](https://docs.microsoft.com/azure/virtual-machines/windows/hpcpack-cluster-options.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
   - [Linux](https://docs.microsoft.com/azure/virtual-machines/linux/hpcpack-cluster-options.md?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
 
-## Misc
+### Partners & Consultants
 
-- [Microsoft HPC Pack](https://docs.microsoft.com/en-us/powershell/high-performance-computing/overview?view=hpc16-ps)
-- [Azure Batch](https://docs.microsoft.com/en-us/azure/batch/)
+- HPC software on Azure marketplace
+- Integration partners & consulting firms
+
+### Misc
+
 - Cycle Cloud
 - [Alces Flight](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/alces-flight-limited.alces-flight-compute-solo?tab=overview%3Fwt.mc_id%3Dcomputeinmanufacturing-docs-ercenk)
 - [Microsoft MPI](https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi)
 - https://azure.microsoft.com/en-us/blog/tibco-datasynapse-comes-to-the-azure-marketplace/?WT.mc_id=computeinmanufacturing-docs-ercenk
 - http://www.brightcomputing.com/technology-partners/microsoft
 - https://azure.microsoft.com/en-us/blog/ibm-and-microsoft-azure-support-spectrum-symphony-and-spectrum-lsf/?WT.mc_id=computeinmanufacturing-docs-ercenk
-
-## Cloud Bursting
-
-- Architectures for hybrid network
-- Information on Azure VPN
-- Guide on ExpressRoute
 
 ## Cost Management
 
@@ -286,12 +292,7 @@ Examples of customers that have solved business problems with Azure HPC solution
 - [Schlumberger](https://azure.microsoft.com/blog/big-compute-for-large-engineering-simulations)
 - [Towers Watson](https://customers.microsoft.com/story/insurance-tech-provider-delivers-disruptive-solutions)
 
-## Partners & Consultants
-
-- HPC software on Azure marketplace
-- Integration partners & consulting firms
-
-## Other Links
+## Other Important Information
 
 - Ensure your [vCPU quota](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas?toc=/azure/architecture/topics/high-performance-computing/toc.json) has been increased before attempting to run large scale workloads.
 
