@@ -30,14 +30,14 @@ for line in input_file:
         #continue
     elif line.startswith("## "):
         name = getname(line)
-        indent = "  "
+        indent = ""
         contains = "  items: "
-        next_indent = "    "
+        next_indent = "  "
     elif line.startswith("### "):
         name = getname(line)
-        indent = "    "
+        indent = "  "
         contains = "  items: "
-        next_indent = "        "
+        next_indent = "      "
     elif link:
         contains = "  href: "
         name = link.group(1)
