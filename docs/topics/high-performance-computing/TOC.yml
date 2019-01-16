@@ -10,6 +10,8 @@
     items:
       - name: Big Compute Architecture Guide
         href: ../../guide/architecture-styles/big-compute.md?toc=/azure/architecture/topics/high-performance-computing/toc.json
+      - name: Autoscaling
+        href: ../../best-practices/auto-scaling?toc=/azure/architecture/topics/high-performance-computing/toc.json
   - name: Architecture Examples
     items:
       - name: 3D Video Rendering
