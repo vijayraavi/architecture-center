@@ -13,6 +13,16 @@ def getname(line):
     name = pattern.match(line)
     return name.group(1)
 
+def overviewlink(indent, line):
+    name = getname(line)
+    shortname = name.lower()
+    shortname = str(shortname).replace(" ", "-")
+
+    overview = indent + "- name: Overview\n"
+    overview += indent + "  href: index.md#" + shortname
+
+    return overview
+
 for line in input_file:
     name = ""
     contains = ""
@@ -31,13 +41,15 @@ for line in input_file:
     elif line.startswith("## "):
         name = getname(line)
         indent = ""
-        contains = "  items: "
+        contains = "  items: \n"
         next_indent = "  "
+        contents = overviewlink(next_indent, line)
     elif line.startswith("### "):
         name = getname(line)
         indent = "  "
-        contains = "  items: "
+        contains = "  items: \n"
         next_indent = "      "
+        contents = overviewlink(next_indent, line)
     elif link:
         contains = "  href: "
         name = link.group(1)
@@ -45,7 +57,7 @@ for line in input_file:
     else:
         continue
 
-    #toc += line
+
     toc += indent + "- name: " + name + "\n"
     toc += indent + contains + contents + "\n"
     prev_line = line
