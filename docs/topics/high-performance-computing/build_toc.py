@@ -31,7 +31,7 @@ for line in input_file:
     href_link = href_match.match(line)
 
     # Look for an h3 title
-    h3_match = re.compile('.*href=\"(.*)\" .*')
+    h3_match = re.compile('.*<h3>(.*)</h3>.*')
     h3_title = h3_match.match(line)
 
     if line.startswith("## "):
@@ -69,7 +69,7 @@ for i in range(0,len(toc_list)):
 
     # If there are multiple items below a heading, provide an overview link
     if i+1 != len(toc_list):
-        if toc_list[i+1].get('level') > item_level:
+        if toc_list[i+1].get('level') > item_level and item_level != 1:
             toc += indent + "- name: " + item_name + '\n'
             toc += indent + "  items:" + "\n"
             toc += indent + "  " + "- name: Overview\n"

@@ -1,7 +1,5 @@
 - name: High Performance Computing on Azure
-  items:
-  - name: Overview
-    href: index.md#high-performance-computing-on-azure
+  href: index.md
   - name: Introduction to HPC
     items:
     - name: Overview
@@ -17,7 +15,15 @@
       - name: Autoscaling best practices
         href: /azure/architecture/best-practices/auto-scaling?toc=/azure/architecture/topics/high-performance-computing/toc.json
     - name: HPC Architecture
-      href: index.md#hpc-architecture
+      items:
+      - name: Overview
+        href: index.md#hpc-architecture
+      - name: A computer-aided engineering service on Azure
+        href: /azure/architecture/example-scenario/apps/hpc-saas?toc=/azure/architecture/topics/high-performance-computing/toc.json
+      - name: Running computational fluid dynamics (CFD) simulations on Azure
+        href: /azure/architecture/example-scenario/infrastructure/hpc-cfd?toc=/azure/architecture/topics/high-performance-computing/toc.json
+      - name: 3D video rendering on Azure
+        href: /azure/architecture/example-scenario/infrastructure/video-rendering?toc=/azure/architecture/topics/high-performance-computing/toc.json
   - name: Infrastructure
     items:
     - name: Overview
@@ -183,7 +189,11 @@
       - name: Batch Shipyard recipes for deep learning ↗
         href: https://github.com/Azure/batch-shipyard/tree/master/recipes#deeplearning
   - name: Remote Visualization
-    href: index.md#remote-visualization
+    items:
+    - name: Overview
+      href: index.md#remote-visualization
+    - name: Linux virtual desktops with Citrix
+      href: /azure/architecture/example-scenario/infrastructure/linux-vdi-citrix?toc=/azure/architecture/topics/high-performance-computing/toc.json
   - name: Performance Benchmarks
     items:
     - name: Overview
