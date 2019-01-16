@@ -1,4 +1,4 @@
-- name: High Performance Computing on Azure
+- name: High Performance Computing (HPC) on Azure
   items:
   - name: Introduction to HPC
     items:
@@ -34,14 +34,22 @@
         href: index.md#compute
       - name: Microsoft MPI ↗
         href: https://msdn.microsoft.com/library/bb524831.aspx
-      - name: Linux HPC VM's
-        href: https://docs.microsoft.com/azure/virtual-machines/linux/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json
-      - name: Windows HPC VM's
-        href: https://docs.microsoft.com/azure/virtual-machines/windows/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json
-      - name: Linux GPU VMs
-        href: https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu?toc=/azure/architecture/topics/high-performance-computing/toc.json
-      - name: Windows GPU VMs
-        href: https://docs.microsoft.com/azure/virtual-machines/windows/sizes-gpu?toc=/azure/architecture/topics/high-performance-computing/toc.json
+      - name: CPU based virtual machines
+        items:
+        - name: Overview
+          href: index.md#cpu-based-virtual-machines
+        - name: Linux HPC VM's
+          href: https://docs.microsoft.com/azure/virtual-machines/linux/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json
+        - name: Windows HPC VM's
+          href: https://docs.microsoft.com/azure/virtual-machines/windows/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json
+      - name: GPU-enabled virtual machines
+        items:
+        - name: Overview
+          href: index.md#gpu-enabled-virtual-machines
+        - name: Linux GPU VMs
+          href: https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu?toc=/azure/architecture/topics/high-performance-computing/toc.json
+        - name: Windows GPU VMs
+          href: https://docs.microsoft.com/azure/virtual-machines/windows/sizes-gpu?toc=/azure/architecture/topics/high-performance-computing/toc.json
     - name: Storage
       items:
       - name: Overview

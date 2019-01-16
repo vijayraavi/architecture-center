@@ -17,9 +17,7 @@ def overviewlink(name):
     return str(shortname).replace(" ", "-")
 
 toc = ""
-
 toc_list = []
-toc_list.append({'level': 1, 'name': "High Performance Computing on Azure", 'href':"index.md"})
 
 for line in input_file:
     # Look for an inline link
@@ -34,19 +32,14 @@ for line in input_file:
     h3_match = re.compile('.*<h3>(.*)</h3>.*')
     h3_title = h3_match.match(line)
 
-    if line.startswith("## "):
+    if line.startswith("#"):
         name = getname(line)
-        level = 2
-        toc_list.append({'level': level, 'name': name})
-    elif line.startswith("### "):
-        name = getname(line)
-        level = 3
+        level = line.count("#")
         toc_list.append({'level': level, 'name': name})
     elif inline_link:
-        # Skip internal links
+        # Skip internal anchors
         if re.match('^#.*', inline_link.group(2)):
             continue
-
         toc_list.append({'level': level + 1, 'name': inline_link.group(1), 'href': inline_link.group(2)})
     elif href_link:
         url = href_link.group(1)
