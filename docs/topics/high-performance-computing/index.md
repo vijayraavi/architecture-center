@@ -52,7 +52,7 @@ The following scenarios outline a few of the common ways HPC solutions are built
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>A computer-aided engineering service on Azure</h3>
+                        <h3>Computer-aided engineering services on Azure</h3>
                         <p>Provide a software-as-a-service (SaaS) platform for computer-aided engineering (CAE) on Azure.</p>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ The following scenarios outline a few of the common ways HPC solutions are built
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Running computational fluid dynamics (CFD) simulations on Azure</h3>
+                        <h3>Computational fluid dynamics (CFD) simulations on Azure</h3>
                         <p>Execute computational fluid dynamics (CFD) simulations on Azure.</p>
                     </div>
                 </div>
@@ -110,20 +110,20 @@ Azure offers a range of sizes for compute-intensive workloads. For example, H16r
 
 N-series VMs feature NVIDIA GPUs designed for compute-intensive or graphics-intensive applications including artificial intelligence (AI) learning and visualization.
 
-- CPU based virtual machines
-  - [Linux](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json)
-  - [Windows](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json) VMs
-- GPU-enabled virtual machines
-  - [Linux](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu?toc=/azure/architecture/topics/high-performance-computing/toc.json)
-  - [Windows](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-gpu?toc=/azure/architecture/topics/high-performance-computing/toc.json) VMs
-- Cray Supercomputers
+#### CPU based virtual machines
+- [Linux HPC VM's](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json)
+- [Windows HPC VM's](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json) VMs
+  
+#### GPU-enabled virtual machines
+- [Linux GPU VMs](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu?toc=/azure/architecture/topics/high-performance-computing/toc.json)
+- [Windows GPU VMs](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-gpu?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 
 ### Storage
 
 Large-scale Batch and HPC workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems.  There are a number of solutions to manage both the speed and capacity needs of HPC applications on Azure
 
 - [Parallel virtual file systems on Azure](https://azure.microsoft.com/resources/parallel-virtual-file-systems-on-microsoft-azure/)
-- High performance cloud storage solutions from [Avere](http://www.averesystems.com/about-us/about-avere) (now [joined with Microsoft](https://blogs.microsoft.com/blog/2018/01/03/microsoft-to-acquire-avere-systems-accelerating-high-performance-computing-innovation-for-media-and-entertainment-industry-and-beyond/))
+- High performance cloud storage solutions from [Avere](http://www.averesystems.com/about-us/about-avere)
 - BeeGFS
 - Local NVMe SSDs
 - [Blob, table, and queue storage](https://docs.microsoft.com/azure/storage/storage-introduction?toc=/azure/architecture/topics/high-performance-computing/toc.json)
@@ -194,8 +194,8 @@ The following are examples of cluster and workload managers that can run in Azur
 - [IBM Spectrum Symphony and Symphony LSF](https://azure.microsoft.com/blog/ibm-and-microsoft-azure-support-spectrum-symphony-and-spectrum-lsf/)
 - [PBS Pro](http://pbspro.org)
 - [Microsoft HPC Pack](https://technet.microsoft.com/library/mt744885.aspx)
-  - [Windows](https://docs.microsoft.com/azure/virtual-machines/windows/hpcpack-cluster-options.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
-  - [Linux](https://docs.microsoft.com/azure/virtual-machines/linux/hpcpack-cluster-options.md?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+  - [HPC Pack for Windows](https://docs.microsoft.com/azure/virtual-machines/windows/hpcpack-cluster-options.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+  - [HPC Pack for Linux](https://docs.microsoft.com/azure/virtual-machines/linux/hpcpack-cluster-options.md?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
 
 ### Partners & Consultants
 
@@ -298,16 +298,20 @@ Examples of customers that have solved business problems with Azure HPC solution
 
 ## Next steps
 
-- Learn more about Big Compute solutions for
- [engineering simulation](https://simulation.azure.com/), [rendering](https://azure.microsoft.com/solutions/big-compute/rendering/), [banking and capital markets](https://finance.azure.com/), and [genomics](https://enterprise.microsoft.com/en-us/industries/health/genomics/).
-- For the latest announcements, see the [Microsoft HPC and Batch team blog](http://blogs.technet.com/b/windowshpc/) and the [Azure blog](https://azure.microsoft.com/blog/tag/hpc/).
+For the latest announcements, see:
+  - [Microsoft HPC and Batch team blog](http://blogs.technet.com/b/windowshpc/)
+  - [Azure blog](https://azure.microsoft.com/blog/tag/hpc/).
 - [Set up a Linux RDMA cluster to run MPI applications](https://docs.microsoft.com/azure/virtual-machines/linux/classic/rdma-cluster.md?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 - [Set up a Windows RDMA cluster with Microsoft HPC Pack to run MPI applications](https://docs.microsoft.com/azure/virtual-machines/windows/classic/hpcpack-rdma-cluster.md?toc=/azure/architecture/topics/high-performance-computing/toc.json)
-- [Use compute-intensive VMs in Batch pools](https://docs.microsoft.com/azure/batch/batch-pool-compute-intensive-sizes?toc=/azure/architecture/topics/high-performance-computing/toc.json)
-- Use the managed and scalable Azure [Batch](https://azure.microsoft.com/services/batch/) service to run compute-intensive workloads, without managing underlying infrastructure [Learn more](https://azure.microsoft.com/solutions/architecture/hpc-big-compute-saas/)
+
+### Microsoft Batch Examples
+
+These tutorials will provide you with details on running applications on Microsoft Batch
+
 - [Get started developing with Batch](https://docs.microsoft.com/azure/batch/quick-run-dotnet?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 - [Use Azure Batch code samples](https://github.com/Azure/azure-batch-samples)
 - [Use low-priority VMs with Batch](https://docs.microsoft.com/azure/batch/batch-low-pri-vms?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 - [Run containerized HPC workloads with Batch Shipyard](https://github.com/Azure/batch-shipyard)
 - [Run parallel R workloads on Batch](https://github.com/Azure/doAzureParallel)
 - [Run on-demand Spark jobs on Batch](https://github.com/Azure/aztk)
+- [Use compute-intensive VMs in Batch pools](https://docs.microsoft.com/azure/batch/batch-pool-compute-intensive-sizes?toc=/azure/architecture/topics/high-performance-computing/toc.json)
