@@ -62,13 +62,13 @@ for i in range(0,len(toc_list)):
     item_level = toc_list[i].get('level')
     item_name = toc_list[i]['name']
 
-    if item_level == 1:
+    if item_level == 1 or item_level == 2:
         indent = ""
     else:
         indent = "  " * (item_level - 1)
 
-    # If there are multiple items below a heading, provide an overview link
     if i+1 != len(toc_list):
+        # If there are multiple items below a heading, provide an overview link
         if toc_list[i+1].get('level') > item_level and item_level != 1:
             toc += indent + "- name: " + item_name + '\n'
             toc += indent + "  items:" + "\n"
