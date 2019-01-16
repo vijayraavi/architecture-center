@@ -1,9 +1,9 @@
 - name: High Performance Computing on Azure
-  href: index.md
-- name: Introduction to HPC
   items:
-  - name: Overview
-    href: index.md#introduction-to-hpc
+  - name: Introduction to HPC
+    items:
+    - name: Overview
+      href: index.md#introduction-to-hpc
     - name: Problems solved with High Performance Computing
       href: index.md#problems-solved-with-high-performance-computing
     - name: How is HPC different on the cloud
@@ -24,10 +24,10 @@
         href: /azure/architecture/example-scenario/infrastructure/hpc-cfd?toc=/azure/architecture/topics/high-performance-computing/toc.json
       - name: 3D video rendering on Azure
         href: /azure/architecture/example-scenario/infrastructure/video-rendering?toc=/azure/architecture/topics/high-performance-computing/toc.json
-- name: Infrastructure
-  items:
-  - name: Overview
-    href: index.md#infrastructure
+  - name: Infrastructure
+    items:
+    - name: Overview
+      href: index.md#infrastructure
     - name: Compute
       items:
       - name: Overview
@@ -72,10 +72,10 @@
         href: https://docs.microsoft.com/azure/aks/intro-kubernetes?toc=/azure/architecture/topics/high-performance-computing/toc.json
       - name: Container Registry
         href: https://docs.microsoft.com/azure/container-registry/container-registry-intro?toc=/azure/architecture/topics/high-performance-computing/toc.json
-- name: Management
-  items:
-  - name: Overview
-    href: index.md#management
+  - name: Management
+    items:
+    - name: Overview
+      href: index.md#management
     - name: Do-it-yourself
       items:
       - name: Overview
@@ -148,14 +148,14 @@
         href: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/alces-flight-limited.alces-flight-compute-solo?tab=overview%3Fwt.mc_id%3Dcomputeinmanufacturing-docs-ercenk
       - name: Microsoft MPI
         href: https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi
-- name: Cost Management
-  href: index.md#cost-management
-- name: Authentication
-  href: index.md#authentication
-- name: HPC applications
-  items:
-  - name: Overview
-    href: index.md#hpc-applications
+  - name: Cost Management
+    href: index.md#cost-management
+  - name: Authentication
+    href: index.md#authentication
+  - name: HPC applications
+    items:
+    - name: Overview
+      href: index.md#hpc-applications
     - name: Azure Marketplace ↗
       href: https://azuremarketplace.microsoft.com/marketplace
     - name: Engineering applications
@@ -188,22 +188,22 @@
         href: https://azuremarketplace.microsoft.com/marketplace/apps/microsoft-ads.dsvm-deep-learning
       - name: Batch Shipyard recipes for deep learning ↗
         href: https://github.com/Azure/batch-shipyard/tree/master/recipes#deeplearning
-- name: Remote Visualization
-  items:
-  - name: Overview
-    href: index.md#remote-visualization
+  - name: Remote Visualization
+    items:
+    - name: Overview
+      href: index.md#remote-visualization
     - name: Linux virtual desktops with Citrix
       href: /azure/architecture/example-scenario/infrastructure/linux-vdi-citrix?toc=/azure/architecture/topics/high-performance-computing/toc.json
-- name: Performance Benchmarks
-  items:
-  - name: Overview
-    href: index.md#performance-benchmarks
+  - name: Performance Benchmarks
+    items:
+    - name: Overview
+      href: index.md#performance-benchmarks
     - name: Compute Benchmarks
       href: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/compute-benchmark-scores?toc=/azure/architecture/topics/high-performance-computing/toc.json
-- name: Customer stories
-  items:
-  - name: Overview
-    href: index.md#customer-stories
+  - name: Customer stories
+    items:
+    - name: Overview
+      href: index.md#customer-stories
     - name: ANEO ↗
       href: https://customers.microsoft.com/story/it-provider-finds-highly-scalable-cloud-based-hpc-redu
     - name: AXA Global P&C ↗
@@ -230,16 +230,16 @@
       href: https://azure.microsoft.com/blog/big-compute-for-large-engineering-simulations
     - name: Towers Watson ↗
       href: https://customers.microsoft.com/story/insurance-tech-provider-delivers-disruptive-solutions
-- name: Other Important Information
-  items:
-  - name: Overview
-    href: index.md#other-important-information
+  - name: Other Important Information
+    items:
+    - name: Overview
+      href: index.md#other-important-information
     - name: vCPU quota
       href: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas?toc=/azure/architecture/topics/high-performance-computing/toc.json
-- name: Next steps
-  items:
-  - name: Overview
-    href: index.md#next-steps
+  - name: Next steps
+    items:
+    - name: Overview
+      href: index.md#next-steps
     - name: genomics ↗
       href: https://enterprise.microsoft.com/en-us/industries/health/genomics/
     - name: Azure blog ↗
