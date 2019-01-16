@@ -5,4 +5,5 @@
         "**/_themes": true,
         "log": true
     },
+    "python.pythonPath": "C:\\Users\\adboegli\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
 }
