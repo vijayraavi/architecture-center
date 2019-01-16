@@ -1,5 +1,8 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import re
+import codecs
 
 input_file = open('index.md', 'r')
 count_lines = 0
@@ -40,6 +43,10 @@ for line in input_file:
         level = 3
         toc_list.append({'level': level, 'name': name})
     elif inline_link:
+        # Skip internal links
+        if re.match('^#.*', inline_link.group(2)):
+            continue
+
         toc_list.append({'level': level + 1, 'name': inline_link.group(1), 'href': inline_link.group(2)})
     elif href_link:
         url = href_link.group(1)
@@ -60,19 +67,23 @@ for i in range(0,len(toc_list)):
     else:
         indent = "  " * (item_level - 1)
 
-    toc += indent + "- name: " + item_name + '\n'
-
     # If there are multiple items below a heading, provide an overview link
     if i+1 != len(toc_list):
         if toc_list[i+1].get('level') > item_level:
+            toc += indent + "- name: " + item_name + '\n'
             toc += indent + "  items:" + "\n"
             toc += indent + "  " + "- name: Overview\n"
             toc += indent + "  " + "  href: index.md#" + overviewlink(item_name) + "\n"
         elif toc_list[i].get('href'):
+            if ".com" in toc_list[i].get('href'):
+                if re.match('^(.(?<!docs.microsoft.com))*?$', toc_list[i].get('href')):
+                    item_name = item_name + u" ↗"
+            toc += indent + "- name: " + item_name + '\n'
             toc += indent + "  href: " + toc_list[i].get('href') + "\n"
         else:
+            toc += indent + "- name: " + item_name + '\n'
             toc += indent + "  href: index.md#" + overviewlink(item_name) + "\n"
 
-output_file = open('TOC.yml', 'w')
+output_file = codecs.open('TOC.yml', 'w', "utf-8")
 output_file.write(toc)
 output_file.close()
