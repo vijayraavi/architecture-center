@@ -4,63 +4,75 @@ import re
 input_file = open('index.md', 'r')
 count_lines = 0
 
-# Work on the previous line
-prev_line = ""
-next_indent = ""
-
 def getname(line):
     pattern = re.compile('.*# (.*)')
     name = pattern.match(line)
     return name.group(1)
 
-def overviewlink(indent, line):
-    name = getname(line)
+def overviewlink(name):
     shortname = name.lower()
-    shortname = str(shortname).replace(" ", "-")
+    return str(shortname).replace(" ", "-")
 
-    overview = indent + "- name: Overview\n"
-    overview += indent + "  href: index.md#" + shortname
+toc = ""
 
-    return overview
+toc_list = []
+toc_list.append({'level': 1, 'name': "High Performance Computing on Azure", 'href':"index.md"})
 
 for line in input_file:
-    name = ""
-    contains = ""
-    contents = ""
-    indent = next_indent
-    count_lines += 1
+    # Look for an inline link
+    inline_match = re.compile('.*\[(.*)\]\((.*)\).*')
+    inline_link = inline_match.match(line)
 
-    # Look for a link
-    pattern = re.compile('.*\[(.*)\]\((.*)\).*')
-    link = pattern.match(line)
+    # Look for an html link
+    href_match = re.compile('.*href=\"(.*)\" .*')
+    href_link = href_match.match(line)
 
-    if prev_line == "":
-        toc = "- name: High Performance Computing on Azure\n"
-        toc += "  href: index.md\n"
-        #continue
-    elif line.startswith("## "):
+    # Look for an h3 title
+    h3_match = re.compile('.*href=\"(.*)\" .*')
+    h3_title = h3_match.match(line)
+
+    if line.startswith("## "):
         name = getname(line)
-        indent = ""
-        contains = "  items: \n"
-        next_indent = "  "
-        contents = overviewlink(next_indent, line)
+        level = 2
+        toc_list.append({'level': level, 'name': name})
     elif line.startswith("### "):
         name = getname(line)
-        indent = "  "
-        contains = "  items: \n"
-        next_indent = "      "
-        contents = overviewlink(next_indent, line)
-    elif link:
-        contains = "  href: "
-        name = link.group(1)
-        contents = link.group(2)
+        level = 3
+        toc_list.append({'level': level, 'name': name})
+    elif inline_link:
+        toc_list.append({'level': level + 1, 'name': inline_link.group(1), 'href': inline_link.group(2)})
+    elif href_link:
+        url = href_link.group(1)
+        continue
+    elif h3_title:
+        toc_list.append({'level': level + 1, 'name': h3_title.group(1), 'href': url})
     else:
         continue
 
+# Build the TOC
 
-    toc += indent + "- name: " + name + "\n"
-    toc += indent + contains + contents + "\n"
-    prev_line = line
+for i in range(0,len(toc_list)):
+    item_level = toc_list[i].get('level')
+    item_name = toc_list[i]['name']
 
-#print('number of lines:', count_lines)
-print(toc)
+    if item_level == 1:
+        indent = ""
+    else:
+        indent = "  " * (item_level - 1)
+
+    toc += indent + "- name: " + item_name + '\n'
+
+    # If there are multiple items below a heading, provide an overview link
+    if i+1 != len(toc_list):
+        if toc_list[i+1].get('level') > item_level:
+            toc += indent + "  items:" + "\n"
+            toc += indent + "  " + "- name: Overview\n"
+            toc += indent + "  " + "  href: index.md#" + overviewlink(item_name) + "\n"
+        elif toc_list[i].get('href'):
+            toc += indent + "  href: " + toc_list[i].get('href') + "\n"
+        else:
+            toc += indent + "  href: index.md#" + overviewlink(item_name) + "\n"
+
+output_file = open('TOC.yml', 'w')
+output_file.write(toc)
+output_file.close()
