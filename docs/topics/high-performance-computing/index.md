@@ -27,7 +27,7 @@ Many industries :
 
 ### How is HPC different on the cloud
 
-The main difference between an on-premise HPC system, and one in the cloud is that cloud resources can dynamically be added and removed as they're needed.  This moves your bottleneck away from available compute cores and instead focuses on right sizing your infrastructure to the requirements of your job.
+One of the differences between an on-premise HPC system and one in the cloud is that cloud resources can dynamically be added and removed as they're needed.  This moves your bottleneck away from available compute cores and instead focuses on right sizing your infrastructure to the requirements of your job.
 
 The following articles provide more detail about this dynamic scaling capability.
 
