@@ -62,7 +62,7 @@ for i in range(0,len(toc_list)):
     item_name = toc_list[i]['name']
 
     # Automatically indent based on the heading level
-    if item_level == 1:
+    if item_level <= 2:
         indent = ""
     else:
         indent = "  " * (item_level - 1)
@@ -71,9 +71,11 @@ for i in range(0,len(toc_list)):
     if i+1 != len(toc_list):
         if toc_list[i+1].get('level') > item_level:
             toc += indent + "- name: " + item_name + '\n'
-            toc += indent + "  items:" + "\n"
             # Don't create an overview link for the top level item
-            if item_level != 1:
+            if item_level == 1:
+                toc += indent + "  href: index.md\n"
+            else:
+                toc += indent + "  items:" + "\n"
                 toc += indent + "  " + "- name: Overview\n"
                 toc += indent + "  " + "  href: index.md#" + overviewlink(item_name) + "\n"
         # Add an arror indicating external links
