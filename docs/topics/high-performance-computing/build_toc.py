@@ -65,7 +65,7 @@ for i in range(0,len(toc_list)):
     if item_level <= 2:
         indent = ""
     else:
-        indent = "  " * (item_level - 1)
+        indent = "  " * (item_level - 2)
 
     # If there are multiple items below a heading, provide an overview link
     if i+1 != len(toc_list):
@@ -76,8 +76,8 @@ for i in range(0,len(toc_list)):
                 toc += indent + "  href: index.md\n"
             else:
                 toc += indent + "  items:" + "\n"
-                toc += indent + "  " + "- name: Overview\n"
-                toc += indent + "  " + "  href: index.md#" + overviewlink(item_name) + "\n"
+                toc += indent + "  - name: Overview\n"
+                toc += indent + "    href: index.md#" + overviewlink(item_name) + "\n"
         # Add an arror indicating external links
         elif toc_list[i].get('href'):
             # TODO: Also add marker to links with domains ending in other than .com
