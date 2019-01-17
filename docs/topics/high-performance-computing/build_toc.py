@@ -78,7 +78,9 @@ for i in range(0,len(toc_list)):
                 toc += indent + "  " + "  href: index.md#" + overviewlink(item_name) + "\n"
         # Add an arror indicating external links
         elif toc_list[i].get('href'):
+            # TODO: Also add marker to links with domains ending in other than .com
             if ".com" in toc_list[i].get('href'):
+                # Skip docs links
                 if re.match('^(.(?<!docs.microsoft.com))*?$', toc_list[i].get('href')):
                     item_name = item_name + u" ↗"
             toc += indent + "- name: " + item_name + '\n'
