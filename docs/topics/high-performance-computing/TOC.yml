@@ -4,8 +4,8 @@
   items:
   - name: Overview
     href: index.md#introduction-to-hpc
-  - name: Problems solved with High Performance Computing
-    href: index.md#problems-solved-with-high-performance-computing
+  - name: HPC industries and workloads
+    href: index.md#hpc-industries-and-workloads
   - name: How is HPC different on the cloud
     items:
     - name: Overview
@@ -14,20 +14,20 @@
       href: /azure/architecture/guide/architecture-styles/big-compute?toc=/azure/architecture/topics/high-performance-computing/toc.json
     - name: Autoscaling best practices
       href: /azure/architecture/best-practices/auto-scaling?toc=/azure/architecture/topics/high-performance-computing/toc.json
-  - name: HPC Architecture
+- name: Infrastructure
+  items:
+  - name: Overview
+    href: index.md#infrastructure
+  - name: Example HPC Architectures
     items:
     - name: Overview
-      href: index.md#hpc-architecture
+      href: index.md#example-hpc-architectures
     - name: Computer-aided engineering services on Azure
       href: /azure/architecture/example-scenario/apps/hpc-saas?toc=/azure/architecture/topics/high-performance-computing/toc.json
     - name: Computational fluid dynamics (CFD) simulations on Azure
       href: /azure/architecture/example-scenario/infrastructure/hpc-cfd?toc=/azure/architecture/topics/high-performance-computing/toc.json
     - name: 3D video rendering on Azure
       href: /azure/architecture/example-scenario/infrastructure/video-rendering?toc=/azure/architecture/topics/high-performance-computing/toc.json
-- name: Infrastructure
-  items:
-  - name: Overview
-    href: index.md#infrastructure
   - name: Compute
     items:
     - name: Overview
@@ -157,7 +157,11 @@
     - name: Microsoft MPI
       href: https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi
 - name: Cost Management
-  href: index.md#cost-management
+  items:
+  - name: Overview
+    href: index.md#cost-management
+  - name: Low priority VM's
+    href: https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-low-priority?toc=/azure/architecture/topics/high-performance-computing/toc.json
 - name: Authentication
   href: index.md#authentication
 - name: HPC applications

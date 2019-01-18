@@ -14,12 +14,12 @@ High Performance Computing (HPC), also called "Big Compute", is the process of u
 
 > [!VIDEO https://www.youtube.com/embed/rKURT32faJk]
 
-### Problems solved with High Performance Computing
+### HPC industries and workloads
 
-Many industries :
+Many industries use HPC to solve some of their most difficult problems.  These include things like:
 
-- Genomic modeling
-- Oil & Gas
+- Genomics
+- Oil & Gas Simulations
 - Finance
 - Semiconductor Design
 - Engineering
@@ -34,7 +34,11 @@ The following articles provide more detail about this dynamic scaling capability
 - [Big Compute Architecture Style](/azure/architecture/guide/architecture-styles/big-compute?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 - [Autoscaling best practices](/azure/architecture/best-practices/auto-scaling?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 
-### HPC Architecture
+## Infrastructure
+
+There are a number of infrastructure components necessary to build a HPC system.  Compute, Storage, and Networking provide the underlying components, no matter how you choose to manage your HPC workloads.
+
+### Example HPC Architectures
 
 There are a number of different ways to design and implement your HPC architecture on Azure.  High performance computing (HPC) applications can scale to thousands of compute cores, extend on-premises big compute, or run as a 100% cloud native solution.
 
@@ -100,9 +104,6 @@ The following scenarios outline a few of the common ways HPC solutions are built
 </li>
 </ul>
 
-## Infrastructure
-
-There are a number of infrastructure components necessary to build a HPC system.  Compute, Storage, and Networking provide the underlying components, no matter how you choose to manage your HPC workloads.
 
 ### Compute
 
@@ -213,7 +214,9 @@ The following are examples of cluster and workload managers that can run in Azur
 
 ## Cost Management
 
-- Low priority VM's
+Managing your HPC cost on Azure can be done through a few different ways.
+
+- [Low priority VM's](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-low-priority?toc=/azure/architecture/topics/high-performance-computing/toc.json)  allows you to take advantage of our unutilized capacity at a significant cost savings.
 - Upfront commitments
 - Discounts when you use microsoft products
 
