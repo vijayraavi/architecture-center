@@ -8,11 +8,10 @@ ms.date: 09/15/2018
 
 # Data warehousing and analytics for sales and marketing
 
-::: zone target="docs"
-
 This example scenario demonstrates a data pipeline that integrates large amounts of data from multiple sources into a unified analytics platform in Azure. This specific scenario is based on a sales and marketing solution, but the design patterns are relevant for many industries requiring advanced analytics of large datasets such as e-commerce, retail, and healthcare.
 
-This example demonstrates a sales and marketing company that creates incentive programs. These programs reward customers, suppliers, salespeople, and employees. Data is fundamental to these programs, and the company wants to improve the insights gained through data analytics using Azure.
+> [!div class="introduction"]
+> This example demonstrates a sales and marketing company that creates incentive programs. These programs reward customers, suppliers, salespeople, and employees. Data is fundamental to these programs, and the company wants to improve the insights gained through data analytics using Azure.
 
 The company needs a modern approach to analysis data, so that decisions are made using the right data at the right time. The company's goals include:
 
@@ -29,18 +28,17 @@ This approach can also be used to:
 - Integrate relational data sources with other unstructured datasets.
 - Use semantic modeling and powerful visualization tools for simpler data analysis.
 
-::: zone-end
-
 ## Architecture
 
-![Architecture for a data warehousing and analysis scenario in Azure][architecture]
+> [!div class="architecture_diagram"]
+> ![Architecture for a data warehousing and analysis scenario in Azure][architecture]
 
-The data flows through the solution as follows:
-
-1. For each data source, any updates are exported periodically into a staging area in Azure Blob storage.
-2. Data Factory incrementally loads the data from Blob storage into staging tables in SQL Data Warehouse. The data is cleansed and transformed during this process. Polybase can parallelize the process for large datasets.
-3. After loading a new batch of data into the warehouse, a previously created Analysis Services tabular model is refreshed. This semantic model simplifies the analysis of business data and relationships.
-4. Business analysts use Microsoft Power BI to analyze warehoused data via the Analysis Services semantic model.
+> [!div class="data_flow"]
+> The data flows through the solution as follows:
+> 1. For each data source, any updates are exported periodically into a staging area in Azure Blob storage.
+> 2. Data Factory incrementally loads the data from Blob storage into staging tables in SQL Data Warehouse. The data is cleansed and transformed during this process. Polybase can parallelize the process for large datasets.
+> 3. After loading a new batch of data into the warehouse, a previously created Analysis Services tabular model is refreshed. This semantic model simplifies the analysis of business data and relationships.
+> 4. Business analysts use Microsoft Power BI to analyze warehoused data via the Analysis Services semantic model.
 
 ### Components
 
@@ -60,8 +58,6 @@ Data is loaded from these different data sources using several Azure components:
 - [Analysis Services](/azure/analysis-services) provides a semantic model for your data. It can also increase system performance when analyzing your data.
 - [Power BI](/power-bi) is a suite of business analytics tools to analyze data and share insights. Power BI can query a semantic model stored in Analysis Services, or it can query SQL Data Warehouse directly.
 - [Azure Active Directory (Azure AD)](/azure/active-directory) authenticates users who connect to the Analysis Services server through Power BI. Data Factory can also use Azure AD to authenticate to SQL Data Warehouse via a service principal or [Managed identity for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview).
-
-::: zone target="docs"
 
 ### Alternatives
 
@@ -102,8 +98,6 @@ Review a [pricing sample for a data warehousing scenario][calculator] via the Az
 - Review the [Azure reference architecture for automated enterprise BI](/azure/architecture/reference-architectures/data/enterprise-bi-adf), which includes instructions for deploying an instance of this architecture in Azure.
 - Read the [Maritz Motivation Solutions customer story][source-document]. That story describes a similar approach to managing customer data.
 - Find comprehensive architectural guidance on data pipelines, data warehousing, online analytical processing (OLAP), and big data in the [Azure Data Architecture Guide](/azure/architecture/data-guide).
-
-::: zone-end
 
 <!-- links -->
 [source-document]: https://customers.microsoft.com/story/maritz
