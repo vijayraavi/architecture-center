@@ -10,8 +10,9 @@ ms.date: 09/15/2018
 
 This example scenario demonstrates a data pipeline that integrates large amounts of data from multiple sources into a unified analytics platform in Azure. This specific scenario is based on a sales and marketing solution, but the design patterns are relevant for many industries requiring advanced analytics of large datasets such as e-commerce, retail, and healthcare.
 
-> [!div class="introduction"]
-> This example demonstrates a sales and marketing company that creates incentive programs. These programs reward customers, suppliers, salespeople, and employees. Data is fundamental to these programs, and the company wants to improve the insights gained through data analytics using Azure.
+:::introduction
+This example demonstrates a sales and marketing company that creates incentive programs. These programs reward customers, suppliers, salespeople, and employees. Data is fundamental to these programs, and the company wants to improve the insights gained through data analytics using Azure.
+:::
 
 The company needs a modern approach to analysis data, so that decisions are made using the right data at the right time. The company's goals include:
 
@@ -30,15 +31,17 @@ This approach can also be used to:
 
 ## Architecture
 
-> [!div class="architecture_diagram"]
-> ![Architecture for a data warehousing and analysis scenario in Azure][architecture]
+:::architecture_diagram
+![Architecture for a data warehousing and analysis scenario in Azure][architecture]
+:::
 
-> [!div class="data_flow"]
-> The data flows through the solution as follows:
-> 1. For each data source, any updates are exported periodically into a staging area in Azure Blob storage.
-> 2. Data Factory incrementally loads the data from Blob storage into staging tables in SQL Data Warehouse. The data is cleansed and transformed during this process. Polybase can parallelize the process for large datasets.
-> 3. After loading a new batch of data into the warehouse, a previously created Analysis Services tabular model is refreshed. This semantic model simplifies the analysis of business data and relationships.
-> 4. Business analysts use Microsoft Power BI to analyze warehoused data via the Analysis Services semantic model.
+:::data_flow
+The data flows through the solution as follows:
+1. For each data source, any updates are exported periodically into a staging area in Azure Blob storage.
+2. Data Factory incrementally loads the data from Blob storage into staging tables in SQL Data Warehouse. The data is cleansed and transformed during this process. Polybase can parallelize the process for large datasets.
+3. After loading a new batch of data into the warehouse, a previously created Analysis Services tabular model is refreshed. This semantic model simplifies the analysis of business data and relationships.
+4. Business analysts use Microsoft Power BI to analyze warehoused data via the Analysis Services semantic model.
+:::
 
 ### Components
 
