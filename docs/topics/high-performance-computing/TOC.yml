@@ -14,6 +14,8 @@
       href: /azure/architecture/guide/architecture-styles/big-compute?toc=/azure/architecture/topics/high-performance-computing/toc.json
     - name: Autoscaling best practices
       href: /azure/architecture/best-practices/auto-scaling?toc=/azure/architecture/topics/high-performance-computing/toc.json
+- name: Implementation Checklist
+  href: index.md#implementation-checklist
 - name: Infrastructure
   items:
   - name: Overview
@@ -162,8 +164,8 @@
     href: index.md#cost-management
   - name: Low priority VM's
     href: https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-low-priority?toc=/azure/architecture/topics/high-performance-computing/toc.json
-- name: Authentication
-  href: index.md#authentication
+- name: Security
+  href: index.md#security
 - name: HPC applications
   items:
   - name: Overview
