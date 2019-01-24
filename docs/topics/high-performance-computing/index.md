@@ -36,6 +36,8 @@ The following articles provide more detail about this dynamic scaling capability
 
 ## Implementation Checklist
 
+Ensure you're reviewed the following areas while building your HPC solution on Azure
+
 - [ ] Choose the appropriate [architecture](#Infrastructure) based on your requirements
   - [ ] Know which [Compute](#compute) options is right for your workload
   - [ ] Identify the right [storage](#storage) solution that meets your needs
