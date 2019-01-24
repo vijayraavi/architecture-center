@@ -34,6 +34,15 @@ The following articles provide more detail about this dynamic scaling capability
 - [Big Compute Architecture Style](/azure/architecture/guide/architecture-styles/big-compute?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 - [Autoscaling best practices](/azure/architecture/best-practices/auto-scaling?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 
+## Implementation Checklist
+
+[ ] Choose the appropriate [architecture](#Infrastructure) based on your requirements
+  [ ] Know which [Compute](#compute) options is right for your workload
+  [ ] Identify the right [storage](#storage) solution that meets your needs
+[ ] Decide how you're going to [manage](#manage) all your resources
+[ ] Optimize your [application](#applications) for the cloud
+[ ] [Secure](#security) your Infrastructure
+
 ## Infrastructure
 
 There are a number of infrastructure components necessary to build a HPC system.  Compute, Storage, and Networking provide the underlying components, no matter how you choose to manage your HPC workloads.
@@ -103,7 +112,6 @@ The following scenarios outline a few of the common ways HPC solutions are built
     </a>
 </li>
 </ul>
-
 
 ### Compute
 
@@ -220,9 +228,12 @@ Managing your HPC cost on Azure can be done through a few different ways.
 - Upfront commitments
 - Discounts when you use microsoft products
 
-## Authentication
+## Security
 
 - Centralized user management for Linux & Windows
+- Network Isolation
+- ExpressRoute
+- VPN
 
 ## HPC applications
 
