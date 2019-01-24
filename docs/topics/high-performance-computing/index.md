@@ -36,12 +36,12 @@ The following articles provide more detail about this dynamic scaling capability
 
 ## Implementation Checklist
 
-[ ] Choose the appropriate [architecture](#Infrastructure) based on your requirements
-  [ ] Know which [Compute](#compute) options is right for your workload
-  [ ] Identify the right [storage](#storage) solution that meets your needs
-[ ] Decide how you're going to [manage](#manage) all your resources
-[ ] Optimize your [application](#applications) for the cloud
-[ ] [Secure](#security) your Infrastructure
+- [ ] Choose the appropriate [architecture](#Infrastructure) based on your requirements
+  - [ ] Know which [Compute](#compute) options is right for your workload
+  - [ ] Identify the right [storage](#storage) solution that meets your needs
+- [ ] Decide how you're going to [manage](#manage) all your resources
+- [ ] Optimize your [application](#applications) for the cloud
+- [ ] [Secure](#security) your Infrastructure
 
 ## Infrastructure
 
