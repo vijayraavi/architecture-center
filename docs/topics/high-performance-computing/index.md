@@ -5,7 +5,9 @@ author: adamboeglin
 ms.date: 12/03/2018
 layout: LandingPage
 ms.topic: landing-page
+zone_pivot_groups: platform
 ---
+
 # High Performance Computing (HPC) on Azure
 
 ## Introduction to HPC
@@ -13,6 +15,8 @@ ms.topic: landing-page
 High Performance Computing (HPC), also called "Big Compute", is the process of using a large number of coordinated CPU or GPU based computers to solve complex mathematical tasks to solve a wide number of problems.
 
 > [!VIDEO https://www.youtube.com/embed/rKURT32faJk]
+
+::: zone pivot="linux"
 
 ### HPC industries and workloads
 
@@ -25,6 +29,10 @@ Many industries use HPC to solve some of their most difficult problems.  These i
 - Engineering
 - Weather modeling
 
+::: zone-end
+
+::: zone pivot="windows"
+
 ### How is HPC different on the cloud
 
 One of the differences between an on-premise HPC system and one in the cloud is that cloud resources can dynamically be added and removed as they're needed.  This moves your bottleneck away from available compute cores and instead focuses on right sizing your infrastructure to the requirements of your job.
@@ -33,6 +41,8 @@ The following articles provide more detail about this dynamic scaling capability
 
 - [Big Compute Architecture Style](/azure/architecture/guide/architecture-styles/big-compute?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 - [Autoscaling best practices](/azure/architecture/best-practices/auto-scaling?toc=/azure/architecture/topics/high-performance-computing/toc.json)
+
+::: zone-end
 
 ## Implementation Checklist
 
