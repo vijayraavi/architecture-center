@@ -41,8 +41,8 @@ Ensure you're reviewed the following areas while building your HPC solution on A
 
 > [!div class="checklist"]
 > - Choose the appropriate [architecture](#infrastructure) based on your requirements
->   - Know which [Compute](#compute) options is right for your workload
->   - Identify the right [storage](#storage) solution that meets your needs
+> - Know which [Compute](#compute) options is right for your workload
+> - Identify the right [storage](#storage) solution that meets your needs
 > - Decide how you're going to [manage](#management) all your resources
 > - Optimize your [application](#hpc-applications) for the cloud
 > - [Secure](#security) your Infrastructure

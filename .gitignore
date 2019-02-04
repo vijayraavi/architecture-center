@@ -231,4 +231,4 @@ _site/
 _themes*/
 
 .openpublishing.buildcore.ps1
-.vscode/
+.vscode/*
