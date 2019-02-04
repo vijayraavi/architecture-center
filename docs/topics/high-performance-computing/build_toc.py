@@ -18,7 +18,7 @@ def getname(line):
 # Generate the links used in anchors
 def overviewlink(name):
     shortname = name.lower()
-    return str(shortname).replace(" ", "-")
+    return str(shortname).replace(" ", "-").replace("&", "")
 
 toc = ""
 toc_list = []

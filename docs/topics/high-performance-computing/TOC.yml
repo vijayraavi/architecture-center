@@ -91,7 +91,7 @@
   - name: Hybrid & Cloud Bursting
     items:
     - name: Overview
-      href: index.md#hybrid-&-cloud-bursting
+      href: index.md#hybrid--cloud-bursting
     - name: Options for connecting an on-premises network to Azure
       href: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking?toc=/azure/architecture/topics/high-performance-computing/toc.json
     - name: Connect an on-premises network to Azure using a VPN gateway
