@@ -3,8 +3,11 @@
 
 import re
 import codecs
+from os.path import dirname, join
 
-input_file = open('index.md', 'r')
+current_dir = dirname(__file__)
+file_path = join(current_dir, "./index.md")
+input_file = open(file_path, 'r')
 
 # Use regex to pull a title from a header
 def getname(line):
@@ -93,6 +96,7 @@ for i in range(0,len(toc_list)):
             toc += indent + "  href: index.md#" + overviewlink(item_name) + "\n"
 
 # Write the TOC file
-output_file = codecs.open('TOC.yml', 'w', "utf-8")
+output_file_path = join(current_dir, 'TOC.yml')
+output_file = codecs.open(output_file_path, 'w', "utf-8")
 output_file.write(toc)
 output_file.close()
