@@ -11,7 +11,9 @@ ms.topic: landing-page
 
 ## Introduction to HPC
 
-High Performance Computing (HPC), also called "Big Compute", uses a large number of CPU or GPU based computers to solve complex mathematical tasks.
+> [!VIDEO https://www.youtube.com/embed/rKURT32faJk]
+
+High Performance Computing (HPC), also called "Big Compute", uses a large number of CPU or GPU-based computers to solve complex mathematical tasks.
 
 Many industries use HPC to solve some of their most difficult problems.  These include workloads such as:
 
@@ -22,13 +24,9 @@ Many industries use HPC to solve some of their most difficult problems.  These i
 - Engineering
 - Weather modeling
 
-Review this video for an overview of HPC on Azure.
-
-> [!VIDEO https://www.youtube.com/embed/rKURT32faJk]
-
 ### How is HPC different on the cloud
 
-One of the primary differences between an on-premise HPC system and one in the cloud is the ability for resources to dynamically be added and removed as they're needed.  This can remove available compute capacity as a bottleneck and instead allow customers to right size their infrastructure for the requirements of their jobs.
+One of the primary differences between an on-premise HPC system and one in the cloud is the ability for resources to dynamically be added and removed as they're needed.  Dynamic scaling removes compute capacity as a bottleneck and instead allow customers to right size their infrastructure for the requirements of their jobs.
 
 The following articles provide more detail about this dynamic scaling capability.
 
@@ -49,7 +47,7 @@ As you're looking to implement your own HPC solution on Azure, ensure you're rev
 
 ## Infrastructure
 
-There are a number of infrastructure components necessary to build a HPC system.  Compute, Storage, and Networking provide the underlying components, no matter how you choose to manage your HPC workloads.
+There are a number of infrastructure components necessary to build an HPC system.  Compute, Storage, and Networking provide the underlying components, no matter how you choose to manage your HPC workloads.
 
 ### Example HPC Architectures
 
@@ -121,8 +119,8 @@ The following scenarios outline a few of the common ways HPC solutions are built
 
 Azure offers a range of sizes that are optimized for both CPU & GPU intensive workloads.
 
-#### CPU based virtual machines
-- [Linux VM's](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json)
+#### CPU-based virtual machines
+- [Linux VMs](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 - [Windows VM's](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-hpc?toc=/azure/architecture/topics/high-performance-computing/toc.json) VMs
   
 #### GPU-enabled virtual machines
@@ -137,14 +135,14 @@ N-series VMs feature NVIDIA GPUs designed for compute-intensive or graphics-inte
 Large-scale Batch and HPC workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems.  There are a number of solutions to manage both the speed and capacity needs of HPC applications on Azure
 
 - [Parallel virtual file systems on Azure](https://azure.microsoft.com/resources/parallel-virtual-file-systems-on-microsoft-azure/)
-- High performance cloud storage solutions from [Avere](http://www.averesystems.com/about-us/about-avere)
+- [Avere](http://www.averesystems.com/about-us/about-avere) high-performance cloud storage solutions
 - [BeeGFS](https://azure.microsoft.com/resources/implement-glusterfs-on-azure/en-us/)
 - [Storage Optimized Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 - [Blob, table, and queue storage](https://docs.microsoft.com/azure/storage/storage-introduction?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 - [Azure SMB File storage](https://docs.microsoft.com/azure/storage/storage-files-introduction?toc=/azure/architecture/topics/high-performance-computing/toc.json)
 - [Intel Cloud Edition Lustre](https://azuremarketplace.microsoft.com/marketplace/apps/intel.intel-cloud-edition-gs)
 
-For more information comparing Lustre, GlusterFS, and BeeGFS on Azure, review the [Parallel Files Sstems on Azure eBook](https://blogs.msdn.microsoft.com/azurecat/2018/06/11/azurecat-ebook-parallel-virtual-file-systems-on-microsoft-azure/)
+For more information comparing Lustre, GlusterFS, and BeeGFS on Azure, review the [Parallel Files Systems on Azure eBook](https://blogs.msdn.microsoft.com/azurecat/2018/06/11/azurecat-ebook-parallel-virtual-file-systems-on-microsoft-azure/)
 
 ### Networking
 
@@ -158,7 +156,7 @@ H16r, H16mr, A8, and A9 VMs can connect to a high throughput back-end RDMA netwo
 
 ### Do-it-yourself
 
-Building an HPC system from scratch on Azure offers a significant amount of flexability, but is often very maintenance intensive.  
+Building an HPC system from scratch on Azure offers a significant amount of flexibility, but is often very maintenance intensive.  
 
 1. Set up your own cluster environment in Azure virtual machines or [virtual machine scale sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview?toc=/azure/architecture/topics/high-performance-computing/toc.json).
 2. Use Azure Resource Manager templates to deploy leading [workload managers](#workload-managers), infrastructure, and [applications](#hpc-applications).
@@ -265,9 +263,9 @@ There are a number of workload managers offered in the [Azure Marketplace](https
 
 ### Azure Batch
 
-[Azure Batch](https://docs.microsoft.com/azure/batch/batch-technical-overview?toc=/azure/architecture/topics/high-performance-computing/toc.json) is a platform service for running large-scale parallel and high-performance computing (HPC) applications efficiently in the cloud. Azure Batch schedules compute-intensive work to run on a managed pool of virtual machines, and can automatically scale compute resources to meet the needs of your jobs. 
+[Azure Batch](https://docs.microsoft.com/azure/batch/batch-technical-overview?toc=/azure/architecture/topics/high-performance-computing/toc.json) is a platform service for running large-scale parallel and high-performance computing (HPC) applications efficiently in the cloud. Azure Batch schedules compute-intensive work to run on a managed pool of virtual machines, and can automatically scale compute resources to meet the needs of your jobs.
 
-SaaS providers or developers can use the Batch SDKs and tools to integrate HPC applications or container workloads with Azure, stage data to Azure, and build job execution pipelines. 
+SaaS providers or developers can use the Batch SDKs and tools to integrate HPC applications or container workloads with Azure, stage data to Azure, and build job execution pipelines.
 
 ### Azure CycleCloud
 
@@ -306,9 +304,9 @@ Containers can also be used to manage some HPC workloads.  Services like the Azu
 
 ## Cost Management
 
-Managing your HPC cost on Azure can be done through a few different ways.  Ensure you've reviewed the [Azure puchasing options](https://azure.microsoft.com/en-us/pricing/purchase-options/) to find the method that works best for your organization.
+Managing your HPC cost on Azure can be done through a few different ways.  Ensure you've reviewed the [Azure purchasing options](https://azure.microsoft.com/en-us/pricing/purchase-options/) to find the method that works best for your organization.
 
-[Low priority VM's](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-low-priority?toc=/azure/architecture/topics/high-performance-computing/toc.json) allow you to take advantage of our unutilized capacity at a significant cost savings.
+[Low priority VMs](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-low-priority?toc=/azure/architecture/topics/high-performance-computing/toc.json) allow you to take advantage of our unutilized capacity at a significant cost savings.
 
 ## Security
 
@@ -329,7 +327,7 @@ In addition to the network configurations available in the [Cloud Bursting](#) s
                     </div>
                     <div class="cardText">
                         <h3>Implement a hub-spoke network topology in Azure</h3>
-                        <p>The hub is a virtual network (VNet) in Azure that acts as a central point of connectivity to your on-premises network. The spokes are VNets that peer with the hub, and can be used to isolate workloads. Traffic flows between the on-premises datacenter and the hub through an ExpressRoute or VPN gateway connection.</p>
+                        <p>The hub is a virtual network (VNet) in Azure that acts as a central point of connectivity to your on-premises network. The spokes are VNets that peer with the hub, and can be used to isolate workloads.</p>
                     </div>
                 </div>
             </div>
@@ -416,7 +414,7 @@ Run custom or commercial HPC applications in Azure. Several examples in this sec
 
 ## Customer stories
 
-There are a number of customers who've seen great success by using Azure for their HPC workloads.  You can find a few of these customer case studies below:
+There are a number of customers who have seen great success by using Azure for their HPC workloads.  You can find a few of these customer case studies below:
 
 - [ANEO](https://customers.microsoft.com/story/it-provider-finds-highly-scalable-cloud-based-hpc-redu) 
 - [AXA Global P&C](https://customers.microsoft.com/story/axa-global-p-and-c)
@@ -434,7 +432,7 @@ There are a number of customers who've seen great success by using Azure for the
 
 ## Other Important Information
 
-- Ensure your [vCPU quota](https://docs.microsoft.com/azure/virtual-machines/linux/quotas?toc=/azure/architecture/topics/high-performance-computing/toc.json) has been increased before attempting to run large scale workloads.
+- Ensure your [vCPU quota](https://docs.microsoft.com/azure/virtual-machines/linux/quotas?toc=/azure/architecture/topics/high-performance-computing/toc.json) has been increased before attempting to run large-scale workloads.
 
 ## Next steps
 
