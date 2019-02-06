@@ -12,7 +12,7 @@
                     "summary": "How do microservices differ from other architectures, and when should you use them?"
                 },
                 {
-                    "title": "Designing microservices",
+                    "title": "Modeling microservices",
                     "url": "./domain-analysis.md",
                     "summary": "To avoid some common pitfalls when designing microservices, use domain analysis to define your microservice boundaries."
                 },
@@ -24,13 +24,8 @@
             ]
         },
         {
-            "heading": "Microservices architectures",
+            "heading": "Example scenarios using microservices",
             "cards": [
-                {
-                    "title": "Azure Kubernetes Service (AKS)",
-                    "url": "../reference-architectures/microservices/aks.md",
-                    "summary": "This reference architecture shows a basic AKS configuration that can be the starting point for most deployments."
-                },
                 {
                     "title": "Using Service Fabric to decompose monolithic applications",
                     "url": "../example-scenario/infrastructure/service-fabric-microservices.md",
@@ -41,16 +36,37 @@
                     "url": "../example-scenario/data/ecommerce-order-processing",
                     "summary":"Order processing using a functional programming model implemented via microservices."
                 }
+
+            ]
+        },
+        {
+            "heading": "Designing a microservices application",
+            "cards": [
+                {
+                    "title": "Azure Kubernetes Service (AKS) reference architecture",
+                    "url": "../reference-architectures/microservices/aks.md",
+                    "summary": "This reference architecture shows a basic AKS configuration that can be the starting point for most deployments."
+                },
+                {
+                    "title": "API gateways",
+                    "url": "./gateway.md",
+                    "summary": "An API gateway acts as a reverse proxy, routing requests from clients to services. It may also perform cross-cutting tasks such as authentication, SSL termination, and rate limiting."
+                },
+                {
+                    "title": "Data considerations for microservices",
+                    "url": "../example-scenario/infrastructure/service-fabric-microservices.md",
+                    "summary": "Considerations for managing data in a microservices architecture."
+                },
+                {
+                    "title": "Interservice communication",
+                    "url": "./interservice-communication.md",
+                    "summary":"This article looks at the tradeoffs between asynchronous messaging versus synchronous APIs."
+                }
             ]
         },
         {
             "heading": "Deploying and running microservices in production",
             "cards": [
-                {
-                    "title": "Deploying an API gateway",
-                    "url": "./gateway.md",
-                    "summary": "An API gateway acts as a reverse proxy, routing requests from clients to services. It may also perform cross-cutting tasks such as authentication, SSL termination, and rate limiting."
-                },
                 {
                     "title": "Logging and monitoring",
                     "url": "./logging-monitoring.md",

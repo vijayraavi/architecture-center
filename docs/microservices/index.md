@@ -35,7 +35,7 @@ Microservices are a popular architectural style for building cloud applications 
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Designing microservices</h3>
+                        <h3>Modeling microservices</h3>
                         <p>To avoid some common pitfalls when designing microservices, use domain analysis to define your microservice boundaries.</p>
                     </div>
                 </div>
@@ -59,23 +59,9 @@ Microservices are a popular architectural style for building cloud applications 
 </li>
 </ul>
 
-## Microservices architectures
+## Example scenarios using microservices
 
 <ul  class="panelContent cardsZ">
-<li style="display: flex; flex-direction: column;">
-    <a href="../reference-architectures/microservices/aks.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Azure Kubernetes Service (AKS)</h3>
-                        <p>This reference architecture shows a basic AKS configuration that can be the starting point for most deployments.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
 <li style="display: flex; flex-direction: column;">
     <a href="../example-scenario/infrastructure/service-fabric-microservices.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
@@ -106,16 +92,30 @@ Microservices are a popular architectural style for building cloud applications 
 </li>
 </ul>
 
-## Deploying and running microservices in production
+## Designing a microservices application
 
 <ul  class="panelContent cardsZ">
+<li style="display: flex; flex-direction: column;">
+    <a href="../reference-architectures/microservices/aks.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Azure Kubernetes Service (AKS) reference architecture</h3>
+                        <p>This reference architecture shows a basic AKS configuration that can be the starting point for most deployments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
 <li style="display: flex; flex-direction: column;">
     <a href="./gateway.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Deploying an API gateway</h3>
+                        <h3>API gateways</h3>
                         <p>An API gateway acts as a reverse proxy, routing requests from clients to services. It may also perform cross-cutting tasks such as authentication, SSL termination, and rate limiting.</p>
                     </div>
                 </div>
@@ -123,6 +123,39 @@ Microservices are a popular architectural style for building cloud applications 
         </div>
     </a>
 </li>
+<li style="display: flex; flex-direction: column;">
+    <a href="../example-scenario/infrastructure/service-fabric-microservices.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Data considerations for microservices</h3>
+                        <p>Considerations for managing data in a microservices architecture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+<li style="display: flex; flex-direction: column;">
+    <a href="./interservice-communication.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Interservice communication</h3>
+                        <p>This article looks at the tradeoffs between asynchronous messaging versus synchronous APIs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+</ul>
+
+## Deploying and running microservices in production
+
+<ul  class="panelContent cardsZ">
 <li style="display: flex; flex-direction: column;">
     <a href="./logging-monitoring.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
