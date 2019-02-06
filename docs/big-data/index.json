@@ -1,0 +1,72 @@
+{
+    "title": "Building big data architectures on Azure",
+    "description": "Building big data architectures on Azure",
+    "iconPath": "../_images/data-guide.svg",
+    "summary": "A big data architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems.",
+    "sections": [
+        {
+            "cards": [
+                {
+                    "title": "What is a big data architecture?",
+                    "url": "../data-guide/big-data/index.md",
+                    "summary": "This article describes the logical components that fit into a big data architecture."
+                }
+            ]
+        },
+        {
+            "heading": "Data warehouses",
+            "cards": [
+                {
+                    "title": "Overview of data warehousing",
+                    "url": "../data-guide/relational-data/data-warehousing.md",
+                    "summary": "A data warehouse is a central, organizational, relational repository of integrated data."
+                },
+                {
+                    "title": "Overview of ETL (extract, transform, and load) processing",
+                    "url": "../data-guide/relational-data/etl.md",
+                    "summary": "ETL is a data pipeline that collects data from various sources, transforms it according to business rules, and loads it into a data store."
+                },
+                {
+                    "title": "Enterprise BI in Azure with SQL Data Warehouse",
+                    "url": "../reference-architectures/data/enterprise-bi-sqldw.md",
+                    "summary": "This reference architecture implements an extract, load, and transform (ELT) pipeline that moves data from SQL Server into SQL Data Warehouse for analysis."
+                },
+                {
+                    "title": "Automated enterprise BI with SQL Data Warehouse and Azure Data Factory",
+                    "url": "../reference-architectures/data/enterprise-bi-adf.md",
+                    "summary": "This reference architecture shows how to automate an ELT pipeline using Azure Data Factory."
+                },
+                {
+                    "title": "Hybrid ETL with existing on-premises SSIS and Azure Data Factory",
+                    "url": "../reference-architectures/data/enterprise-bi-adf.md",
+                    "summary": "This example discusses using existing SQL Server Integration Services (SSIS) packages as part of a cloud data workflow."
+                }
+            ]
+        },
+        {
+            "heading": "Real-time stream processing",
+            "cards": [
+                {
+                    "title": "Overview of real-time processing architectures",
+                    "url": "../data-guide/relational-data/data-warehousing.md",
+                    "summary": "Real-time processing captures steams of data in real-time and processes them with minimal latency."
+                },
+                {
+                    "title": "Stream processing with Azure Databricks",
+                    "url": "../reference-architectures/data/stream-processing-databricks.md",
+                    "summary": "This reference architecture shows an end-to-end stream processing pipeline using Spark on Azure Databricks."
+                },
+                {
+                    "title": "Stream processing with Azure Stream Analytics",
+                    "url": "../reference-architectures/data/stream-processing-stream-analytics.md",
+                    "summary": "This reference architecture shows an end-to-end stream processing pipeline using Azure Stream Analytics."
+                },
+                {
+                    "title": "High-scale message ingestion with Event Hubs",
+                    "url": "../microservices/ingestion-workflow.md",
+                    "summary": "Use Event Hubs to manage a workflow at very high throughput."
+                }
+            ]
+        }
+    ]
+}
