@@ -19,7 +19,7 @@
                 {
                     "title": "Reference implementation",
                     "url": "./reference-implementation.md",
-                    "summary":"This reference implementation shows best practices for a microservices architecture deployed to Azure Kubernetes Service (AKS)."
+                    "summary":"This reference implementation shows best practices for a microservices architecture on Azure Kubernetes Service (AKS)."
                 }
             ]
         },
@@ -47,14 +47,14 @@
             "heading": "Deploying and running microservices in production",
             "cards": [
                 {
-                    "title": "Deploying API gateways",
+                    "title": "Deploying an API gateway",
                     "url": "./gateway.md",
                     "summary": "An API gateway acts as a reverse proxy, routing requests from clients to services. It may also perform cross-cutting tasks such as authentication, SSL termination, and rate limiting."
                 },
                 {
                     "title": "Logging and monitoring",
                     "url": "./logging-monitoring.md",
-                    "summary": "The distributed nature of microservices architectures makes logging and monitor critical."
+                    "summary": "The distributed nature of microservices architectures makes logging and monitoring especially critical."
                 },
                 {
                     "title": "Continuous integration and deployment",

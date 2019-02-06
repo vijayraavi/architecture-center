@@ -50,7 +50,7 @@ Microservices are a popular architectural style for building cloud applications 
                 <div class="card">
                     <div class="cardText">
                         <h3>Reference implementation</h3>
-                        <p>This reference implementation shows best practices for a microservices architecture deployed to Azure Kubernetes Service (AKS).</p>
+                        <p>This reference implementation shows best practices for a microservices architecture on Azure Kubernetes Service (AKS).</p>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@ Microservices are a popular architectural style for building cloud applications 
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Deploying API gateways</h3>
+                        <h3>Deploying an API gateway</h3>
                         <p>An API gateway acts as a reverse proxy, routing requests from clients to services. It may also perform cross-cutting tasks such as authentication, SSL termination, and rate limiting.</p>
                     </div>
                 </div>
@@ -130,7 +130,7 @@ Microservices are a popular architectural style for building cloud applications 
                 <div class="card">
                     <div class="cardText">
                         <h3>Logging and monitoring</h3>
-                        <p>The distributed nature of microservices architectures makes logging and monitor critical.</p>
+                        <p>The distributed nature of microservices architectures makes logging and monitoring especially critical.</p>
                     </div>
                 </div>
             </div>

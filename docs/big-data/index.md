@@ -1,12 +1,12 @@
 ---
-title: Building big data architectures on Azure
+title: Big Data architectures on Azure
 description: Building big data architectures on Azure
 ms.date: 10/23/2018
 layout: LandingPage
 ms.topic: landing-page
 ---
 
-# Building big data architectures on Azure
+# Big Data architectures on Azure
 
 <!-- markdownlint-disable MD033 -->
 

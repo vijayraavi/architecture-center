@@ -1,5 +1,5 @@
 {
-    "title": "Building big data architectures on Azure",
+    "title": "Big Data architectures on Azure",
     "description": "Building big data architectures on Azure",
     "iconPath": "../_images/data-guide.svg",
     "summary": "A big data architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems.",
