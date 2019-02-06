@@ -10,7 +10,7 @@ ms.topic: landing-page
 
 <!-- markdownlint-disable MD033 -->
 
-<img src="../_images/microservices.svg" style="float:left; margin-top:8px; margin-right:8px;"/>
+<img src="../_images/microservices.svg" style="float:left; margin-top:8px; margin-right:8px; max-width: 80px; max-height: 80px;"/>
 
 Microservices are a popular architectural style for building cloud applications that are resilient, highly scalable, independently deployable, and able to evolve quickly. But a successful microservices architecture requires a different approach to designing and building applications.
 

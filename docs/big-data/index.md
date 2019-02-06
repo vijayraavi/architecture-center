@@ -10,7 +10,7 @@ ms.topic: landing-page
 
 <!-- markdownlint-disable MD033 -->
 
-<img src="../_images/data-guide.svg" style="float:left; margin-top:8px; margin-right:8px;"/>
+<img src="../_images/data-guide.svg" style="float:left; margin-top:8px; margin-right:8px; max-width: 80px; max-height: 80px;"/>
 
 A big data architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems.
 
