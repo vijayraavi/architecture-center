@@ -1,7 +1,6 @@
 ---
-title: Designing, building, and operating microservices on Azure with Kubernetes
-description: Designing, building, and operating microservices on Azure
-author: MikeWasson
+title: Building microservices on Azure
+description: Designing, building, and operating microservices architectures on Azure
 ms.date: 10/23/2018
 layout: LandingPage
 ms.topic: landing-page
@@ -68,11 +67,6 @@ Microservices are a popular architectural style for building cloud applications 
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../_images/microservices.svg" />
-                        </div>
-                    </div>
                     <div class="cardText">
                         <h3>Azure Kubernetes Service (AKS)</h3>
                         <p>This reference architecture shows a basic AKS configuration that can be the starting point for most deployments.</p>
@@ -87,11 +81,6 @@ Microservices are a popular architectural style for building cloud applications 
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../_images/microservices.svg" />
-                        </div>
-                    </div>
                     <div class="cardText">
                         <h3>Using Service Fabric to decompose monolithic applications</h3>
                         <p>Shows an iterative approach to decomposing an ASP.NET web site into a microservices architecture.</p>
@@ -102,15 +91,10 @@ Microservices are a popular architectural style for building cloud applications 
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
-    <a href="../example-scenario/infrastructure/service-fabric-microservices.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="../example-scenario/data/ecommerce-order-processing" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../_images/microservices.svg" />
-                        </div>
-                    </div>
                     <div class="cardText">
                         <h3>Scalable order processing on Azure</h3>
                         <p>Order processing using a functional programming model implemented via microservices.</p>
@@ -131,7 +115,7 @@ Microservices are a popular architectural style for building cloud applications 
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardText">
-                        <h3>API gateways</h3>
+                        <h3>Deploying API gateways</h3>
                         <p>An API gateway acts as a reverse proxy, routing requests from clients to services. It may also perform cross-cutting tasks such as authentication, SSL termination, and rate limiting.</p>
                     </div>
                 </div>
@@ -146,7 +130,7 @@ Microservices are a popular architectural style for building cloud applications 
                 <div class="card">
                     <div class="cardText">
                         <h3>Logging and monitoring</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>The distributed nature of microservices architectures makes logging and monitor critical.</p>
                     </div>
                 </div>
             </div>
@@ -160,7 +144,7 @@ Microservices are a popular architectural style for building cloud applications 
                 <div class="card">
                     <div class="cardText">
                         <h3>Continuous integration and deployment</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Continuous integration and continuous delivery (CI/CD) are key to achieving success with microservices.</p>
                     </div>
                 </div>
             </div>
