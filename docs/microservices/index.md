@@ -92,7 +92,7 @@ Microservices are a popular architectural style for building cloud applications 
 </li>
 </ul>
 
-## Designing a microservices application
+## Microservices reference architectures
 
 <ul  class="panelContent cardsZ">
 <li style="display: flex; flex-direction: column;">
@@ -101,7 +101,7 @@ Microservices are a popular architectural style for building cloud applications 
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Azure Kubernetes Service (AKS) reference architecture</h3>
+                        <h3>Microservices using Azure Kubernetes Service (AKS)</h3>
                         <p>This reference architecture shows a basic AKS configuration that can be the starting point for most deployments.</p>
                     </div>
                 </div>
@@ -109,6 +109,25 @@ Microservices are a popular architectural style for building cloud applications 
         </div>
     </a>
 </li>
+<li style="display: flex; flex-direction: column;">
+    <a href="../reference-architectures/microservices/aks.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Microservices using Service Fabric</h3>
+                        <p>This reference architecture shows a how to deploy a microservices architecture to Service Fabric.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+</ul>
+
+## Implementing a microservices application
+
+<ul  class="panelContent cardsZ">
 <li style="display: flex; flex-direction: column;">
     <a href="./gateway.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">

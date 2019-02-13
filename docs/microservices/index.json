@@ -40,13 +40,24 @@
             ]
         },
         {
-            "heading": "Designing a microservices application",
+            "heading": "Microservices reference architectures",
             "cards": [
                 {
-                    "title": "Azure Kubernetes Service (AKS) reference architecture",
+                    "title": "Microservices using Azure Kubernetes Service (AKS)",
                     "url": "../reference-architectures/microservices/aks.md",
                     "summary": "This reference architecture shows a basic AKS configuration that can be the starting point for most deployments."
                 },
+                {
+                    "title": "Microservices using Service Fabric",
+                    "url": "../reference-architectures/microservices/aks.md",
+                    "summary": "This reference architecture shows a how to deploy a microservices architecture to Service Fabric."
+                }
+
+            ]
+        },
+        {
+            "heading": "Implementing a microservices application",
+            "cards": [
                 {
                     "title": "API gateways",
                     "url": "./gateway.md",
