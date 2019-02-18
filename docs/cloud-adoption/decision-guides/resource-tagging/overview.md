@@ -41,7 +41,7 @@ For more sophisticated organization than a consistent naming convention only can
 
 *Tags* are metadata elements attached to resources. Tags consist of pairs of key/value strings. The values you include in these pairs is up to you, but the application of a consistent set of global tags, as part of a comprehensive naming and tagging policy, is a critical part of an overall governance policy.
 
-Here are some examples of common tagging patterns:
+When planning your tagging strategy, consider the common tagging patterns listed below, which  provide examples of how tagging applies organization to cloud assets. These patterns are not meant to be exclusive and can be used in parallel, providing multiple ways of organizing assets based on your company's needs.
 
 <!-- markdownlint-disable MD033 -->
 

@@ -41,7 +41,7 @@ Each Azure Enterprise Agreement provides a further ability to organize subscript
 
 ## Subscription design patterns
 
-Every enterprise is different. Therefore, the department/account/subscription hierarchy enabled throughout an Azure Enterprise Agreement allows for significant flexibility in how Azure is organized. Modeling your organization's hierarchy to reflect the needs of your company for billing, resource management, and resource access is the first, and most important, decision that you make when starting in the public cloud.
+Every enterprise is different. Therefore, the department/account/subscription hierarchy enabled throughout an Azure Enterprise Agreement allows for significant flexibility in how Azure is organized. Modeling your cloud estate to reflect your organization's hierarchy allows you to better align groups within your company with billing and accounting, resource management, and resource access for the cloud resources they use. Choosing a subscriptions design pattern is the first, and most important, decision that you should make as you begin to work with Azure.
 
 The following subscription patterns reflect a general increase in subscription design sophistication to support potential organizational priorities:
 

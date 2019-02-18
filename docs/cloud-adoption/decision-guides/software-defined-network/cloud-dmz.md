@@ -24,14 +24,14 @@ The DMZ deploys network virtual appliances (NVAs) to implement security function
 Deploying a Cloud DMZ assumes the following:
 
 - Your security teams have not fully aligned on-premises and cloud-based security requirements and policies.
-- Your cloud-based workloads require limited access to services hosted on your on-premises or third-party networks, or your users or applications in your on-premises environment need limited access to cloud-hosted resources.
+- Your cloud-based workloads require access to limited subset of services hosted on your on-premises or third-party networks, or your users or applications in your on-premises environment need limited access to cloud-hosted resources.
 - Implementing a VPN connection between your on-premises networks and cloud provider is not prevented by corporate policy, regulatory requirements, or technical compatibility issues.
 - Your workloads either do not require multiple subscriptions to bypass subscription resource limits, or they involve multiple subscriptions but don't require central management of connectivity or shared services used by resources spread across multiple subscriptions.
 
 Your Cloud Adoption team should consider the following issues when looking at implementing a Cloud DMZ virtual networking architecture:
 
 - Connecting on-premises networks with cloud networks increases the complexity of your security requirements. Even though the connection between cloud networks and the on-premises environment are secured, you still need to ensure cloud resources are secured.
-- The Cloud DMZ architecture is commonly used as a stepping stone while connectivity is further secured and security policy aligned between on-premises and cloud networks, allowing a broader adoption of a full-scale hybrid networking architecture.
+- The Cloud DMZ architecture is commonly used as a stepping stone while connectivity is further secured and security policy aligned between on-premises and cloud networks, allowing a broader adoption of a full-scale hybrid networking architecture. However, it may also apply to isolated deployments with specific security, identity and connectivity needs that the Cloud DMZ approach satisfies.
 
 ## Learn more
 
