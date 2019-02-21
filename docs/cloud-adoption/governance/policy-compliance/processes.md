@@ -35,17 +35,15 @@ Before defining triggers for policy compliance remediation, you need establish t
 
 ### Assign Cloud Governance team members
 
-Who will provide ongoing guidance on policy compliance and handle policy-related issues that emerge when deploying and operating your cloud assets? The size and composition of your Cloud Governance team will depend on the complexity of your policy requirements, and the budgeting and staffing priorities you've attached to policy compliance.
+Your cloud governance team will provide ongoing guidance on policy compliance and handle policy-related issues that emerge when deploying and operating your cloud assets. When building this team, invite staff from your organization that have expertise in areas covered by your defined policy statements and identified risks.
 
-Choose team members that have expertise in the areas covered by your defined policy statements. For initial test deployments this can be limited to a few system administrators responsible for establishing the basics of governance. As your deployments mature and your policies become more complex and more integrated with your wider corporate policy requirements, your Cloud Governance team will need to change to support increasingly complicated policy requirements.
-
-As your governance processes mature, review the cloud guidance team's membership regularly to ensure that you can properly address the latest policy requirements. Identify members of your IT staff with relevant experience or interest in specific areas of governance and include them in your teams on a permanent or ad-hoc basis as-needed.
+For initial test deployments this can be limited to a few system administrators responsible for establishing the basics of governance. As your governance processes mature, review the cloud guidance team's membership regularly to ensure that you can properly address new potential risks and policy requirements. Identify members of your IT and business staff with relevant experience or interest in specific areas of governance and include them in your teams on a permanent or ad-hoc basis as-needed.
 
 ### Reviews and policy iteration
 
-As additional resources are deployed, the Cloud Governance team will need to ensure that new workloads or assets comply with policy requirements. Plan to meet with the teams responsible for deploying any new resources to discuss alignment with your design guides.
+As additional resources and workloads are deployed, the cloud governance team will need to ensure that new workloads or assets comply with policy requirements. Evaluate new requirements from workload development teams to ensure their planned deployments will align with your design guides, and update your policies to support these requirements when appropriate.
 
-As your overall deployment grows, evaluate new potential risks regularly and update policy statements and design guides as needed. Schedule regular review cycles each of the five governance disciplines to ensure policy is up-to-date and being met.
+Plan to evaluate new potential risks and update policy statements and design guides as needed. Work with IT staff and workload teams to evaluate new Azure features and services on an ongoing basis. Also schedule regular review cycles each of the five governance disciplines to ensure policy is up-to-date and being met.
 
 ### Education
 
