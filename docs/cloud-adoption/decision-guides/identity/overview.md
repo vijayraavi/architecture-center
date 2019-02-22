@@ -15,11 +15,13 @@ In any environment, whether on-premises, hybrid, or cloud-only, IT needs to cont
 
 ![Plotting identity options from least to most complex, aligned with jump links below](../../_images/discovery-guides/discovery-guide-identity.png)
 
-Jump to: [Determine Identity Integration Requirements](#determine-identity-integration-requirements) | [Cloud native](#cloud-baseline) | [Directory Synchronization](#directory-synchronization) | [Cloud hosted domain services](#cloud-hosted-domain-services) | [Active Directory Federation Services](#active-directory-federation-services) | [Evolving identity integration](#evolving-identity-integration) | [Learn more](#learn-more)
+Jump to: [Determine Identity Integration Requirements](#determine-identity-integration-requirements) | [Cloud native](#cloud-baseline) | [Directory Synchronization](#directory-synchronization) | [Cloud hosted domain services](#cloud-hosted-domain-services) | [Active Directory Federation Services](#active-directory-federation-services) | [Learn more](#learn-more)
 
 There are several ways to manage identity in a cloud environment, which vary in cost and complexity. A key factor in structuring your cloud-based identity services is the level of integration required with your existing on-premises identity infrastructure.
 
 In Azure, Azure Active Directory (Azure AD) provides a base level of access control and identity management for cloud resources. However, if your organization's Active Directory (AD) infrastructure has a complex forest structure or customized organizational units (OUs), your cloud-based workloads may require directory synchronization with Azure AD for a consistent set of identities, groups, and roles between your on-premises and cloud environments. Additionally, support for applications dependent on legacy authentication mechanisms may require the deployment of Active Directory Domain Services (AD DS) in the cloud.
+
+Cloud-based identity management is an iterative process. You may start with a cloud native solution with a small set of users and corresponding roles for an initial deployment. As your migration matures, you may need to integrate your identity solution using directory synchronization or add domains services as part of your cloud deployments. Revisit your identity strategy in every iteration of your migration process.
 
 ## Determine identity integration requirements
 
@@ -83,10 +85,6 @@ It's likely that your existing directories and domain services will continue to 
 Identity federation establishes trust relationships across multiple identity management systems to allow common authentication and authorization capabilities. You can then support single sign-on capabilities across multiple domains within your organization or identity systems managed by your customers or business partners.
 
 Azure AD supports federation of on-premises Active Directory domains using [Active Directory Federation Services](/azure/active-directory/hybrid/how-to-connect-fed-whatis) (AD FS). See the reference architecture [Extend AD FS to Azure](../../../reference-architectures/identity/adfs.md) to see how this can be implemented in Azure.
-
-## Evolving identity integration
-
-Identity integration is an iterative process. You may want to start with a cloud native solution with a small set of users and corresponding roles for an initial deployment. As your migration matures, consider adopting a federated model or performing a full directory migration of your on-premises identity services to the cloud. Revisit your identity strategy in every iteration of your migration process.
 
 ## Learn more
 
