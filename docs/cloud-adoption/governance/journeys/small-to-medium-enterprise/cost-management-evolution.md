@@ -46,7 +46,7 @@ This business risk can be expanded into a few technical risks:
 
 ## Evolution of the policy statements
 
-The following changes to policy will help mitigate the new risks and guide implementation.
+The following changes to policy will help remediate the new risks and guide implementation.
 
 1. All cloud costs should be monitored against plan on a weekly basis by the governance team. Reporting on deviations between cloud costs and plan is to be shared with IT leadership and finance monthly. All cloud costs and plan updates should be reviewed with IT leadership and finance monthly.
 2. All costs must be allocated to a business function for accountability purposes.
@@ -70,7 +70,7 @@ This section of the article will evolve the governance MVP design to include new
 
 ## Conclusion
 
-Adding these processes and changes to the governance MVP helps mitigate many of the risks associated with cost governance. Together, they create the visibility, accountability, and optimization needed to control costs.
+Adding these processes and changes to the governance MVP helps remediate many of the risks associated with cost governance. Together, they create the visibility, accountability, and optimization needed to control costs.
 
 ## Next steps
 

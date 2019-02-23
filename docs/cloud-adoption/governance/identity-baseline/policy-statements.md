@@ -68,7 +68,7 @@ The following sample policy statements address a number of common identity-relat
 
 **Policy statement**: Cloud Governance processes must include quarterly review with identity management teams to identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
 
-**Potential design options**: Establish a quarterly security review meeting that includes both governance team members and IT staff responsible for managing identity services. Review existing security data and metrics to establish gaps in current identity management policy and tooling, and update policy to mitigate any new risks.
+**Potential design options**: Establish a quarterly security review meeting that includes both governance team members and IT staff responsible for managing identity services. Review existing security data and metrics to establish gaps in current identity management policy and tooling, and update policy to remediate any new risks.
 
 ## Next steps
 

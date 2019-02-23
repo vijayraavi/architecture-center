@@ -31,7 +31,7 @@ Actionable policy statements and the resulting architecture requirements serve a
 
 ## Developing Resource Consistency governance policy statements
 
-The following six steps offer examples and potential options to consider when developing Resource Consistency governance. Use each step as a starting point for discussions within your Cloud Governance team and with affected business, and IT teams across your organization to establish the policies and processes needed to mitigate Resource Consistency risks.
+The following six steps offer examples and potential options to consider when developing Resource Consistency governance. Use each step as a starting point for discussions within your Cloud Governance team and with affected business, and IT teams across your organization to establish the policies and processes needed to manage Resource Consistency risks.
 
 <!-- markdownlint-disable MD033 -->
 

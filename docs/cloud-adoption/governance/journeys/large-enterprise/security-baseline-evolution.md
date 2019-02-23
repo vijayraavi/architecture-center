@@ -65,7 +65,7 @@ This business risk can be expanded into a few technical risks:
 
 ## Evolution of the policy statements
 
-The following changes to policy will help mitigate the new risks and guide implementation. The list looks long, but the adoption of these policies may be easier than it would appear.
+The following changes to policy will help remediate the new risks and guide implementation. The list looks long, but the adoption of these policies may be easier than it would appear.
 
 1. All deployed assets must be categorized by criticality and data classification. Classifications are to be reviewed by the Cloud Governance team and the application before deployment to the cloud.
 2. Applications that store or access protected data are to be managed differently than those that don’t. At a minimum, they should be segmented to avoid unintended access of protected data.
@@ -160,7 +160,7 @@ In prior evolutions of the best practice, NSGs were defined which blocked public
 
 ## Conclusion
 
-Adding these processes and changes to the governance MVP helps mitigate many of the risks associated with security governance. Together, they add the network, identity, and security monitoring tools needed to protect data.
+Adding these processes and changes to the governance MVP helps remediate many of the risks associated with security governance. Together, they add the network, identity, and security monitoring tools needed to protect data.
 
 ## Next steps
 

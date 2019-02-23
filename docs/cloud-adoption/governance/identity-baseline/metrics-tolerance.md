@@ -38,7 +38,7 @@ Risks related to Identity Baseline are largely related to the complexity of your
 
 In the early stages of cloud adoption, work with your IT security team and business stakeholders to identify [business risks](business-risks.md) related to identity, then determine an acceptable baseline for identity risk tolerance. This section of the CAF guidance provides examples, but the detailed risks and baselines for your company or deployments may be different.
 
-Once you have a baseline, establish minimum benchmarks representing an unacceptable increase in your identified risks. These benchmarks act as triggers for when you need to take action to mitigate these risks. The following are a few examples of how identity related metrics, such as those discussed above, can justify an increased investment in the Identity Baseline discipline.
+Once you have a baseline, establish minimum benchmarks representing an unacceptable increase in your identified risks. These benchmarks act as triggers for when you need to take action to address these risks. The following are a few examples of how identity related metrics, such as those discussed above, can justify an increased investment in the Identity Baseline discipline.
 
 - **User account number trigger**. A company with more than X number of users, groups, or other objects managed in your identity systems could benefit from investment in the Identity Baseline discipline to ensure efficient governance over a large number of accounts.
 - **On-premises identity dependency trigger**. A company planning to migrate workloads to the cloud that require legacy authentication capabilities or third party MFA should invest in the Identity Baseline discipline to reduce risks related to refactoring or additional cloud infrastructure deployment.
@@ -49,7 +49,7 @@ Once you have a baseline, establish minimum benchmarks representing an unaccepta
 - **RBAC trigger**. A company with under X% of resources using role-based access control methods should consider investing in the Identity Baseline discipline to identify optimized ways to assign user access to resources.
 - **Authentication failure trigger**. A company where authentication failures represent more than X% of attempts should invest in the Identity Baseline discipline to ensure that authentication methods are not under external attack, and that users are able to use the authentication methods correctly.
 - **Authorization failure trigger**. A company where access attempts are rejected more than X% of the time should invest in the Identity Baseline discipline to improve the application and updating of access controls, and identify potentially malicious access attempts.
-- **Compromised account trigger**. A company with more than X number of compromised accounts should invest in the Identity Baseline discipline to improve the strength and security of authentication mechanisms and improve mechanisms to mitigate risks related to compromised accounts.
+- **Compromised account trigger**. A company with more than X number of compromised accounts should invest in the Identity Baseline discipline to improve the strength and security of authentication mechanisms and improve mechanisms to remediate risks related to compromised accounts.
 
 The exact metrics and triggers you use to gauge risk tolerance and the level of investment in the Identity Baseline discipline will be specific to your organization, but the examples above should serve as a useful base for discussion within your Cloud Governance team.
 

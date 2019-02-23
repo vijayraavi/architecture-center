@@ -82,7 +82,7 @@ The CAF governance model identifies key areas of importance during the journey. 
 - Identity Baseline
 - Deployment Acceleration
 
-Essentially, corporate policies serve as the early warning system to detect potential problems. The disciplines help the company mitigate risks and create guardrails.
+Essentially, corporate policies serve as the early warning system to detect potential problems. The disciplines help the company manage risks and create guardrails.
 
 ### Grow to the end state
 
@@ -90,9 +90,9 @@ Because governance requirements will evolve throughout the cloud adoption journe
 
 An **incremental governance** approach empowers these traits. Incremental governance relies on a small set of corporate policies, processes, and tools to establish a foundation for adoption and governance. That foundation is called a **minimum viable product (MVP)**. An MVP allows the governance team to quickly incorporate governance into implementations throughout the adoption lifecycle. An MVP can be established at any point during the cloud adoption process. However, it’s a good practice to adopt an MVP as early as possible.
 
-The ability to respond rapidly to changing risks empowers the Cloud Governance team to engage in new ways. The Cloud Governance team can join the Cloud Strategy team as scouts, moving ahead of the cloud adoption teams, plotting routes, and quickly establishing guardrails to mitigate risks associated with the adoption plans. These just-in-time governance layers are known as **governance evolutions**. With this approach, governance strategy evolves one step ahead of the cloud adoption teams.
+The ability to respond rapidly to changing risks empowers the Cloud Governance team to engage in new ways. The Cloud Governance team can join the Cloud Strategy team as scouts, moving ahead of the cloud adoption teams, plotting routes, and quickly establishing guardrails to manage risks associated with the adoption plans. These just-in-time governance layers are known as **governance evolutions**. With this approach, governance strategy evolves one step ahead of the cloud adoption teams.
 
-The following diagram shows a simple governance MVP and three governance evolutions. During the evolutions, additional corporate policies are defined to mitigate new risks. The Deployment Acceleration discipline then applies those changes across each deployment.
+The following diagram shows a simple governance MVP and three governance evolutions. During the evolutions, additional corporate policies are defined to remediate new risks. The Deployment Acceleration discipline then applies those changes across each deployment.
 
 ![Example of Incremental Governance evolutions](../../_images/governance/incremental-governance-example.png)
 

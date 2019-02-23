@@ -27,13 +27,13 @@ Large established enterprises often have teams or employees who focus on the dis
 
 In many large enterprises, the Five Disciplines of Cloud Governance can be blockers to adoption. Developing cloud expertise in identity, security, operations, deployments, and configuration across an enterprise takes time. Holistically implementing IT governance policy and IT security can slow innovation by months or even years. Balancing the business need to innovate and the governance need to protect existing resources is delicate.
 
-The inherent capabilities of the cloud can remove blockers to innovation but increase risks. In this governance journey, we showed how the example company created guardrails to mitigate the risk. Rather than tackling each of the disciplines required to protect the environment, the Cloud Governance team leads a risk-based approach to govern what could be deployed, while the other teams build the necessary cloud maturities. Most importantly, as each team reaches cloud maturity, governance applies their solutions holistically. As each team matures and adds to the overall solution, the Cloud Governance team can open stage gates, allowing additional innovation and adoption to thrive.
+The inherent capabilities of the cloud can remove blockers to innovation but increase risks. In this governance journey, we showed how the example company created guardrails to manage the risks. Rather than tackling each of the disciplines required to protect the environment, the Cloud Governance team leads a risk-based approach to govern what could be deployed, while the other teams build the necessary cloud maturities. Most importantly, as each team reaches cloud maturity, governance applies their solutions holistically. As each team matures and adds to the overall solution, the Cloud Governance team can open stage gates, allowing additional innovation and adoption to thrive.
 
 This model illustrates the growth of a partnership between the Cloud Governance team and existing enterprise teams (Security, IT Governance, Networking, Identity, and others). The journey starts with the governance MVP and grows to a holistic end state through governance evolutions.
 
 ## Requirements to supporting such a team sport
 
-The first requirement of a multi-layer governance model is to understand of the governance hierarchy. Answering the follownig questions will help you to understand the general governance hierarchy:
+The first requirement of a multi-layer governance model is to understand of the governance hierarchy. Answering the following questions will help you to understand the general governance hierarchy:
 
 - How is cloud accounting (billing for cloud services) allocated across business units?
 - How are governance responsibilities allocated across corporate IT and each business unit?

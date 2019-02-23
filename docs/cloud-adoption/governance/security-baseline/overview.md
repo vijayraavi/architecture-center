@@ -31,7 +31,7 @@ Actionable policy statements and the resulting architecture requirements serve a
 
 ## Developing Security Baseline governance policy statements
 
-The following six steps offer examples and potential options to consider when developing Security Baseline governance. Use each step as a starting point for discussions within your Cloud Governance team and with affected business, IT, and security teams across your organization to establish the policies and processes needed to mitigate security-related risks.
+The following six steps offer examples and potential options to consider when developing Security Baseline governance. Use each step as a starting point for discussions within your Cloud Governance team and with affected business, IT, and security teams across your organization to establish the policies and processes needed to manage security-related risks.
 
 <!-- markdownlint-disable MD033 -->
 

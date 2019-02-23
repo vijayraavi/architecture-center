@@ -1,18 +1,13 @@
 ---
 title: "CAF: Define corporate policy statements"
-description: How do you establish policy to reflect and mitigate risks?
+description: How do you establish policy to reflect and remediate risks?
 author: BrianBlanchard
 ms.date: 01/02/2019
 ---
 
-<!---
-I understand risk and tolerance, now what do I do?
-Define the policy... [aspirational statement to move towards 2/1] If you need help defining policies, each discipline includes references to common business risks and policies to mitigate the risks...
---->
-
 # Defining corporate policy for cloud governance
 
-Once you've analyzed the known risks and related risk tolerances for your organization's cloud transformation journey, your next step is to establish policy that will explicitly address those risks and define the steps needed to mitigate them where possible.
+Once you've analyzed the known risks and related risk tolerances for your organization's cloud transformation journey, your next step is to establish policy that will explicitly address those risks and define the steps needed to remediate them where possible.
 
 <!-- markdownlint-disable MD026 -->
 
@@ -39,7 +34,7 @@ The shift to cloud adoption requires a shift in governance. In many organization
 As governance is an ongoing process, policy should be regularly reviewed with IT staff and stakeholders to ensure resources hosted in the cloud continue to maintain compliance with overall corporate goals and requirements. Your understanding of new risks and acceptable tolerance can fuel a [review of existing policies](what-is-a-cloud-policy-review.md), in order to determine the required level of governance that is appropriate for your organization.
 
 > [!TIP]
-> If your organization makes use of vendors or other trusted business partners, one of the biggest business risks to consider may be a lack of adherence to [regulatory compliance](what-is-regulatory-compliance.md) by these external organizations. Often times this risk cannot be mitigated, and instead may require a strict adherence to requirements by all parties. Make sure you've identified and understand any third-party compliance requirements before beginning a policy review.
+> If your organization makes use of vendors or other trusted business partners, one of the biggest business risks to consider may be a lack of adherence to [regulatory compliance](what-is-regulatory-compliance.md) by these external organizations. Often times this risk cannot be remediated, and instead may require a strict adherence to requirements by all parties. Make sure you've identified and understand any third-party compliance requirements before beginning a policy review.
 
 ## Create cloud policy statements
 
@@ -51,7 +46,7 @@ Individual cloud policy statements are guidelines for addressing specific risks 
 - **Policy statement**. A concise explanation of the policy requirements and goals.
 - **Design or technical guidance**. Actionable recommendations, specifications, or other guidance to support and enforce this policy that IT teams and developers can use when designing and building their cloud deployments.
 
-If you need help getting started with defining policies, consult the [governance disciplines](../governance-disciplines.md) introduced in the governance section overview. The articles for each of these disciplines includes examples of common business risks encountered when moving to the cloud and sample policies used to mitigate those risks (for example, see the Cost Management discipline's [sample policy definitions](../cost-management/policy-statements.md)).
+If you need help getting started with defining policies, consult the [governance disciplines](../governance-disciplines.md) introduced in the governance section overview. The articles for each of these disciplines includes examples of common business risks encountered when moving to the cloud and sample policies used to remediate those risks (for example, see the Cost Management discipline's [sample policy definitions](../cost-management/policy-statements.md)).
 
 ## Incremental governance and integrating with existing policy
 

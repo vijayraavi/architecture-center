@@ -22,7 +22,7 @@ The business justification for the cloud migration of the two datacenters was ap
 - 15% of the assets in the datacenter (750 virtual machines) have a dependency on legacy authentication or third-party multi-factor authentication.
 - The VPN connection that connects existing datacenters and Azure does not offer sufficient data transmission speeds or latency to migrate the volume of assets within the two-year timeline to retire the datacenter.
 
-The first two roadblocks are being mitigated in parallel. This article will address the resolution of the third and fourth roadblocks.
+The first two roadblocks are being managed in parallel. This article will address the resolution of the third and fourth roadblocks.
 
 ### Evolution of the Cloud Governance team
 
@@ -55,7 +55,7 @@ This business risk can be expanded into a few technical risks:
 
 ## Evolution of the policy statements
 
-The following changes to policy will help mitigate the new risks and guide implementation.
+The following changes to policy will help remediate the new risks and guide implementation.
 
 1. The chosen cloud provider must offer a means of authenticating via legacy methods.
 2. The chosen cloud provider must offer a means of authentication with the current third-party MFA solution.
@@ -82,7 +82,7 @@ Here are the new best practices:
 
 ## Conclusion
 
-Adding these changes to the governance MVP helps mitigate many of the risks in this article, allowing each cloud adoption team to quickly move past this roadblock.
+Adding these changes to the governance MVP helps remediate many of the risks in this article, allowing each cloud adoption team to quickly move past this roadblock.
 
 ## Next steps
 

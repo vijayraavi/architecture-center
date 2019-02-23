@@ -18,7 +18,7 @@ author: BrianBlanchard
 
 ## Policy alignment
 
-This sample policy synthesizes a Cloud Native scenario, meaning that the tools and platforms provided by Azure are sufficient to mitigate business risks regarding a deployment. In this scenario, it is assumed that a simple configuration of the default Azure services provides sufficient asset protection.
+This sample policy synthesizes a Cloud Native scenario, meaning that the tools and platforms provided by Azure are sufficient to manage business risks involved in a deployment. In this scenario, it is assumed that a simple configuration of the default Azure services provides sufficient asset protection.
 
 ## Cloud security and compliance
 
@@ -74,7 +74,7 @@ Security monitoring is a proactive strategy that audits your resources to identi
 
 ### Extending Cloud Native policies
 
-Using the cloud can reduce some of the security burden. Microsoft provides physical security for Azure datacenters and helps protect the cloud platform against infrastructure threats such as a DDoS attack. Given that Microsoft has thousands of cybersecurity specialists working on security every day, the resources to mitigate cyberattacks are considerable. In fact, while organizations were once worried about whether the cloud was secure, most now understand that given the level of investment that vendors such as Microsoft make in people and specialized infrastructure, the cloud is actually more secure than most on-premises datacenters.
+Using the cloud can reduce some of the security burden. Microsoft provides physical security for Azure datacenters and helps protect the cloud platform against infrastructure threats such as a DDoS attack. Given that Microsoft has thousands of cybersecurity specialists working on security every day, the resources to detect, prevent, or mitigate cyberattacks are considerable. In fact, while organizations were once worried about whether the cloud was secure, most now understand that given the level of investment that vendors such as Microsoft make in people and specialized infrastructure, the cloud is actually more secure than most on-premises datacenters.
 
 Even with this investment in Cloud Native Security Baseline, it is suggested that any Security Baseline policy extend the default Cloud Native policies. The following are examples of extended policies that should be considered, even in a Cloud Native environment:
 

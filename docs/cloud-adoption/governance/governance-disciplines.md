@@ -122,7 +122,7 @@ Across each cloud provider, there are common governance disciplines that can ser
                     </div>
                     <div class="cardText">
                         <h3>Resource Consistency</h3>
-                        <p>Cloud operations depends on consistency in resource configuration. Through governance tooling, resources can consistently be configured to mitigate risks related to on-boarding, drift, discoverability, and recovery.</p>
+                        <p>Cloud operations depends on consistency in resource configuration. Through governance tooling, resources can consistently be configured to manage risks related to on-boarding, drift, discoverability, and recovery.</p>
                     </div>
                 </div>
             </div>

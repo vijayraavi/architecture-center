@@ -31,7 +31,7 @@ Actionable policy statements and the resulting architecture requirements serve a
 
 ## Developing Identity Baseline governance policy statements
 
-The following six steps offer examples and potential options to consider when developing Identity Baseline governance. Use each step as a starting point for discussions within your Cloud Governance team and with affected business, and IT teams across your organization to establish the policies and processes needed to mitigate identity-related risks.
+The following six steps offer examples and potential options to consider when developing Identity Baseline governance. Use each step as a starting point for discussions within your Cloud Governance team and with affected business, and IT teams across your organization to establish the policies and processes needed to manage identity-related risks.
 
 <!-- markdownlint-disable MD033 -->
 

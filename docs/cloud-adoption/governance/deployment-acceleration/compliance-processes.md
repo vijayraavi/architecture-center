@@ -11,7 +11,7 @@ author: alexbuckgit
 
 # Deployment Acceleration policy compliance processes
 
-This article discusses an approach to policy adherence processes that govern [Deployment Acceleration](./overview.md). Effective governance of cloud configuration starts with recurring manual processes designed to detect issues and impose policies to mitigate those risks. However, you can automate these processes and supplement with tooling to reduce the overhead of governance and allow for faster response to deviation.
+This article discusses an approach to policy adherence processes that govern [Deployment Acceleration](./overview.md). Effective governance of cloud configuration starts with recurring manual processes designed to detect issues and impose policies to remediate those risks. However, you can automate these processes and supplement with tooling to reduce the overhead of governance and allow for faster response to deviation.
 
 ## Planning, review, and reporting processes
 
@@ -41,7 +41,7 @@ Ensure that your security and IT teams have implemented automated monitoring sys
 
 ## Violation triggers and enforcement actions
 
-Because noncompliance with configuration policies can lead to critical service disruption risks, the Cloud Governance team should have visibility into serious policy violations. Ensure IT staff have clear escalation paths for reporting configuration compliance issues to the governance team members best suited to identify and verify that policy issues are mitigated.  
+Because noncompliance with configuration policies can lead to critical service disruption risks, the Cloud Governance team should have visibility into serious policy violations. Ensure IT staff have clear escalation paths for reporting configuration compliance issues to the governance team members best suited to identify and verify that policy issues are mitigated once detected.  
 
 When violations are detected, you should take actions to realign with policy as soon as possible. Your IT team can automate most violation triggers using the tools outlined in the [Deployment Acceleration toolchain for Azure](toolchain.md).
 

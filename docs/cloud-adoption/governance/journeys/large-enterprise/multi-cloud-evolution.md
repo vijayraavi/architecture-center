@@ -45,7 +45,7 @@ This business risk can be expanded into a few technical risks
 
 ## Evolution of the policy statements
 
-The following changes to policy will help mitigate the new risks and guide implementation.
+The following changes to policy will help remediate the new risks and guide implementation.
 
 1. All assets in a secondary cloud must be monitored through existing operational management and security monitoring tools.
 2. All organizational units must be integrated into the existing identity provider.

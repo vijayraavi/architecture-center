@@ -47,7 +47,7 @@ This business risk can be expanded into a few technical risks:
 
 ## Evolution of the policy statements
 
-The following changes to policy will help mitigate the new risks and guide implementation.
+The following changes to policy will help remediate the new risks and guide implementation.
 
 1. All assets in a secondary cloud must be monitored through existing operational management and security monitoring tools
 2. All Organization Units must be integrated into the existing identity provider
@@ -78,4 +78,4 @@ As multi-cloud adoption grows, the design evolution above will continue to matur
 
 ## Conclusion
 
-This series of articles outlined the evolution of governance best practices, aligned with the experiences of this fictional company. By starting small, but with the right foundation, the company could move quickly and yet still apply the right amount of governance at the right time. The MVP by itself did not protect the customer. Instead, it created the foundation to mitigate risk and add protections. From there, layers of governance were applied to mitigate tangible risks. The exact journey presented here won't align 100% with the experiences of any reader. Rather, it serves as a pattern for incremental governance. The reader is advised to mold these best practices to fit their own unique constraints and governance requirements.
+This series of articles outlined the evolution of governance best practices, aligned with the experiences of this fictional company. By starting small, but with the right foundation, the company could move quickly and yet still apply the right amount of governance at the right time. The MVP by itself did not protect the customer. Instead, it created the foundation to manage risks and add protections. From there, layers of governance were applied to remediate tangible risks. The exact journey presented here won't align 100% with the experiences of any reader. Rather, it serves as a pattern for incremental governance. The reader is advised to mold these best practices to fit their own unique constraints and governance requirements.

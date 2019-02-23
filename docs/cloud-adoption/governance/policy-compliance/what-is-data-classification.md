@@ -15,9 +15,9 @@ author: BrianBlanchard
 
 Data classification allows you to determine and assign value to your organization's data, and is a very common starting point for governance. The Data classification process categorizes data by sensitivity and business impact in order to identify risks. Once data is classified, it can be managed in ways that protect sensitive or important data from theft or loss.
 
-## Understand data risks, then mitigate
+## Understand data risks, then manage them
 
-Before any risk can be mitigated, it must be understood. In the case of data breach liability, that understanding starts with data classification. Data classification is the process of associating a meta data characteristic to every asset in a digital estate, which identifies the type of data associated with that asset.
+Before any risk can be managed, it must be understood. In the case of data breach liability, that understanding starts with data classification. Data classification is the process of associating a meta data characteristic to every asset in a digital estate, which identifies the type of data associated with that asset.
 
 Microsoft suggests that any asset which has been identified as a potential candidate for migration or deployment to the cloud should have documented meta data to record the data classification, business criticality, and billing responsibility. These three points of classification can go a long way to understanding and mitigating risks.
 

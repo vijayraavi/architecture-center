@@ -84,7 +84,7 @@ Defining corporate policy focuses on identifying and mitigating business risks r
                     </div>
                     <div class="cardText">
                         <h3>Policy and compliance</h3>
-                        <p>Evaluate risk tolerance to inform minimally invasive policies that govern cloud adoption and mitigate risks. In some industries, third-party compliance affects initial policy creation.</p>
+                        <p>Evaluate risk tolerance to inform minimally invasive policies that govern cloud adoption and manage risks. In some industries, third-party compliance affects initial policy creation.</p>
                     </div>
                 </div>
             </div>

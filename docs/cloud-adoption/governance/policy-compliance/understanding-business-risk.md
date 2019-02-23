@@ -17,14 +17,14 @@ An understanding of business risk is one of the most important elements of any c
 
 Risk is relative. A small company with a few IT assets, in a closed building has little risk. Add users and an internet connection with access to those assets, the risk is intensified. When that small company grows to Fortune 500 status, the risks are exponentially greater. As revenue, business process, employee counts, and IT assets accumulate, risks increase and coalesce. IT assets that aid in generating revenue are at tangible risk of stopping that revenue stream in the event of an outage. Every moment of downtime equates to losses. Likewise, as data accumulates, the risk of harming customers grows.
 
-In the traditional on-premises world, IT governance teams focus on assessing those risks. Creating processes to mitigate the risk. Deploying systems to ensure mitigation measures are successful and implemented. This balances the risks required to operate in a connected, modern business environment.
+In the traditional on-premises world, IT governance teams focus on assessing those risks. Creating processes to manage the risk. Deploying systems to ensure mitigation measures are successful and implemented. This balances the risks required to operate in a connected, modern business environment.
 
 ## Understanding business risks in the cloud
 
 During a transformation, the same relative risks can be seen.
 
 - During early experimentation, a few assets are deployed with little to no relevant data. The risk is small.
-- When the first workload is deployed, risk goes up a little. This risk is easily mitigated by choosing an inherently low risk application with a small user base.
+- When the first workload is deployed, risk goes up a little. This risk is easily remediated by choosing an inherently low risk application with a small user base.
 - As more workloads come online, risks change at each release. New apps go live, risks change.
 - When a company brings the first 10-20 applications online, the risk profile is much different that it is when the 1000th applications go into production in the cloud.
 
@@ -50,7 +50,7 @@ The following are a few extremely basic examples of business risks that can be i
 - Any asset with all open ports exposed to the internet are at risk of compromise
 
 The above examples are meant to establish MVP business risks as a theory. The actual list will be unique to every environment.
-Once the Business Risk MVP is established, they can be converted to [Policies](overview.md) to mitigate each risk.
+Once the Business Risk MVP is established, they can be converted to [Policies](overview.md) to remediate each risk.
 
 <!-- markdownlint-enable MD026 -->
 

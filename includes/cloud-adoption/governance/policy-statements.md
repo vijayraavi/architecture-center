@@ -2,7 +2,7 @@
 
 ## Policy statements
 
-The following policy statements establish the requirements needed to mitigate the defined risks. These policies define the functional requirements for the governance MVP. Each will be represented in the implementation of the governance MVP.
+The following policy statements establish the requirements needed to remediate the defined risks. These policies define the functional requirements for the governance MVP. Each will be represented in the implementation of the governance MVP.
 
 Deployment Acceleration:
 

@@ -60,7 +60,7 @@ This business risk can be expanded into a few technical risks:
 
 ## Evolution of the policy statements
 
-The following changes to policy will help mitigate the new risks and guide implementation. The list looks long, but adopting these policies may be easier than it appears.
+The following changes to policy will help remediate the new risks and guide implementation. The list looks long, but adopting these policies may be easier than it appears.
 
 1. All deployed assets must be categorized by criticality and data classification. Classifications are to be reviewed by the Cloud Governance team and the application owner before deployment to the cloud.
 2. Applications that store or access protected data are to be managed differently than those that don’t. At a minimum, they should be segmented to avoid unintended access of protected data.
@@ -118,7 +118,7 @@ The governance MVP design will evolve to include new Azure policies and an imple
 
 ## Conclusion
 
-Adding the above processes and changes to the governance MVP will help to mitigate many of the risks associated with security governance. Together, they add the network, identity, and security monitoring tools needed to protect data.
+Adding the above processes and changes to the governance MVP will help to remediate many of the risks associated with security governance. Together, they add the network, identity, and security monitoring tools needed to protect data.
 
 ## Next Steps
 
