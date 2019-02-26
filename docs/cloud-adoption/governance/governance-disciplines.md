@@ -92,25 +92,6 @@ Across each cloud provider, there are common governance disciplines that can ser
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
-    <a href="./identity-baseline/overview.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../_images/governance/identity-baseline.png" class="x-hidden-focus"/>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Identity Baseline</h3>
-                        <p>Inconsistencies in the application of identity requirements can increase the risk of breach. The Identity Baseline discipline focuses on ways to ensure identity is consistently applied across cloud adoption efforts.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
     <a href="./resource-consistency/overview.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
@@ -123,6 +104,25 @@ Across each cloud provider, there are common governance disciplines that can ser
                     <div class="cardText">
                         <h3>Resource Consistency</h3>
                         <p>Cloud operations depends on consistency in resource configuration. Through governance tooling, resources can consistently be configured to manage risks related to on-boarding, drift, discoverability, and recovery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+<li style="display: flex; flex-direction: column;">
+    <a href="./identity-baseline/overview.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../_images/governance/identity-baseline.png" class="x-hidden-focus"/>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Identity Baseline</h3>
+                        <p>Inconsistencies in the application of identity requirements can increase the risk of breach. The Identity Baseline discipline focuses on ways to ensure identity is consistently applied across cloud adoption efforts.</p>
                     </div>
                 </div>
             </div>
