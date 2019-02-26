@@ -25,9 +25,10 @@ Until trust in the cloud environment is fully established it's important to tigh
 
 1. Establish a cloud DMZ.
     1. The [Cloud DMZ reference architecture](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) establishes a pattern and deployment model for creating a VPN Gateway in Azure.
-    2. Validate that proper DMZ connectivity is in place for a local edge device in the on-premises datacenter, and that on-premises security and traffic management mechanisms are configured to only allow access to and from authorized resources and services hosted in the cloud.
-    3. Validate that the local edge device is compatible with Azure VPN Gateway requirements.
-    <!-- 4. Once connection to the on-premisess VPN has been verified, capture the Resource Manager template created by that reference architecture. -->
+    2. Validate that on-premises security and traffic management mechanisms are configured to only allow access to and from authorized resources and services hosted in the cloud.
+    3. Validate that proper DMZ connectivity is in place for a local edge device in the on-premises datacenter.
+    4. Validate that the local edge device is compatible with Azure VPN Gateway requirements.
+    <!-- 5. Once connection to the on-premisess VPN has been verified, capture the Resource Manager template created by that reference architecture. -->
 1. Create a second blueprint named `dmz`.
     1. Add the Resource Manager template for the VPN Gateway to the blueprint.
 1. Apply the DMZ blueprint to any subscriptions requiring on-premises connectivity. This blueprint should be applied in addition to the governance MVP blueprint.
