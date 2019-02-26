@@ -21,9 +21,9 @@ Organizing cloud-based resources is one of the most important tasks for IT, unle
 
 ![Plotting tagging options from least to most complex, aligned with jump links below](../../_images/discovery-guides/discovery-guide-tagging.png)
 
-Jump to: [Baseline naming conventions](#baseline-naming-conventions) | [Resource tagging patterns](#resource-tagging-patterns) | [Naming and tagging policy](#naming-and-tagging-policy) | [Learn more](#learn-more)
+Jump to: [Baseline naming conventions](#baseline-naming-conventions) | [Resource tagging patterns](#resource-tagging-patterns) | [Learn more](#learn-more)
 
-Your tagging approach can be simple or complex, with the emphasis ranging from supporting IT teams managing cloud workloads to integrating information relating to all aspects of the entire business.
+Your tagging approach can be simple or complex, with the emphasis ranging from supporting IT teams managing cloud workloads to integrating information relating to all aspects of the business.
 
 An IT aligned tagging focus, such as tagging based on workload, function, or environment, will reduce the complexity of monitoring assets and make management decisions based on operational requirements much easier.
 
@@ -41,7 +41,14 @@ For more sophisticated organization than a consistent naming convention only can
 
 *Tags* are metadata elements attached to resources. Tags consist of pairs of key/value strings. The values you include in these pairs is up to you, but the application of a consistent set of global tags, as part of a comprehensive naming and tagging policy, is a critical part of an overall governance policy.
 
-When planning your tagging strategy, consider the common tagging patterns listed below, which  provide examples of how tagging applies organization to cloud assets. These patterns are not meant to be exclusive and can be used in parallel, providing multiple ways of organizing assets based on your company's needs.
+As part of your planning process, use the following questions to help determine the kind of information your resource tags need to support:
+
+- Does your naming and tagging policies need to integrate with existing naming and organizational policies within your company?
+- Will you implement a chargeback or showback accounting system? Will you need to associate resources with accounting information for departments, business groups, and teams in more detail than a simple subscription-level breakdown allows?
+- Does tagging need to represent details such regulatory compliance requirements for a resource? What about operational details such as uptime requirements, patching schedules, or security requirements?
+- What tags will be required for all resources based on central IT policy? What tags will be optional? Are individual teams allowed to implement their own custom tagging schemes?
+
+The common tagging patterns listed below provide examples of how tagging can be used to organize cloud assets. These patterns are not meant to be exclusive and can be used in parallel, providing multiple ways of organizing assets based on your company's needs.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -54,15 +61,6 @@ When planning your tagging strategy, consider the common tagging patterns listed
 | Purpose               | businessprocess=support<br/>businessimpact=moderate<br/>revenueimpact=high   | Aligns resources to business functions to better support investment decisions  |
 
 <!-- markdownlint-enable MD033 -->
-
-## Naming and tagging policy
-
-Your naming and tagging policy will evolve over time. However, determining your core organizational priorities at the outset of a cloud migration is critical. As part of your planning process, carefully consider the following questions:
-
-- How best can your naming and tagging policies integrate with existing naming and organizational policies within your organization?
-- Will you implement a chargeback or showback accounting system? Will you need to provide accounting information for departments, business groups, and teams in more detail than a simple subscription-level breakdown allows?
-- What tagging information will be required for all resources? What tagging information will be left up to individual teams to implement or not implement?
-- Does tagging need to represent details such regulatory compliance requirements for a resource? What about operational details such as uptime requirements, patching schedules, or security requirements?
 
 ## Learn more
 
