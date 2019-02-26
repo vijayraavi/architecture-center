@@ -7,7 +7,7 @@ The following decisions come from teams outside of the Cloud Governance team. Th
 ### Identity Baseline
 
 Identity Baseline is the fundamental starting point for all governance. Before attempting to apply governance, identity must be established. The established identity strategy will then be enforced by the governance solutions.
-In this governance journey, the Identity Management team implements the **[Directory Synchronization](/azure/architecture-center/cloud-adoption/decision-guides/identity/overview#directory-synchronization)** pattern:
+In this governance journey, the Identity Management team implements the **[Directory Synchronization](/azure/architecture/cloud-adoption/decision-guides/identity/overview#directory-synchronization)** pattern:
 
 - RBAC will be provided by Azure Active Directory (Azure AD), using the directory synchronization or "Same Sign-On" that was implemented during company’s migration to Office 365. For implementation guidance, see [Reference Architecture for Azure AD Integration](/azure/architecture/reference-architectures/identity/azure-ad).
 - The Azure AD tenant will also govern authentication and access for assets deployed to Azure.
@@ -18,7 +18,7 @@ In the governance MVP, the governance team will enforce application of the repli
 
 Software Defined Network is an important initial aspect of the Security Baseline. Establishing the governance MVP depends on early decisions from the Security Management team to define how networks can be safely configured.
 
-Given the lack of requirements, IT security is playing it safe and has required a **[Cloud DMZ](/azure/architecture-center/cloud-adoption/decision-guides/software-defined-network/cloud-dmz)** Pattern. That means governance of the Azure deployments themselves will be very light.
+Given the lack of requirements, IT security is playing it safe and has required a **[Cloud DMZ](/azure/architecture/cloud-adoption/decision-guides/software-defined-network/cloud-dmz)** Pattern. That means governance of the Azure deployments themselves will be very light.
 
 - Azure subscriptions may connect to an existing data center via VPN, but must follow all existing on-premises IT governance policies regarding connection of a demilitarized zone to protected resources. For implementation guidance regarding VPN connectivity, see [VPN Reference Architecture](/azure/architecture/reference-architectures/hybrid-networking/vpn).
 - Decisions regarding subnet, firewall, and routing are currently being deferred to each application/workload lead.
@@ -31,14 +31,14 @@ The Cloud Governance team has proactively invited members of the networking and 
 ### Security Baseline: Encryption
 
 Encryption is another fundamental decision within the Security Baseline discipline. Because the company currently does not yet store any protected data in the cloud, the Security Team has decided on a less aggressive pattern for encryption.
-At this point, a **[Cloud Native](/azure/architecture-center/cloud-adoption/decision-guides/encryption/overview#key-management)** pattern to encryption is suggested but not required of any development team.
+At this point, a **[Cloud Native](/azure/architecture/cloud-adoption/decision-guides/encryption/overview#key-management)** pattern to encryption is suggested but not required of any development team.
 
 - No governance requirements have been set regarding the use of encryption, because the current corporate policy does not permit mission-critical or protected data in the cloud.
 - Additional analysis will be required before releasing any protected data or mission-critical workloads
 
 ## Policy enforcement
 
-The first decision to make regarding Deployment Acceleration is the pattern for enforcement. In this narrative, the governance team decided to implement the **[Automated Enforcement](/azure/architecture-center/cloud-adoption/decision-guides/policy-enforcement/overview#automated-enforcement)** pattern.
+The first decision to make regarding Deployment Acceleration is the pattern for enforcement. In this narrative, the governance team decided to implement the **[Automated Enforcement](/azure/architecture/cloud-adoption/decision-guides/policy-enforcement/overview#automated-enforcement)** pattern.
 
 - Azure Security Center will be made available to the security and identity teams to monitor security risks. Both teams are also likely to use Security Center to identify new risks and evolve corporate policy.
 - RBAC is required in all subscriptions to govern authentication enforcement.
