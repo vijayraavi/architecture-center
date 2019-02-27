@@ -42,17 +42,17 @@ This implementation can also be described using a simple checklist:
 
 The Cloud Governance team will be responsible for the following decisions and implementations. Many will require inputs from other teams, but the Cloud Governance team is likely to own both the decision and implementation. The following sections outline the decisions made for this use case and details of each decision.
 
-### Subscription Model
+### Subscription design
 
-The **Mixed** pattern has been chosen for Azure subscriptions.
+The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to  efficiently manage access, policies, and compliance of these subscription. In this narrative, the  governance team has chosen the **[Mixed](../../../decision-guides/subscriptions/overview.md#mixed-patterns)** subscription design pattern.
 
 - As new requests for Azure resources arise, a "Department" should be established for each major business unit in each operating geography. Within each of the Departments, "Subscriptions" should be created for each application archetype.
 - An application archetype is a means of grouping applications with similar needs. Common examples include: Applications with protected data, governed applications (such as HIPAA or FedRAMP), low-risk applications, applications with on-premises dependencies, SAP or other mainframe applications in Azure, or applications that extend on-premises SAP or mainframe applications. Each organization has unique needs based on data classifications and the types of applications that support the business. Dependency mapping of the digital estate can help define the application archetypes in an organization.
 - A common naming convention should be agreed upon as part of the subscription design, based on the above two bullets.
 
-### Resource Consistency
+### Resource consistency
 
-**Hierarchical Consistency** has been chosen as a Resource Consistency pattern.
+Resource consistency decisions determine the tools, processes, and effort required to ensure Azure resources are deployed, configured, and managed consistently within a subscription. In this narrative, **[Hierarchical Consistency](../../../decision-guides/resource-consistency/overview.md#hierarchical-consistency)** has been chosen as the primary resource consistency pattern.
 
 - Resource groups should be created for each application. Management groups should be created for each application archetype. Azure Policy should be applied to all subscriptions in the associated management group.
 - As part of the deployment process, Resource Consistency templates for all assets should be stored in source control.
@@ -60,16 +60,17 @@ The **Mixed** pattern has been chosen for Azure subscriptions.
 - The Azure management group hierarchy defined should represent billing responsibility and application ownership using nested groups.
 - Extensive implementation of Azure Policy could exceed the team’s time commitments and may not provide much value at this point. However, a simple default policy should be created and applied to each resource group to enforce the first few cloud governance policy statements. This serves to define the implementation of specific governance requirements. Those implementations can then be applied across all deployed assets.
 
-### Resource Tagging
+### Resource tagging
 
-The **Accounting** pattern has been chosen for resource tagging.
+Resource tagging decisions determine how metadata is applied to Azure resources within a subscription to support operations, management, and accounting purposes. In this narrative, the **[Accounting](../../../decision-guides/resource-tagging/overview.md#resource-tagging-patterns)** pattern has been chosen as a the default model for resource tagging.
 
 - Deployed assets should be tagged with values for the following: Department/Billing Unit, Geography, Data Classification, Criticality, SLA, Environment, Application Archetype, Application, and Application Owner.
 - These values along with the Azure management group and subscription associated with a deployed asset will drive governance, operations, and security decisions.
 
 ### Logging and reporting
 
-At this point, a **Hybrid** pattern for log and reporting is suggested but not required of any development team.
+Logging and reporting decisions determine how your store log data and how the monitoring and reporting tools that keep IT staff informed on operational health are structured. In this narrative a **[Hybrid](../../../decision-guides/log-and-report/overview.md#hybrid)** pattern for logging and reporting is suggested, but not required of any development team at this point.
+
 
 - No governance requirements are currently set regarding the specific data points to be collected for logging or reporting purposes. This is specific to this fictional narrative and should be considered an antipattern. Logging standards should be determined and enforced as soon as possible.
 - Additional analysis is required before the release of any protected data or mission-critical workloads.

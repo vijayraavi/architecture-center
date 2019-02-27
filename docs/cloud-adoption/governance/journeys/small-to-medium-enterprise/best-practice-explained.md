@@ -42,9 +42,9 @@ This implementation can also be described using a simple checklist:
 
 The Cloud Governance team is responsible for the following decisions and implementations. Many require inputs from other teams, but the Cloud Governance team is likely to own both the decision and the implementation. The following sections outline the decisions made for this use case and details of each decision.
 
-### Subscription model
+### Subscription design
 
-The **Application Category** pattern has been chosen for Azure subscriptions.
+The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to  efficiently manage access, policies, and compliance of these subscription. In this narrative, the  governance team has chosen the **[Application Category](../../../decision-guides/subscriptions/overview.md#application-category-pattern)** subscription design pattern.
 
 - An application archetype is a way to group applications with similar needs. Common examples include: Applications with protected data, governed applications (such as HIPAA or FedRAMP), low- risk applications, applications with on-premises dependencies, SAP or other mainframes in Azure, or applications that extend on-premises SAP or mainframes. These archetypes are unique per organization, based on data classifications and the types of applications that power the business. Dependency mapping of the digital estate can aid in defining the application archetypes in an organization.
 - Departments are not likely to be required given the current focus. Deployments are expected to be constrained within a single billing unit. At the stage of adoption, there may not even be an enterprise agreement to centralize billing. It's likely that this level of adoption is being managed by a single pay-as-you-go Azure subscription.
@@ -52,9 +52,9 @@ The **Application Category** pattern has been chosen for Azure subscriptions.
 - In the **Application Category** pattern, subscriptions are created for each application archetype. Each subscription belongs to an account per environment (Development, Test, and Production).
 - A common naming convention should be agreed on as part of the subscription design, based on the previous two points.
 
-### Resource Consistency
+### Resource consistency
 
-The **Deployment Consistency** pattern has been chosen as a Resource Consistency.
+Resource consistency decisions determine the tools, processes, and effort required to ensure Azure resources are deployed, configured, and managed consistently within a subscription. In this narrative, **[Deployment Consistency](../../../decision-guides/resource-consistency/overview.md#deployment-consistency)** has been chosen as the primary resource consistency pattern.
 
 - Resource groups are created for each application. Management groups are created for each application archetype. Azure Policy should be applied to all subscriptions from the associated management group.
 - As part of the deployment process, Azure Resource Consistency templates for the resource group should be stored in source control.
@@ -64,7 +64,7 @@ The **Deployment Consistency** pattern has been chosen as a Resource Consistency
 
 ### Resource tagging
 
-The **Classification** pattern to tagging has been chosen as a model for resource tagging.
+Resource tagging decisions determine how metadata is applied to Azure resources within a subscription to support operations, management, and accounting purposes. In this narrative, the **[Classification](../../../decision-guides/resource-tagging/overview.md#resource-tagging-patterns)** pattern has been chosen as a the default model for resource tagging.
 
 - Deployed assets should be tagged with the following values: Data Classification, Criticality, SLA, and Environment.
 - These four values will drive governance, operations, and security decisions.
@@ -72,7 +72,7 @@ The **Classification** pattern to tagging has been chosen as a model for resourc
 
 ### Logging and reporting
 
-At this point, a **Cloud Native** pattern to logging and reporting is suggested but not required of any development team.
+Logging and reporting decisions determine how your store log data and how the monitoring and reporting tools that keep IT staff informed on operational health are structured. In this narrative a **[Cloud Native](../../../decision-guides/log-and-report/overview.md#cloud-native)** pattern for logging and reporting is suggested, but not required of any development team at this point.
 
 - No governance requirements have been set regarding the data to be collected for logging or reporting purposes.
 - Additional analysis will be needed before releasing any protected data or mission-critical workloads.

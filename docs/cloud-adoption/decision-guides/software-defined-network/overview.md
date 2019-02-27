@@ -11,9 +11,7 @@ author: rotycenh
 
 # CAF: Software Defined Network decision guide
 
-Software Defined Networking (SDN) is a network architecture designed to allow virtualized networking functionality that can be centrally managed, configured, and modified through software. SDN provides an abstraction layer over the physical networking infrastructure, and enables the virtualized equivalent to physical routers, firewalls, and other networking hardware you would find in an on-premises network.
-
-SDN allows IT staff to configure and deploy network structures and capabilities that support workload needs using virtualized resources. The flexibility of software-based deployment management enables rapid modification of networking resources and allows the ability to support both agile and traditional deployment models. Virtualized networks created with SDN technology are critical to creating secure networks on a public cloud platform.
+Software Defined Networking (SDN) is a network architecture designed to allow virtualized networking functionality that can be centrally managed, configured, and modified through software. SDN enables the creation of cloud-based networks using the virtualized equivalents to physical routers, firewalls, and other networking devices used in on-premises networks. SDN is critical to creating secure virtual networks on public cloud platforms such as Azure.
 
 ## Networking decision guide
 
