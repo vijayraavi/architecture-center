@@ -69,7 +69,7 @@ Resource tagging decisions determine how metadata is applied to Azure resources 
 
 ### Logging and reporting
 
-Logging and reporting decisions determine how your store log data and how the monitoring and reporting tools that keep IT staff informed on operational health are structured. In this narrative a **[Hybrid](../../../decision-guides/log-and-report/overview.md#hybrid)** pattern for logging and reporting is suggested, but not required of any development team at this point.
+Logging and reporting decisions determine how your store log data and how the monitoring and reporting tools that keep IT staff informed on operational health are structured. In this narrative a **[Hybrid monitoring](../../../decision-guides/log-and-report/overview.md)** pattern for logging and reporting is suggested, but not required of any development team at this point.
 
 
 - No governance requirements are currently set regarding the specific data points to be collected for logging or reporting purposes. This is specific to this fictional narrative and should be considered an antipattern. Logging standards should be determined and enforced as soon as possible.
