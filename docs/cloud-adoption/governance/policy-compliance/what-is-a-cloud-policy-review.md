@@ -21,7 +21,7 @@ Most businesses manage IT through the execution of processes which alignment wit
 
 As companies mature corporate IT policies, dependencies on past technical decisions have a tendency to seep into governing policies. For instance, its common to see disaster recovery processes include policy that mandates offsite tape backups. This inclusion assumes a dependency on one type of technology (tape backups), that may no longer be the most relevant solution.
 
-Cloud Transformations create a natural inflection point to reconsider the legacy policy decisions of the past. Technical capabilities and default processes change considerably in the cloud, as do the inherit risks. Using the prior example, the tape backup policy stemmed from the risk of a single point of failure by keeping data in one location and the business need to minimize the risk profile by mitigating this risk. In a cloud deployment, there are several options that deliver the same risk mitigation, with much lower recovery time objectives (RTO). For instance:
+Cloud transformations create a natural inflection point to reconsider the legacy policy decisions of the past. Technical capabilities and default processes change considerably in the cloud, as do the inherit risks. Using the prior example, the tape backup policy stemmed from the risk of a single point of failure by keeping data in one location and the business need to minimize the risk profile by mitigating this risk. In a cloud deployment, there are several options that deliver the same risk mitigation, with much lower recovery time objectives (RTO). For instance:
 
 - A cloud-native solution could enable geo-replication of the Azure SQL Database
 - A hybrid solution could use Azure Site Recovery to replicate an IaaS workload to multiple datacenters.
@@ -30,7 +30,7 @@ When executing a cloud transformation, policies often govern many of the tools, 
 
 ## The cloud policy review process
 
-Cloud policy reviews align existing IT governance and IT security policies with the [five disciplines of Cloud Governance](../overview.md): [Cost Management](../cost-management/overview.md), [Security Baseline](../security-baseline/overview.md), [Identity Baseline](../identity-baseline/overview.md), [Resource Consistency](../resource-consistency/overview.md), and [Deployment Acceleration](../deployment-acceleration/overview.md).
+Cloud policy reviews align existing IT governance and IT security policies with the [Five Disciplines of Cloud Governance](../overview.md): [Cost Management](../cost-management/overview.md), [Security Baseline](../security-baseline/overview.md), [Identity Baseline](../identity-baseline/overview.md), [Resource Consistency](../resource-consistency/overview.md), and [Deployment Acceleration](../deployment-acceleration/overview.md).
 
 For each of these disciplines, the review process follows these steps:
 

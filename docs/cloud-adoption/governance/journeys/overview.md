@@ -56,7 +56,7 @@ To start down an adoption path, choose one of the following journeys. Each journ
 
 ## An incremental approach to cloud governance
 
-Adopting the cloud is a journey, not a destination. Along the way, there are clear milestones and tangible business benefits. However, the final state of cloud adoption is usually unknown when a company begins the journey. Cloud governance creates guardrails that keep the company on a safe path throughout the journey.
+Adopting the cloud is a journey, not a destination. Along the way, there are clear milestones and tangible business benefits. However, the final state of cloud adoption is usually unknown when a company begins the journey. Cloud Governance creates guardrails that keep the company on a safe path throughout the journey.
 
 These governance journeys describe the experiences of fictional companies, based on the journeys of real customers. Each journey follows the customer through the governance aspects of their cloud adoption.
 

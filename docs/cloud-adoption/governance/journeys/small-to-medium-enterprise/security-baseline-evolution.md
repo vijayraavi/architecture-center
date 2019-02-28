@@ -79,7 +79,7 @@ The following changes to policy will help remediate the new risks and guide impl
 15. Deployment scripts must be maintained in a central repository accessible by the Cloud Governance team for periodic review and auditing.
 16. Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
 17. Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users.
-18. Cloud governance processes must include quarterly reviews with identity management teams. These reviews can help identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
+18. Cloud Governance processes must include quarterly reviews with identity management teams. These reviews can help identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
 
 ## Evolution of the best practices
 

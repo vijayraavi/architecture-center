@@ -21,7 +21,7 @@ In traditional governance and incremental governance, corporate policy creates t
 
 The image above demonstrates the interactions between business risk, policy and compliance, and monitor and enforce to create a governance strategy. This is followed by using the five disciplines of cloud governance to realize your strategy.
 
-Cloud governance is the product of an ongoing adoption effort over time, as a true lasting transformation doesn't happen overnight. Attempting to deliver complete cloud governance before addressing key corporate policy changes using a fast aggressive method seldom produces the desired results. Instead we recommend an incremental approach.
+Cloud Governance is the product of an ongoing adoption effort over time, as a true lasting transformation doesn't happen overnight. Attempting to deliver complete cloud governance before addressing key corporate policy changes using a fast aggressive method seldom produces the desired results. Instead we recommend an incremental approach.
 
 What is different about a cloud adoption framework is the purchasing cycle and it can enable authentic transformation. Since there is not a big Capital Expenditure (CapEx) acquisition requirement, engineers can begin experimentation and adoption sooner. In most corporate cultures, elimination of the CapEx barrier to adoption can lead to tighter feedback loops, organic growth, and incremental execution.
 

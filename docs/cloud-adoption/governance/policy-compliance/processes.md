@@ -72,7 +72,7 @@ Each violation trigger should have a corresponding action. Triggered actions sho
 
 Some examples of violation triggers and actions:
 
-| Cloud governance discipline | Sample trigger | Sample action |
+| Cloud Governance discipline | Sample trigger | Sample action |
 |-----------------------------|----------------|---------------|
 | Cost Management | Monthly cloud spending is more than 20% higher than expected. | Notify billing unit leader who will begin a review of resource usage. |
 | Security Baseline | Detect suspicious user login activity. | Notify IT security team and disable suspect user account. |
