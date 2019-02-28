@@ -123,7 +123,7 @@ See the following for more information about encryption and key management in th
 
 ## Next steps
 
-Learn how Software Defined Networks provide virtualized networking capabilities for cloud deployments.
+Encryption is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../overview.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
-> [Which Software Defined Network pattern is best for my deployment?](../software-defined-network/overview.md)
+> [Architectural decision guides](../overview.md)

@@ -46,11 +46,11 @@ When planning which virtual networking architecture or combination of architectu
 
 Learn more about the primary software defined networking architectures:
 
-- [**PaaS Only**](paas-only.md): Most platform as a service (PaaS) products support a limited set of built-in networking features and may not require an explicitly defined software defined network to support workload requirements.
-- [**Cloud Native**](cloud-native.md): A cloud native virtual network is the default software defined networking architecture when deploying resources to a cloud platform.
-- [**Cloud DMZ**](cloud-dmz.md): Provides limited connectivity between your on-premises and cloud network which is secured through the implementation of a demilitarized zone on the cloud environment.
-- [**Hybrid**](hybrid.md): The hybrid cloud network architecture allows virtual networks to access your on-premises resources and vice versa.
-- [**Hub and Spoke**](hub-spoke.md): The hub and spoke architecture allows you to centrally manage external connectivity and shared services, isolate individual workloads, and overcome potential subscription limits.
+- [**PaaS Only**](paas-only.md) : Most platform as a service (PaaS) products support a limited set of built-in networking features and may not require an explicitly defined software defined network to support workload requirements.
+- [**Cloud Native**](cloud-native.md) : A cloud native architecture supports cloud-based workloads using virtual networks built on the cloud platform's default software defined networking capabilities, without reliance on on-premises or other external resources.
+- [**Cloud DMZ**](cloud-dmz.md) : Supports limited connectivity between your on-premises and cloud networks, secured through the implementation of a demilitarized zone tightly controlling traffic between the two environments.
+- [**Hybrid**](hybrid.md) : The hybrid cloud network architecture allows virtual networks in trusted cloud environments to access your on-premises resources and vice versa.
+- [**Hub and Spoke**](hub-spoke.md) : The hub and spoke architecture allows you to centrally manage external connectivity and shared services, isolate individual workloads, and overcome potential subscription limits.
 
 ## Learn more
 
@@ -61,7 +61,7 @@ See the following for more information about software defined networking in the 
 
 ## Next steps
 
-Learn how logs, monitoring, and reporting are used by operations teams to manage the health and policy compliance of cloud workloads.
+SDN is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../overview.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
-> [Logs and Reporting](../log-and-report/overview.md)
+> [Architectural decision guides](../overview.md)

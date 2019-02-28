@@ -62,7 +62,7 @@ For IT environments integrating cloud and on-premises resources, you may need us
 
 ## Next steps
 
-Learn how resource consistency is used to organize and standardize cloud deployments in support of subscription design and governance goals.
+Policy enforcement is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../overview.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
-> [Resource consistency](../resource-consistency/overview.md)
+> [Architectural decision guides](../overview.md)

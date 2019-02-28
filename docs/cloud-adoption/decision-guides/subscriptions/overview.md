@@ -123,7 +123,7 @@ For a general description of how Azure subscriptions and resource groups are use
 
 ## Next steps
 
-Learn how identity services are used for access control and management in the cloud.
+Subscription design is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../overview.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
-> [Identity](../identity/overview.md)
+> [Architectural decision guides](../overview.md)

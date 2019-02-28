@@ -114,3 +114,10 @@ Multi-cloud logging support often requires the use of gateway services to proces
 - Visualization, queries, alerts, and analytical tools. It can provide insights into virtual machines, guest operating systems, virtual networks, and workload application events.
 - [REST APIs](/azure/monitoring-and-diagnostics/monitoring-rest-api-walkthrough) for integration with external services and automation of monitoring and alerting services
 - [Integration](/azure/monitoring-and-diagnostics/monitoring-partners) with many popular third-party vendors.
+
+## Next steps
+
+Logging and reporting is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../overview.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
+
+> [!div class="nextstepaction"]
+> [Architectural decision guides](../overview.md)

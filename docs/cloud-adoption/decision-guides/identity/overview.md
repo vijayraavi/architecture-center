@@ -100,7 +100,8 @@ See the following for more information about identity services on the Azure plat
 
 ## Next steps
 
-Learn how to implement policy enforcement in the cloud.
+Identity is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../overview.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
-> [Policy enforcement](../policy-enforcement/overview.md)
+> [Architectural decision guides](../overview.md)
+

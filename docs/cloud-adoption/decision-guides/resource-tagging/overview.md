@@ -71,7 +71,7 @@ For more information about naming and tagging in Azure, see:
 
 ## Next steps
 
-Learn how encryption is used to secure data in cloud environments.
+Resource tagging is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../overview.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
-> [Encryption](../encryption/overview.md)
+> [Architectural decision guides](../overview.md)

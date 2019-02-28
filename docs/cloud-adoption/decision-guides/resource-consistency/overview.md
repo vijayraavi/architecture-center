@@ -67,7 +67,7 @@ These deployment packages allow IT and development teams to rapidly deploy new w
 
 ## Next steps
 
-Learn how resource naming and tagging are used to further organize and manage your cloud resources.
+Resource consistency is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../overview.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
-> [Resource naming and tagging](../resource-tagging/overview.md)
+> [Architectural decision guides](../overview.md)
